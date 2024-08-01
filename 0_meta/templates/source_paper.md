@@ -7,28 +7,37 @@ completed: false
 title: "{{title}}"
 authors: "{{authors}}"
 year: '{{date | format("YYYY/MM")}}'
-url: "{{url}}"
+url: "{{URL}}"
 citekey: "{{citekey}}"
 aliases:
   - "{{shortTitle}}"
   - "{{citekey}}"
 ---
 
+# {{title}}
+
+> [!abstract]
+> {{abstractNote}}
+
+
 # Short Summary
 
-## Key Points
+### Key Points
 
-# Abstract
-```
-{{abstractNote}}
-```
-# Details
-## Problem
+- 
 
-## Methodology
+### Problem
 
-## Results
+- 
 
-# Comments and Implications
+### Methodology
 
-# Links
+- 
+
+### Results
+
+ - 
+
+### Comments and Implications
+
+- 
