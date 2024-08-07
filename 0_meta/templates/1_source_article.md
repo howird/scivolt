@@ -8,18 +8,14 @@ url: "{{URL}}"
 year: "{{year}}"
 authors: "{{authorString}}"
 ---
----
-{{URL}}
-{{year}}
+# TITLE
 
----
+## 3-Sentence Summary
 
-# 3-Sentence Summary
-
-
-
-# Details
 - 
 
-# Reference
+## Details
+- 
+
+## Reference
 

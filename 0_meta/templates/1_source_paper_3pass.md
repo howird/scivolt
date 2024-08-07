@@ -13,7 +13,6 @@ aliases:
   - "{{shortTitle}}"
   - "{{citekey}}"
 ---
-
 # {{title}}
 
 > [!abstract]

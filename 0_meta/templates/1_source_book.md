@@ -3,7 +3,6 @@ date: {{date}}
 completed: false
 pages_per_hour: 
 ---
-
 # {{title}}
 
 ## 2-Sentence Summary
