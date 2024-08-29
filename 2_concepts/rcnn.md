@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#area/ai/dl'
+  - '#ai/dl'
   - '#application/vision'
 ---
 

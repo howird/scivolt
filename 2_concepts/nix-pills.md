@@ -2,7 +2,7 @@
 status: doing
 tags:
   - '#type/tutorial'
-  - '#area/swe/nix/pills'
+  - '#swe/nix/pills'
 ---
 
 # Nix Pills Notes

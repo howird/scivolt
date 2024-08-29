@@ -1,6 +1,6 @@
 ---
 tags:
-- '#area/ai/dl'
+- '#ai/dl'
 ---
 
 # What is batch normalization

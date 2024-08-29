@@ -1,6 +1,6 @@
 ---
 tags:
-- '#area/signals/controls'
+- '#signals/controls'
 ---
 
 # Fourier Series Part 1

@@ -1,7 +1,7 @@
 ---
 date: April 26, 2021
 tags:
-- '#area/ai/comp-neuroscience/encoding'
+- '#ai/comp-neuroscience/encoding'
 ---
 
 # 2.4 Variability

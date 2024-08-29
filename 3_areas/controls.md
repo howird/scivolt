@@ -1,6 +1,6 @@
 ---
 tags:
-- '#area/signals'
+- '#signals'
 ---
 # signals
 

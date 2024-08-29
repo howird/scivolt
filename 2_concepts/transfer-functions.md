@@ -1,7 +1,7 @@
 ---
 date: October 15, 2022
 tags:
-- '#area/signals/controls'
+- '#signals/controls'
 ---
 
 # Transfer Functions

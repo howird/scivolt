@@ -2,7 +2,7 @@
 status: backlog
 tags:
   - '#type/tutorial'
-  - '#area/swe/tool'
+  - '#swe/tool'
 ---
 
 # Git

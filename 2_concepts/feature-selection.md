@@ -1,7 +1,7 @@
 ---
 date: March 18, 2021
 tags:
-- '#area/ai/comp-neuroscience/encoding'
+- '#ai/comp-neuroscience/encoding'
 ---
 
 # 2.3 Feature Selection

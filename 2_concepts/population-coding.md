@@ -1,7 +1,7 @@
 ---
 date: April 30, 2021
 tags:
-- '#area/ai/comp-neuroscience/decoding'
+- '#ai/comp-neuroscience/decoding'
 ---
 
 # 3.2 Population Coding and Bayesian Estimation

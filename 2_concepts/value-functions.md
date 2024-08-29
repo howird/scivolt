@@ -2,7 +2,7 @@
 date: August 27, 2024
 status: doing
 tags:
-  - '#area/ai/rl/model-based'
+  - '#ai/rl/model-based'
   - '#type/theory'
 ---
 

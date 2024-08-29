@@ -1,7 +1,7 @@
 ---
 date: November 1, 2022
 tags:
-- '#area/signals/controls'
+- '#signals/controls'
 ---
 
 # Frequency Response

@@ -11,7 +11,7 @@ def foo(directory: Path, glob="*", ext=".md"):
         new_name = f.name[i_hyphen + 1:]
 
         f_new = f.rename(f.parent / new_name)
-        filestring += f"[{num} {f_new.stem}](./{new_name})\n"
+        filestring += f"[{num} {f_new.stem}]({new_name})\n"
 
     area = directory / f"{directory.name}{ext}"
     with open(area, "w") as f:

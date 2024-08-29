@@ -1,7 +1,7 @@
 ---
 date: April 20, 2022
 tags:
-  - "#area/ai/ml"
+  - "#ai/ml"
   - "#application/clustering"
 ---
 

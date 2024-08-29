@@ -3,7 +3,7 @@ status: doing
 tags:
   - '#type/algorithm'
   - '#type/impl'
-  - '#area/ai/feature-eng'
+  - '#ai/feature-eng'
   - '#application/vision'
 ---
 

@@ -1,7 +1,7 @@
 ---
 date: June 9, 2022
 tags:
-  - "#area/ai/ml"
+  - "#ai/ml"
   - application/classification
 ---
 

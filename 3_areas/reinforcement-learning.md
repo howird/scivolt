@@ -1,7 +1,7 @@
 ---
 tags:
 - '#type/area'
-- '#area/ai/rl`
+- '#ai/rl`
 ---
 
 # What is Reinforcement Learning?

@@ -1,7 +1,7 @@
 ---
 date: March 17, 2021
 tags:
-- '#area/ai/comp-neuroscience/encoding'
+- '#ai/comp-neuroscience/encoding'
 ---
 
 # 2.1 Neural Encoding

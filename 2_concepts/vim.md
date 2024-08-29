@@ -1,7 +1,7 @@
 ---
 status: doing
 tags:
-  - '#area/swe/tool'
+  - '#swe/tool'
   - '#type/tutorial'
 ---
 

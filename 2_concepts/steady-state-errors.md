@@ -1,7 +1,7 @@
 ---
 date: October 22, 2022
 tags:
-- '#area/signals/controls'
+- '#signals/controls'
 ---
 
 # Steady State Errors

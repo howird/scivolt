@@ -1,7 +1,7 @@
 ---
 date: April 28, 2021
 tags:
-- '#area/ai/comp-neuroscience/decoding'
+- '#ai/comp-neuroscience/decoding'
 ---
 
 # 3.1 Neural Decoding and Signal Detection Theory

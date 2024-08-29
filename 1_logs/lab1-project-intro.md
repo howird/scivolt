@@ -1,7 +1,7 @@
 ---
 lectures: w1d2, w2d1
 tags:
-- '#area/hwe/embedded-computer-systems'
+- '#hwe/embedded-computer-systems'
 ---
 
 # Lab 1 Introduction

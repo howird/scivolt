@@ -2,7 +2,7 @@
 date: August 27, 2024
 status: done
 tags:
-  - '#area/ai/rl'
+  - '#ai/rl'
   - '#type/theory'
 ---
 

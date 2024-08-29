@@ -1,7 +1,7 @@
 ---
 date: March 17, 2021
 tags:
-- '#area/ai/comp-neuroscience/bio'
+- '#ai/comp-neuroscience/bio'
 ---
 
 # 1.1 Models of Neuroscience

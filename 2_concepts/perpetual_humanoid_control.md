@@ -6,7 +6,7 @@ citekey: luoPerpetualHumanoidControl2023
 status: doing
 tags:
   - '#type/paper'
-  - '#area/ai/rl/TODO'
+  - '#ai/rl/TODO'
 title: Perpetual Humanoid Control for Real-time Simulated Avatars
 url: ''
 year: 2023/09

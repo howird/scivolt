@@ -1,7 +1,7 @@
 ---
 lectures: null
 tags:
-- '#area/hwe/embedded-computer-systems'
+- '#hwe/embedded-computer-systems'
 ---
 
 - period of 10
