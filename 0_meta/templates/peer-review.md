@@ -1,9 +1,13 @@
+---
+status: backlog
+---
+
 # {{title}}
 
 ## Prior Works
 
-- **What was done before**: 
-- **Why is the problem relevant**: 
+- **What was done before**:
+- **Why is the problem relevant**:
 - **How do the prior works align with the proposed solution**:
 
 ## Problem Statement
@@ -17,19 +21,19 @@
 - Originality:
 - Quality:
 - Clarity:
-- Significance: 
+- Significance:
 
 ### Additional Strengths
 
-- 
+-
 
 ### Additional Weaknesses
 
-- 
+-
 
 ## Questions
 
-- 
+-
 
 ## Limitations
 
@@ -38,4 +42,4 @@
 
 ## Recommendations for the author
 
-- 
+-
