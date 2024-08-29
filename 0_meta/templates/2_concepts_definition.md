@@ -2,7 +2,7 @@
 reference:
 status: backlog
 tags:
-  - '#type/theory'
+  - '#note/theory'
 topics:
 ---
 

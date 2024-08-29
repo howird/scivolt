@@ -6,7 +6,7 @@ authors: '{{authors}}'
 citekey: '{{citekey}}'
 status: backlog
 tags:
-  - '#type/paper'
+  - '#paper'
 title: '{{title}}'
 url: '{{URL}}'
 year: '{{date | format("YYYY/MM")}}'
@@ -14,14 +14,14 @@ year: '{{date | format("YYYY/MM")}}'
 
 # {{title}}
 
-> \[!abstract\]
+> [!abstract]
 > {{abstractNote}}
 
 ## 3-pass method
 
 ### Pass 1
 
-> \[!info\]
+> [!info]
 >
 > - carefully read title, abstract, intro
 > - read all headings and subheadings
@@ -47,7 +47,7 @@ year: '{{date | format("YYYY/MM")}}'
 
 ### Pass 2
 
-> \[!info\]
+> [!info]
 > Pass 2 (1 hour):
 >
 > - understand figures, graphs, looking for errors
@@ -56,7 +56,7 @@ year: '{{date | format("YYYY/MM")}}'
 
 ### Pass 3
 
-> \[!info\]
+> [!info]
 > Pass 3 (5 hours):
 >
 > - essentially re-implement the entire paper
@@ -68,7 +68,7 @@ year: '{{date | format("YYYY/MM")}}'
 
 ## Distillation
 
-> \[!info\]
+> [!info]
 > After the 2/3 pass method try and copy and paste the above notes and present them in a more structured manner
 
 ### Problem

@@ -1,9 +1,9 @@
 ---
 status: backlog
 tags:
-  - '#type/theory'
+  - '#note/theory'
   - '#statistics/regression'
-  - '#ai/dl'
+  - '#deep-learning'
 ---
 
 #### 2.1 Regression and classification are prediction of continuous and categorical values, respectively
@@ -63,7 +63,7 @@ L = \boldsymbol{w}^TX^TX\boldsymbol{w} - X^T\boldsymbol{w}^T\boldsymbol{y} - \bo
 \frac{\partial L}{\partial \boldsymbol w} = 2X^TX\boldsymbol{w} - 2X^T\boldsymbol{y} \\
 \frac{\partial L}{\partial \boldsymbol w} = 0 \\
 0 = X^TX\boldsymbol{w} - X^T\boldsymbol{y} \\
-\boldsymbol{w}^\* = (X^TX)^{-1}X^T\boldsymbol{y} \\
+\boldsymbol{w}^* = (X^TX)^{-1}X^T\boldsymbol{y} \\
 }
 $$
 
@@ -92,7 +92,7 @@ $$
   $$
   \displaylines{
   \tilde L = \sum_{i=0}^N \overbrace{(\hat y_i - y_i)^2}^\text{prediction errors are bad} + \overbrace{\lambda \boldsymbol w^T \boldsymbol w}^\text{large weights are bad} \\
-  \implies \boldsymbol{w}^\* = (\lambda I + X^TX)^{-1}X^T\boldsymbol{y} \\
+  \implies \boldsymbol{w}^* = (\lambda I + X^TX)^{-1}X^T\boldsymbol{y} \\
   }
   $$
 

@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#ai/dl'
+  - '#deep-learning'
 ---
 
 # Key Concepts

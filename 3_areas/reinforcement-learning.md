@@ -1,7 +1,7 @@
 ---
 tags:
-  - '#type/area'
-  - '#ai/rl'
+  - '#note/area'
+  - '#reinforcement-learning'
 ---
 
 # What is Reinforcement Learning?
@@ -21,12 +21,12 @@ tags:
 ## Reinforcement Learning Terminology
 
 - Agent makes a decision,\
-  !\[\[1.1.png\]\]
+  ![[1.1.png]]
 
 ## Why is Deep RL Important?
 
 - END TO END TRAINING!
-  !\[\[1.2.png\]\]
+  ![[1.2.png]]
 - For example, classical Computer Vision involved taking an image and manually extracting low level and then mid level features before feeding those features into a classifier
 - Deep Learning enabled the end to end optimization of the feature extraction and classification components altogether
 - Similarly, in classical RL, one must design not only a feature extraction from the agent observation, one must also design a complex policy to produce actions
@@ -40,16 +40,16 @@ tags:
 - In terms of RL, traditionally, before end to end learning would handle the recognition component and the control components separately
 
 - non-e2e
-  !\[\[1.3.png\]\]
+  ![[1.3.png]]
 
 - e2e
-  !\[\[1.4.png\]\]
+  ![[1.4.png]]
 
 - non-e2e
-  !\[\[1.5.png\]\]
+  ![[1.5.png]]
 
 - e2e:
-  !\[\[1.6.png\]\]
+  ![[1.6.png]]
 
 - Using e2e training, each component of of the pipeline is informed and optimized by the following components
 
@@ -90,7 +90,7 @@ tags:
   - Deep Neural Networks have been proven to process complex sensory input
     - and also compute very complex functions
   - Reinforcement Learning provides the formalism to choose complex actions
-- One study in support of deep learning \[Saxe et Al\](unsupervised learning mdels of primary cortical receptive fields and receptive field plasticity) showed:
+- One study in support of deep learning [Saxe et Al](unsupervised learning mdels of primary cortical receptive fields and receptive field plasticity) showed:
   - tries to analyze the feature known to exist in the brain and compare to feature known to exist in primate senory cotices
   - exposed visual stimulus to a DNN known to elicit specific responss in the primate brain and found that the learned features were statistically very similar to the features in the primate brain
     - the same statistical similarities were found in auditory and touch stimuli

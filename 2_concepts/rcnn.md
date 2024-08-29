@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#ai/dl'
+  - '#deep-learning'
   - '#application/vision'
 ---
 
@@ -18,7 +18,7 @@ tags:
   - classifies each region with category-specific linear SVMs
 - Use a simple technique affine image warping to compute a fixed-size CNN input from each region proposal regardless of the region' shape
 
-!\[\[Pasted image 20231002184636.png\]\]
+![[Pasted image 20231002184636.png]]
 
 # Fast RCNN and Faster RCNN
 
@@ -56,11 +56,11 @@ Multi-Scale Anchors as Regression References
 
 - Our design of anchors presents a novel scheme for addressing multiple scales (and aspect ratios)
 - As shown in Figure 1, there have been two popular ways for multi-scale predictions.
-  !\[\[Pasted image 20231003173212.png\]\]
-- The first way (b) is based on image/feature pyramids, e.g., in DPM \[8\] and CNNbased methods
-  - The images are resized at multiple scales, and feature maps (HOG \[8\] or deep convolutional features) are computed for each scale (Figure 1(a)). This way is often useful but is time-consuming.
-- The second way is to use sliding windows of multiple scales (and/or aspect ratios) on the feature maps. For example, in DPM \[8\], models of different aspect ratios are trained separately using different filter sizes (such as 5×7 and 7×5). If this way is used to address multiple scales, it can be thought of as a “pyramid of filters” (Figure 1(b)).
-- The second way is usually adopted jointly with the first way \[8\]. As a comparison, our anchor-based method is built on a pyramid of anchors, which is more cost-efficient.
+  ![[Pasted image 20231003173212.png]]
+- The first way (b) is based on image/feature pyramids, e.g., in DPM [8] and CNNbased methods
+  - The images are resized at multiple scales, and feature maps (HOG [8] or deep convolutional features) are computed for each scale (Figure 1(a)). This way is often useful but is time-consuming.
+- The second way is to use sliding windows of multiple scales (and/or aspect ratios) on the feature maps. For example, in DPM [8], models of different aspect ratios are trained separately using different filter sizes (such as 5×7 and 7×5). If this way is used to address multiple scales, it can be thought of as a “pyramid of filters” (Figure 1(b)).
+- The second way is usually adopted jointly with the first way [8]. As a comparison, our anchor-based method is built on a pyramid of anchors, which is more cost-efficient.
 - Our method classifies and regresses bounding boxes with reference to anchor boxes of multiple scales and aspect ratios.
 - It only relies on images and feature maps of a single scale, and uses filters (sliding windows on the feature map) of a single size.
 - We show by experiments the effects of this scheme for addressing multiple scales and sizes (Table 8).
@@ -73,9 +73,9 @@ Multi-Scale Anchors as Regression References
 - We assign a positive label to two kinds of anchors:
   - (i) the anchor/anchors with the highest Intersection-overUnion (IoU) overlap with a ground-truth box, or
   - (ii) an anchor that has an IoU overlap higher than 0.7 with any ground-truth box.
-  - Note: that a single ground-truth box may assign positive labels to multiple anchors. Usually the second condition is sufficient to determine the positive samples; but we still adopt the first condition for the reason that in some rare cases the second condition may find no positive sample. We assign a negative label to a non-positive anchor if its IoU ratio is lower than 0.3 for all ground-truth boxes. Anchors that are neither positive nor negative do not contribute to the training objective. With these definitions, we minimize an objective function following the multi-task loss in Fast R-CNN \[2\]. Our loss function for an image is defined as:
+  - Note: that a single ground-truth box may assign positive labels to multiple anchors. Usually the second condition is sufficient to determine the positive samples; but we still adopt the first condition for the reason that in some rare cases the second condition may find no positive sample. We assign a negative label to a non-positive anchor if its IoU ratio is lower than 0.3 for all ground-truth boxes. Anchors that are neither positive nor negative do not contribute to the training objective. With these definitions, we minimize an objective function following the multi-task loss in Fast R-CNN [2]. Our loss function for an image is defined as:
     $$
-    L({p_i},{t_i}) = \frac{1}{N_{cls}}\sum_iL_{cls}(p_i, p_i^*) + \lambda\frac{1}{N_{reg}}\sum p_i^* L_{reg}(t_i, t_i^\*)
+    L({p_i},{t_i}) = \frac{1}{N_{cls}}\sum_iL_{cls}(p_i, p_i^*) + \lambda\frac{1}{N_{reg}}\sum p_i^* L_{reg}(t_i, t_i^*)
     $$
 
 ## Fast RCNN

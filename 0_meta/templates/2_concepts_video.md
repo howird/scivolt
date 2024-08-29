@@ -2,7 +2,7 @@
 Link:
 status: backlog
 tags:
-  - '#type/video'
+  - '#note/video'
 ---
 
 # TITLE

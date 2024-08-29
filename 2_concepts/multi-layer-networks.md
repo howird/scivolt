@@ -1,8 +1,8 @@
 ---
 status: backlog
 tags:
-  - '#type/theory'
-  - '#ai/dl'
+  - '#note/theory'
+  - '#deep-learning'
 ---
 
 #### 3.1 Multi-layer feed-forward networks make a series of simple but unintuitive calculations

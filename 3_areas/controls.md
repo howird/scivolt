@@ -1,7 +1,7 @@
 ---
 tags:
   - '#signals'
-  - '#type/area'
+  - '#note/area'
 ---
 
 # signals

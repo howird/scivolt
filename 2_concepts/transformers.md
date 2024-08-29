@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#ai/dl'
+  - '#deep-learning'
 ---
 
 #### 9.1 Transformers operate on sequences of vectors
@@ -72,7 +72,7 @@ tags:
     - E.g., the first GPT network was trained on BookCorpus (Zhu et al., 2015, ICCV), a collection of 11K free books with about one billion words
 - Masked language modelling
   - The encoder-only BERT model (Devlin et al., 2019) introduced masked language modelling to transformers
-  - Given a full sequence, 15% of tokens are masked at random using a new \[MASK\] token
+  - Given a full sequence, 15% of tokens are masked at random using a new [MASK] token
   - The network predicts these tokens at each masked location, using both forward and backward context
 
 #### 9.10 Transformers create contextualized embeddings

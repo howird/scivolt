@@ -332,7 +332,7 @@ The implications of partitioning are:
     - preferred when accesses are sequential, distributing elements evenly across memories
   - **Block partitioning**: creates smaller arrays from consecutive blocks of the original array
     - better for strided accesses, where accesses jump by a certain stride (like looping through a column in a 2D array), grouping contiguous blocks of data in the same memory
-- Both partitioning types will create $M \times \text{sizeof}(a\[i\])$ memories/interfaces
+- Both partitioning types will create $M \times \text{sizeof}(a[i])$ memories/interfaces
 
 ````ad-example
 

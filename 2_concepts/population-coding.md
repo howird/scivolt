@@ -2,7 +2,7 @@
 date: April 30, 2021
 status: backlog
 tags:
-  - '#ai/comp-neuroscience/decoding'
+  - '#comp-neuro/decoding'
 ---
 
 # 3.2 Population Coding and Bayesian Estimation
@@ -23,7 +23,7 @@ tags:
 - The cosine allows us to interpret the neurons' firing rate as proportional to the projection of the wind velocity, $\overrightarrow v$, onto the cardinal vectors, $\overrightarrow c_a$
 
 $$
-\bigg(\frac{f(s)}{r_{max}}\bigg)_a = \[cos(s-s_a)\]_+
+\bigg(\frac{f(s)}{r_{max}}\bigg)_a = [cos(s-s_a)]_+
 $$
 
 $$
@@ -35,7 +35,7 @@ $$
 $$
 
 $$
-\therefore \\bigg(\frac{f(s)}{r_{max}}\bigg)_a = \[\overrightarrow v \cdot \overrightarrow c_a \]_+
+\therefore \\bigg(\frac{f(s)}{r_{max}}\bigg)_a = [\overrightarrow v \cdot \overrightarrow c_a ]_+
 $$
 
 - Now we can take the responses of all the neurons and compute something called the Population Vector:
@@ -103,7 +103,7 @@ So now we've seen this conditional distribution probability of response given s
 
 - So the two distributions that we're focused on have first the likelihood, that's the one we've already walked with in signal detection theory, and second is the a posteriori distribution.
 - Now we can define two important and general decoding strategies which utilize these two distributions
-- The first is maximum likelihood up here, which we first mentioned in the context of fitting coding models, and again in the decoding of two alternatives, and then we're going to use it in a slightly more general way. In maximum likelihood, one searches for the special stimulus value, s\*, that maximizes the likelihood in our true alternative choice.
+- The first is maximum likelihood up here, which we first mentioned in the context of fitting coding models, and again in the decoding of two alternatives, and then we're going to use it in a slightly more general way. In maximum likelihood, one searches for the special stimulus value, s*, that maximizes the likelihood in our true alternative choice.
 - That's how we mapped any value of the response onto a stimulus, or chose the stimulus value that had the larger likelihood. Alternatively, we can look for a stimulus that maximizes the a posteriori distribution. That's called maximum a posteriori, or MAP.
 
 ![](3.2.8.png#center){ width=100% }
@@ -186,13 +186,13 @@ Sum of that overall neurons. So now we need to find the s, value of s for which
 
 F prime times T over the function itself.
 
-So now we're going to get T sum over a ra f prime of s over f(s). And now we will set that to 0 and solve that for the value of s that solves that equation. So now, here's the expression that we'd like to solve for s\*. So how do we do that? So f as a function of s is equal to some pre factor Ae to the minus 1 over 2 sigma squared,
+So now we're going to get T sum over a ra f prime of s over f(s). And now we will set that to 0 and solve that for the value of s that solves that equation. So now, here's the expression that we'd like to solve for s*. So how do we do that? So f as a function of s is equal to some pre factor Ae to the minus 1 over 2 sigma squared,
 
 s minus sa that's central value. And now f prime of s equaling a. And now we bring down this factoring. There's a square, that that cancels with the half. There's a minus sign, then that cancels with this minus sign, so we get s minus s a over sigma squared. Multiplying the same thing we had before, 1 over 2 sigma squared (s- sa) squared. And so now this equation is quite simple, so we have a = 1 to N RA. What do we have left?
 
 F prime and the F are going to cancel out these exponential factors and the A, and so all we're left with is S minus SA.
 
-Over sigma squared equals 0. So now one can solve that for s = s\* and we're going to find the following solution. So s star is equal to ra times sa divided by sigma a squared and that's divided by the total sum of the firing rates where each is again normalized by its variance.
+Over sigma squared equals 0. So now one can solve that for s = s* and we're going to find the following solution. So s star is equal to ra times sa divided by sigma a squared and that's divided by the total sum of the firing rates where each is again normalized by its variance.
 
 Now if all the sigmas are the same, these factors cancel above and below and we get back an expression which should look very familiar.
 

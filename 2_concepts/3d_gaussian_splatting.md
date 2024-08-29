@@ -5,7 +5,7 @@ authors: Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis
 citekey: kerbl3DGaussianSplatting2023
 status: doing
 tags:
-  - '#type/paper'
+  - '#paper'
 title: 3D Gaussian Splatting for Real-Time Radiance Field Rendering
 url: ''
 year: 2023/08
@@ -13,14 +13,14 @@ year: 2023/08
 
 # 3D Gaussian Splatting for Real-Time Radiance Field Rendering
 
-> \[!abstract\]
+> [!abstract]
 > Radiance Field methods have recently revolutionized novel-view synthesis of scenes captured with multiple photos or videos. However, achieving high visual quality still requires neural networks that are costly to train and render, while recent faster methods inevitably trade off speed for quality. For unbounded and complete scenes (rather than isolated objects) and 1080p resolution rendering, no current method can achieve real-time display rates. We introduce three key elements that allow us to achieve state-of-the-art visual quality while maintaining competitive training times and importantly allow high-quality real-time (>= 30 fps) novel-view synthesis at 1080p resolution. First, starting from sparse points produced during camera calibration, we represent the scene with 3D Gaussians that preserve desirable properties of continuous volumetric radiance fields for scene optimization while avoiding unnecessary computation in empty space; Second, we perform interleaved optimization/density control of the 3D Gaussians, notably optimizing anisotropic covariance to achieve an accurate representation of the scene; Third, we develop a fast visibility-aware rendering algorithm that supports anisotropic splatting and both accelerates training and allows realtime rendering. We demonstrate state-of-the-art visual quality and real-time rendering on several established datasets.
 
 ## 3-pass method
 
 ### Pass 1
 
-> \[!info\]
+> [!info]
 >
 > - carefully read title, abstract, intro
 > - read all headings and subheadings
@@ -66,7 +66,7 @@ year: 2023/08
 
 ### Pass 2
 
-> \[!info\]
+> [!info]
 > Pass 2 (1 hour):
 >
 > - understand figures, graphs, looking for errors
@@ -75,7 +75,7 @@ year: 2023/08
 
 ### Pass 3
 
-> \[!info\]
+> [!info]
 > Pass 3 (5 hours):
 >
 > - essentially re-implement the entire paper
@@ -87,7 +87,7 @@ year: 2023/08
 
 ## Distillation
 
-> \[!info\]
+> [!info]
 > After the 2/3 pass method try and copy and paste the above notes and present them in a more structured manner
 
 ### Problem

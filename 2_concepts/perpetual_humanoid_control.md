@@ -5,23 +5,24 @@ authors: Zhengyi Luo, Jinkun Cao, Alexander Winkler, Kris Kitani, Weipeng Xu
 citekey: luoPerpetualHumanoidControl2023
 status: doing
 tags:
-  - '#type/paper'
-  - '#ai/rl/TODO'
+  - "#paper"
+  - "#reinforcement-learning/TODO"
+  - "#application/control"
 title: Perpetual Humanoid Control for Real-time Simulated Avatars
-url: ''
+url: ""
 year: 2023/09
 ---
 
 # Perpetual Humanoid Control for Real-time Simulated Avatars
 
-> \[!abstract\]
+> [!abstract]
 > We present a physics-based humanoid controller that achieves high-fidelity motion imitation and fault-tolerant behavior in the presence of noisy input (e.g. pose estimates from video or generated from language) and unexpected falls. Our controller scales up to learning ten thousand motion clips without using any external stabilizing forces and learns to naturally recover from fail-state. Given reference motion, our controller can perpetually control simulated avatars without requiring resets. At its core, we propose the progressive multiplicative control policy (PMCP), which dynamically allocates new network capacity to learn harder and harder motion sequences. PMCP allows efficient scaling for learning from large-scale motion databases and adding new tasks, such as fail-state recovery, without catastrophic forgetting. We demonstrate the effectiveness of our controller by using it to imitate noisy poses from video-based pose estimators and language-based motion generators in a live and real-time multi-person avatar use case.
 
 ## 3-pass method
 
 ### Pass 1
 
-> \[!info\]
+> [!info]
 >
 > - carefully read title, abstract, intro
 > - read all headings and subheadings
@@ -86,7 +87,7 @@ year: 2023/09
 
 ### Pass 2
 
-> \[!info\]
+> [!info]
 > Pass 2 (1 hour):
 >
 > - understand figures, graphs, looking for errors
@@ -95,7 +96,7 @@ year: 2023/09
 
 ### Pass 3
 
-> \[!info\]
+> [!info]
 > Pass 3 (5 hours):
 >
 > - essentially re-implement the entire paper
@@ -107,7 +108,7 @@ year: 2023/09
 
 ## Distillation
 
-> \[!info\]
+> [!info]
 > After the 2/3 pass method try and copy and paste the above notes and present them in a more structured manner
 
 ### Problem

@@ -1,7 +1,7 @@
 ---
 tags:
   - '#hwe/embedded-computer-systems'
-  - '#type/area'
+  - '#note/area'
 ---
 
 [2.1 high-level-synthesis](high-level-synthesis.md)
@@ -20,7 +20,6 @@ tags:
 [5.2 app-specific-instr-procs](app-specific-instr-procs.md)
 [5.3 asip](asip.md)
 [6.1 memory-organization](memory-organization.md)
-[7 energy-optimization](energy-optimization.md)
 
 # Introduction to Embedded Computer Systems
 

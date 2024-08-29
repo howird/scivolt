@@ -2,7 +2,7 @@
 date: April 22, 2022
 status: backlog
 tags:
-  - '#ai/ml'
+  - '#machine-learning'
   - '#application/clustering'
 ---
 
@@ -18,7 +18,7 @@ $$
 \text{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j=1}^n e^{x_j}}
 $$
 
-- Then, we update the value of each mean as the expected value ($E\[x\]$) or weighted average of the points w.r.t. their probability distribution
+- Then, we update the value of each mean as the expected value ($E[x]$) or weighted average of the points w.r.t. their probability distribution
 
 ## Implementation
 
@@ -134,7 +134,7 @@ $$
 $$
 
 $$
-\text{where: } \text{ label}_{i} \in \[0, k), \mathbb{Z}
+\text{where: } \text{ label}_{i} \in [0, k), \mathbb{Z}
 $$
 
 - Then, we check if the labels we just created are the exact same as the previous iteration, if so, we end the algorithm

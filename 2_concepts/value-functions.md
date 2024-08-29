@@ -2,13 +2,13 @@
 date: August 27, 2024
 status: doing
 tags:
-  - '#ai/rl/model-based'
-  - '#type/theory'
+  - '#reinforcement-learning/model-based'
+  - '#note/theory'
 ---
 
 # Rewards and Value Functions
 
-> \[!info\] Background
+> [!info] Background
 > [markov-decision-process](markov-decision-process.md)
 
 ## Return
@@ -42,17 +42,17 @@ $$
 
 - A value function $V(s)$ is the expected sum of discounted rewards when starting from state $s$ and acting under a policy $\pi$
   $$
-  V(s) = \mathbb{E}\big\[ \sum_{t=0}^H \gamma^t R_{t+1}(S_t, A_t, S_{t+1}) | \pi,s_0=s \big\]
+  V(s) = \mathbb{E}\big[ \sum_{t=0}^H \gamma^t R_{t+1}(S_t, A_t, S_{t+1}) | \pi,s_0=s \big]
   $$
 
-- An __optimal__ value function $V^\*(s)$ is the expected sum of discounted rewards when starting from state $s$ and acting under an __optimal__ policy $\pi$
+- An __optimal__ value function $V^*(s)$ is the expected sum of discounted rewards when starting from state $s$ and acting under an __optimal__ policy $\pi$
 
   - the optimal policy is defined as the policy which maximizes the value function
     $$
     \begin{aligned}
-    V^*(s) &= \max_\pi\mathbb{E}\big\[ \sum_{t=0}^H \gamma^t R_{t+1}(S_t, A_t, S_{t+1}) | \pi, s_0=s \big\] \\\
+    V^*(s) &= \max_\pi\mathbb{E}\big[ \sum_{t=0}^H \gamma^t R_{t+1}(S_t, A_t, S_{t+1}) | \pi, s_0=s \big] \\\
     \pi^*(s) &= \arg\max_\pi V(s)\\
-    &= \arg\max_\pi\mathbb{E}\big\[ \sum_{t=0}^H \gamma^t R_{t+1}(S_t, A_t, S_{t+1}) | \pi, s_0=s \big\] \\
+    &= \arg\max_\pi\mathbb{E}\big[ \sum_{t=0}^H \gamma^t R_{t+1}(S_t, A_t, S_{t+1}) | \pi, s_0=s \big] \\
     \end{aligned}
     $$
 

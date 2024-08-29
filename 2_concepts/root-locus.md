@@ -41,7 +41,7 @@ $$
 1. As $k \rightarrow \infty$, the remaining $n-m$ branches tend towards $\infty$, with straight line symptotes with angles of:
 
 $$
-\theta = \frac{\pm (2q+1))180^\text o}{n - m}, {q|q\in \mathbb Z, q\in\[0,n-m)}
+\theta = \frac{\pm (2q+1))180^\text o}{n - m}, {q|q\in \mathbb Z, q\in[0,n-m)}
 $$
 from a common intersection point at:
 

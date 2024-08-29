@@ -35,7 +35,7 @@ INS DIAGRAM
 
 - deamond will be initialized to zero (doesnt have to be)
 
-- \[\*C_0\]
+- [*C_0]
 
 sdf scheduling algo
 

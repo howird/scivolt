@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#type/tutorial'
+  - '#note/tutorial'
   - '#hwe'
 ---
 

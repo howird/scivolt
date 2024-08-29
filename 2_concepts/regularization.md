@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#ai/dl'
+  - '#deep-learning'
 ---
 
 #### 6.1 Overfitting can be reduced by simplifying the model, using more training data, or regularization

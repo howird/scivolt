@@ -2,7 +2,7 @@
 date: June 15, 2022
 status: backlog
 tags:
-  - '#ai/dl'
+  - '#deep-learning'
 ---
 
 # AlexNet

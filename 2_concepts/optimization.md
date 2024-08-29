@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#ai/dl'
+  - '#deep-learning'
 ---
 
 #### 5.1 Challenges include high dimensionality, non-convexity, poor conditioning, and gradient cliffs

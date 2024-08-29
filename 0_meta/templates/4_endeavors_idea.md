@@ -22,7 +22,7 @@ tags:
 
 ## Milestones
 
-- \[ \]
+- [ ]
 
 ## Data
 

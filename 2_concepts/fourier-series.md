@@ -6,7 +6,7 @@ tags:
 
 # Fourier Series Part 1
 
-- We want to approximate the following function, $f(x)$, as a summation of periodic functions within a specific domain, here we choose $\[-\pi, \pi\]$
+- We want to approximate the following function, $f(x)$, as a summation of periodic functions within a specific domain, here we choose $[-\pi, \pi]$
   ![](https://lh7-us.googleusercontent.com/HAlo-HlcIzOP3gw1Hqo2RK7XOuGlaLG5ZX9oyDeQwy9X1vXWmuWjOxKdCBgk3NqqoHynzVE1uSXmqiiW9YwoRPUJSMJ-GnNLLMXPigOFw_LjWEvZkzsLN8CSt2NjP2scT2ioL0eZ33Gs7fg65ZHCyw)
 
 $$f(x) = \frac{A_0}{2} + \sum _{k=1}^{\infty} A_k \cos (kx)+B_k \sin (kx)$$
@@ -87,7 +87,7 @@ $$
 \<\Psi_n, \Psi_m> = \int_{-\pi}^{\pi} e^{jnx}e^{-jmx}dx = \int_{-\pi}^{\pi} e^{j(n-m)x}dx
 $$%5Cpsi_k%20%3D%20e%5E%7Bikx%7D%20%3D%20%5Ccos(kx)%2Bi%20%5Csin(kx)
 
-[$$\implies \frac{1}{i(j-k)} \[ e^{j(n-m)x}\]_{-\pi}^{\pi}$$](<https://www.codecogs.com/eqnedit.php?latex=%5Cpsi_k%20%3D%20e%5E%7Bikx%7D%20%3D%20%5Ccos(kx)%2Bi%20%5Csin(kx)#0>)
+[$$\implies \frac{1}{i(j-k)} [ e^{j(n-m)x}]_{-\pi}^{\pi}$$](<https://www.codecogs.com/eqnedit.php?latex=%5Cpsi_k%20%3D%20e%5E%7Bikx%7D%20%3D%20%5Ccos(kx)%2Bi%20%5Csin(kx)#0>)
 
 - Here, since the function is periodic from $-\pi$ to $\pi$, $e^{j(n-m)}$ will always be equal at $-\pi$ and $\pi$, thus when $n \ne m$ it must evaluate to 0, in the equal case use l'hopital's:
   $$
@@ -200,7 +200,7 @@ $$f * g=\mathcal{L}(f)\cdot \mathcal{L}(g) = f(S) \cdot g(S)$$
 
 ![](https://lh7-us.googleusercontent.com/mAx0Q1fyEEJdShCv2IEMiiICXOE5QrEa3jX3QBPcM5czQYMgt-2bN6wCeG-3q4o0m67eAMhWT2W--OF3MBpkJ6JjFO88Kp2Hwu9bCqUkHUdCJZBhRrWpusXzqq4fzQWg1eroemb41g0sAlFqf5r2pA)
 
-- Given a system defined by its impulse response, $$h(t)$$, its output to an input $$x(t)$$ is: $$y(t) = h(t)\*x(t)$$
+- Given a system defined by its impulse response, $$h(t)$$, its output to an input $$x(t)$$ is: $$y(t) = h(t)*x(t)$$
 
 - In the frequency domain, taking the Laplace Transform of the impulse response $$h(t)$$, gives us the system function: $$H(S)$$
 
@@ -208,4 +208,4 @@ $$Y(S) = H(S)\cdot X(S)$$
 
 - For stable, causal systems all poles are on the left half of the S-plane
 
-\*\*
+**

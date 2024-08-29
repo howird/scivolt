@@ -2,7 +2,7 @@
 date: March 18, 2021
 status: backlog
 tags:
-  - '#ai/comp-neuroscience/encoding'
+  - '#comp-neuro/encoding'
 ---
 
 # 2.3 Feature Selection

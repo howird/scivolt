@@ -6,7 +6,7 @@ authors: Maximilian Gilles, Yuhao Chen, Tim Robin Winter, E. Zhixuan Zeng, Alexa
 citekey: gillesMetaGraspNetLargeScaleBenchmark2022
 status: backlog
 tags:
-  - '#type/paper'
+  - '#paper'
 title: 'MetaGraspNet: A Large-Scale Benchmark Dataset for Scene-Aware Ambidextrous Bin Picking via Physics-based Metaverse Synthesis'
 url: ''
 year: 2022/08
@@ -14,7 +14,7 @@ year: 2022/08
 
 # MetaGraspNet: A Large-Scale Benchmark Dataset for Scene-Aware Ambidextrous Bin Picking via Physics-based Metaverse Synthesis
 
-> \[!abstract\]
+> [!abstract]
 > Autonomous bin picking poses significant challenges to vision-driven robotic systems given the complexity of the problem, ranging from various sensor modalities, to highly entangled object layouts, to diverse item properties and gripper types. Existing methods often address the problem from one perspective. Diverse items and complex bin scenes require diverse picking strategies together with advanced reasoning. As such, to build robust and effective machine-learning algorithms for solving this complex task requires significant amounts of comprehensive and high quality data. Collecting such data in real world would be too expensive and time prohibitive and therefore intractable from a scalability perspective. To tackle this big, diverse data problem, we take inspiration from the recent rise in the concept of metaverses, and introduce MetaGraspNet, a large-scale photo-realistic bin picking dataset constructed via physics-based metaverse synthesis. The proposed dataset contains 217k RGBD images across 82 different article types, with full annotations for object detection, amodal perception, keypoint detection, manipulation order and ambidextrous grasp labels for a parallel-jaw and vacuum gripper. We also provide a real dataset consisting of over 2.3k fully annotated high-quality RGBD images, divided into 5 levels of difficulties and an unseen object set to evaluate different object and layout properties. Finally, we conduct extensive experiments showing that our proposed vacuum seal model and synthetic dataset achieves state-of-the-art performance and generalizes to real world use-cases.
 
 # Short Summary

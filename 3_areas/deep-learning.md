@@ -1,10 +1,9 @@
 ---
 tags:
-  - '#type/area'
+  - '#note/area'
 ---
 
 [1 intro](intro.md)
-[10a llms](llms.md)
 [2 linear-regression-classification](linear-regression-classification.md)
 [3 multi-layer-networks](multi-layer-networks.md)
 [4 backprop](backprop.md)
@@ -16,3 +15,4 @@ tags:
 [8 cnn-architectures](cnn-architectures.md)
 [8.2 alexnet](alexnet.md)
 [9 transformers](transformers.md)
+[10a llms](llms.md)

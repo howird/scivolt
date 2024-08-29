@@ -2,7 +2,7 @@
 date: June 9, 2022
 status: backlog
 tags:
-  - '#ai/ml'
+  - '#machine-learning'
   - '#application/classification'
 ---
 
@@ -14,7 +14,7 @@ tags:
 
 - Suppose we have a dataset with positive and negative classes:
 
-![](learning-wiki/machine-learning/img/4.1.1.png#center){width=60%}
+![](img/4.1.1.png#center){width=60%}
 
 - We can draw an arbitrary decision boundary:
 
@@ -111,7 +111,7 @@ $$
 - Thus we want to find:
 
 $$
-\operatorname\*{argmin}_w \frac12||w||^2 \tag{3}
+\operatorname*{argmin}_w \frac12||w||^2 \tag{3}
 $$
 
 ### Optimization
@@ -119,7 +119,7 @@ $$
 - To do so, we use Lagrange Multipliers:
 
 $$
-L = \frac12||w||^2 - \sum_i\alpha_i\[y_i (\overrightarrow w \cdot \overrightarrow x_i + b) -1\]
+L = \frac12||w||^2 - \sum_i\alpha_i[y_i (\overrightarrow w \cdot \overrightarrow x_i + b) -1]
 $$
 
 - We try to find the extremum with respect to $w$:
@@ -155,7 +155,7 @@ $$
 - On a sidenote, we can plug our two equations back into the original equation $L$:
 
 $$
-L = \frac12||w||^2 - \sum_i\alpha_i\[y_i (\overrightarrow w \cdot \overrightarrow x_i + b) -1\]
+L = \frac12||w||^2 - \sum_i\alpha_i[y_i (\overrightarrow w \cdot \overrightarrow x_i + b) -1]
 $$
 
 $$
@@ -203,7 +203,7 @@ $$
   - Using equations $(1)$ and $(2)$, we find that we can maximize the width of the margins with:
 
 $$
-\operatorname\*{argmin}_w \frac12||w||^2 \tag{3}
+\operatorname*{argmin}_w \frac12||w||^2 \tag{3}
 $$
 
 - We optimize this using Lagrange Multipliers and get:

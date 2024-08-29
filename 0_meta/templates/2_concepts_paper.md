@@ -6,7 +6,7 @@ authors: '{{authors}}'
 citekey: '{{citekey}}'
 status: backlog
 tags:
-  - '#type/paper'
+  - '#paper'
 title: '{{title}}'
 url: '{{URL}}'
 year: '{{date | format("YYYY/MM")}}'
@@ -14,7 +14,7 @@ year: '{{date | format("YYYY/MM")}}'
 
 # {{title}}
 
-> \[!abstract\]
+> [!abstract]
 > {{abstractNote}}
 
 # Short Summary

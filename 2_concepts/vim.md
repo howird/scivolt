@@ -2,7 +2,7 @@
 status: doing
 tags:
   - '#swe/tool'
-  - '#type/tutorial'
+  - '#note/tutorial'
 ---
 
 # my vim cheatsheet

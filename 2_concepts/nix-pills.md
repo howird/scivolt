@@ -1,7 +1,7 @@
 ---
 status: doing
 tags:
-  - '#type/tutorial'
+  - '#note/tutorial'
   - '#swe/nix/pills'
 ---
 
@@ -9,7 +9,7 @@ tags:
 
 ## Pill 6: Our First Derivation
 
-> \[!info\]
+> [!info]
 >
 > A Nix derivation is a low-level, intermediate representation used in the Nix package manager to describe how a package or a build artifact should be constructed. It contains all the information needed to build a package, including:
 

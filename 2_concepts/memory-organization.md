@@ -12,7 +12,7 @@ tags:
 
 - The average memory access time ($t_avg$​) is a fundamental metric used to understand the efficiency of memory hierarchies in processors
 
-- It is calculated based on the hit time ($t_{hit}$​), the miss rate ($% \times t_{miss}$​), and the time it takes to retrieve data from the next level of cache or memory when there is a miss
+- It is calculated based on the hit time ($t_{hit}$​), the miss rate ($\% \times t_{miss}$​), and the time it takes to retrieve data from the next level of cache or memory when there is a miss
   $$
   \displaylines{
   t_{avg} = t_{hit} + % \times t_{miss} \\
@@ -39,7 +39,7 @@ tags:
   - $L_i \subset L_{i+1}$
   - This simplifies cache coherency protocols because only the highest-level cache needs to be checked for coherency issues, and ensures a single point of update or invalidation.
 
-- \*\* (2) Exclusive\*\*: Data stored in a lower-level cache (L1) is not stored in any higher-level cache (L3)
+- ** (2) Exclusive**: Data stored in a lower-level cache (L1) is not stored in any higher-level cache (L3)
 
   - $L_i \cap L_{i+1} = 0$
   - This maximizes the total unique data stored across all caches but can complicate cache coherency and require more frequent access to slower memory.

@@ -1,19 +1,19 @@
 ---
 status: backlog
 tags:
-  - '#ai/dl'
+  - '#deep-learning'
 ---
 
 #### 7.1 Convolution is related to correlation
 
 - Convolution
   $$
-  (f * g)\[k\] = \sum_{m=1}^M f\[k - m\]g\[m\]
+  (f * g)[k] = \sum_{m=1}^M f[k - m]g[m]
   $$
 
 - Cross-correlation
   $$
-  (f \star g)\[k\] = \sum_{m=1}^M f\[k + m\]g\[m\]
+  (f \star g)[k] = \sum_{m=1}^M f[k + m]g[m]
   $$
 
 #### 7.2 Convolution emphasizes features that are like the kernel

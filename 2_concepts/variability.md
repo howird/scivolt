@@ -2,7 +2,7 @@
 date: April 26, 2021
 status: backlog
 tags:
-  - '#ai/comp-neuroscience/encoding'
+  - '#comp-neuro/encoding'
 ---
 
 # 2.4 Variability
@@ -44,7 +44,7 @@ $$
 - The next issue to deal with is to generate the arrival time of spikes $p(t),$ from  $r(t)$
 - Over a time period $t$ which is divided into $n$ time bins:
   - Each time bin is $\Delta t$ long where $\Delta t= \frac T n$
-  - Over $t$ the probability that $k$ spikes occur is $P_n\[k\] = \binom nk p^k(1-p)^k$
+  - Over $t$ the probability that $k$ spikes occur is $P_n[k] = \binom nk p^k(1-p)^k$
   - The mean or average number of spikes is $<k> = np$
   - The variance is $Var(k) = np(1-p)$
 
@@ -54,7 +54,7 @@ $$
 - We use the Poisson Distribution which is the Binomial with $n \rightarrow \infin \text{ and } p \rightarrow 0$
   - Thus the Poisson Distribution can be used to provide a reasonable approx. to the binomial if $n$ is large and $p$ is small
 
-  - Distribution: $P_T\[k\] = (rT)^k \exp(-rT)/k!$ where $r = \frac {P}{\Delta t}$
+  - Distribution: $P_T[k] = (rT)^k \exp(-rT)/k!$ where $r = \frac {P}{\Delta t}$
 
   - Mean: $<k>= rT$
 

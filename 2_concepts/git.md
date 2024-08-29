@@ -1,13 +1,13 @@
 ---
 status: backlog
 tags:
-  - '#type/tutorial'
+  - '#note/tutorial'
   - '#swe/tool'
 ---
 
 # Git
 
-> \[!info\]
+> [!info]
 > Put any git commands here that you need to remember and could foresee yourself using in the future.
 
 ### Normal usage

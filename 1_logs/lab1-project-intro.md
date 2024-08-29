@@ -15,9 +15,9 @@ tags:
 ### Color Spaces
 
 - bitmaps (`.bmp` files) and screen output are normally in the RGB (red green blue) space
-  - where each pixel is represented using 8 bits per color $\in \[0, 255\]$
+  - where each pixel is represented using 8 bits per color $\in [0, 255]$
 - Instead of the RGB color space, we use YCbCr (luminance, blue chrominance, red chrominance)
-  - also using 8 bits per color $\in \[0, 255\]$
+  - also using 8 bits per color $\in [0, 255]$
 
 ```ad-info
 Human eyes are more sensitive to changes in brightness (luminance) than changes in colour (chrominance)
@@ -62,7 +62,7 @@ the program processes them in this order
           - $j$ is frame number
           - what is the difference between the $j$ frame number and $i$ frame number
 
-- File Format = \[header | payload | trailer\]
+- File Format = [header | payload | trailer]
 
   - Header: always 20 bytes
     - 5 equal 4 byte sections

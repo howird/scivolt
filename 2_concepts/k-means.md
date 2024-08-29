@@ -2,7 +2,7 @@
 date: April 20, 2022
 status: backlog
 tags:
-  - '#ai/ml'
+  - '#machine-learning'
   - '#application/clustering'
 ---
 
@@ -151,7 +151,7 @@ $$
 $$
 
 $$
-\text{where: } \text{ label}_{i} \in \[0, k), \mathbb{Z}
+\text{where: } \text{ label}_{i} \in [0, k), \mathbb{Z}
 $$
 
 ### Loop Step 3

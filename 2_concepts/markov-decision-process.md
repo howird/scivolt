@@ -2,13 +2,13 @@
 date: August 27, 2024
 status: done
 tags:
-  - '#ai/rl'
-  - '#type/theory'
+  - '#reinforcement-learning'
+  - '#note/theory'
 ---
 
 # Markov Decision Process
 
-> \[!info\] Background
+> [!info] Background
 >
 > - A __Markov chain__ is a mathematical model used to describe a system that transitions from one state to another within a set of possible states, $S$
 > - __Markov Property__: the probability of transitioning to any future state depends only on the current state and not on the sequence of events that preceded it
@@ -28,7 +28,7 @@ tags:
   - Reward function $R(s, a, s')$
     - note: the reward at
   - Start state $s_0$
-  - Discount factor $\gamma \in \[0,1\]$
+  - Discount factor $\gamma \in [0,1]$
   - Horizon $H$
 
 - __Reinforcement Learning__ (RL) defines the state to encapsulate an agent and environment
@@ -40,11 +40,11 @@ tags:
 
 - Goal of RL is to learn a policy, $\pi$, that will maximize the (discounted) expected reward:
   $$
-  \pi(s) = \arg\max_\pi E\[\sum_{t=0}^H\gamma_tR(S_t, A_t, S_{t+1}|\pi)\]
+  \pi(s) = \arg\max_\pi E[\sum_{t=0}^H\gamma_tR(S_t, A_t, S_{t+1}|\pi)]
   $$
 - note: the policy $\pi(s)$ returns a probability distribution over all possible actions
 
-> \[!question\]
+> [!question]
 >
 > - (1) One confusing aspect is the alignment of the state actions and rewards at each time step:
 >

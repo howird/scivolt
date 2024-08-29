@@ -2,8 +2,8 @@
 date: August 27, 2024
 status: doing
 tags:
-  - '#ai/rl/model-based'
-  - '#type/algorithm'
+  - '#reinforcement-learning/model-based'
+  - '#note/algorithm'
 ---
 
 # Value Iteration

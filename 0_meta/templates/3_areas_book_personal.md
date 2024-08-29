@@ -3,7 +3,7 @@ date: '{{date}}'
 pages_per_hour:
 status: backlog
 tags:
-  - '#type/book'
+  - '#note/book'
 ---
 
 # {{title}}

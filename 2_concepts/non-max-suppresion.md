@@ -1,9 +1,9 @@
 ---
 status: doing
 tags:
-  - '#type/algorithm'
-  - '#type/impl'
-  - '#ai/feature-eng'
+  - '#note/algorithm'
+  - '#note/impl'
+  - '#feature-engineering'
   - '#application/vision'
 ---
 
