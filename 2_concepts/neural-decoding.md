@@ -63,17 +63,17 @@ tags:
 
 ```python
 def is_tiger(tiger_threshold, breeze_threshold, p_dist_tiger, p_dist_breeze):
-		counter = 0
-		time = 0
-		is_tiger = None
-		while True:
-				s = getStimulus()
-				likelihood = p_dist_tiger(s)/p_dist_breeze(s)
-				counter += log(likelihood)
-				if   counter >= tiger_threshold:
-						return True
-				elif counter <= breeze_threshold:
-						return False
+        counter = 0
+        time = 0
+        is_tiger = None
+        while True:
+                s = getStimulus()
+                likelihood = p_dist_tiger(s)/p_dist_breeze(s)
+                counter += log(likelihood)
+                if   counter >= tiger_threshold:
+                        return True
+                elif counter <= breeze_threshold:
+                        return False
 ```
 
 # Kiani, Hanks, Shadlen (2006)

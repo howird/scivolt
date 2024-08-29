@@ -10,9 +10,9 @@ tags:
 
 ```c
 void toplevel(args) {
-	module1; // L1  <- function call on loop
-	module2; // L2
-	module3; // L3
+    module1; // L1  <- function call on loop
+    module2; // L2
+    module3; // L3
 }
 ```
 
@@ -31,6 +31,6 @@ void toplevel(args) {
 ```ad-question
 - This is essentially just pipelining to improve throughput
 - The difference between data-level parallelism pipelining and transaction level is that:
-	- data-level parallelism is pipelining at the loop level for smaller operations
-	- transaction-level parallelism is pipelining at the top-level module level
+    - data-level parallelism is pipelining at the loop level for smaller operations
+    - transaction-level parallelism is pipelining at the top-level module level
 ```

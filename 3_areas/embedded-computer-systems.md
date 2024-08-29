@@ -53,23 +53,23 @@ tags:
 
 ```mermaid
 graph TD
-	r([requirements]) -->|analysis| ss([system spec])
-	ss -->|partitioning| hb([hardware blocks])
-	ss -->|partitioning| a([architecture])
-	ss -->|partitioning| sb([software blocks])
+    r([requirements]) -->|analysis| ss([system spec])
+    ss -->|partitioning| hb([hardware blocks])
+    ss -->|partitioning| a([architecture])
+    ss -->|partitioning| sb([software blocks])
 
-	hb -->|design| hd([hardware designs])
-	a -.-> hd
-	hd -->|implementation| hm([hardware modules])
-	a -.-> hm
-	a --> s([system])
-	a -.-> sm
-	sd -->|implementation| sm([software modules])
-	a -.-> sd
-	sb -->|design| sd([software designs])
+    hb -->|design| hd([hardware designs])
+    a -.-> hd
+    hd -->|implementation| hm([hardware modules])
+    a -.-> hm
+    a --> s([system])
+    a -.-> sm
+    sd -->|implementation| sm([software modules])
+    a -.-> sd
+    sb -->|design| sd([software designs])
 
-	hm -->|integration| s
-	sm -->|integration| s
+    hm -->|integration| s
+    sm -->|integration| s
 ```
 
 - (1) requirements specification defines:

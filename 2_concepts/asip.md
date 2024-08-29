@@ -1,5 +1,5 @@
 ---
-status: backlog
+status: done
 tags:
   - '#hwe/embedded-computer-systems'
 ---
@@ -49,9 +49,9 @@ tags:
 ```
 ; use generator
 ; generator::regfile(name=>"L",
-					 cname="long128",
-					 sname=>"s"
-					 width=>128);
+                     cname="long128",
+                     sname=>"s"
+                     width=>128);
 opcode add128
 add128 {assign sr=st+ss};
 
@@ -66,7 +66,7 @@ add128 {assign sr=st+ss};
 int main() {
     long 128 src1[N], src2p[N], src2[N], dtst[N];
     for(int i=0, i<N; i++)
-	    dst[i]=add128(src[i], src2[N])
+        dst[i]=add128(src[i], src2[N])
 }
 ```
 
@@ -88,12 +88,12 @@ int main() {
 
 ```mermaid
 graph TD
-	a --> lsft
-	b --> lsft
-	b --> rsft
-	c --> rsft
-	lsft(("<<")) --> pipe(("|"))
-	rsft((">>")) --> pipe
+    a --> lsft
+    b --> lsft
+    b --> rsft
+    c --> rsft
+    lsft(("<<")) --> pipe(("|"))
+    rsft((">>")) --> pipe
 ```
 
 - an illegal cut is when there is a path going into and out of a cut

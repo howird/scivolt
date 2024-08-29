@@ -18,7 +18,7 @@ __Status Quo__
 - The jury is still out on whether HLS is better than RTL design in the long run 
 - While most major industries have tools for HLS, they seem to be pretty niche
 - The greatest positive of HLS is its potential for labour saving
-	- ex. can do pipelining with one line of code (via a `pragma` or a compiler directive)
+    - ex. can do pipelining with one line of code (via a `pragma` or a compiler directive)
 ```
 
 ## Quick Recap: Field Programmable Gate Arrays (FPGAs)
@@ -156,18 +156,18 @@ The CLB diagram consists of 2 main components:
 
 ```c
 void ex1(int* a) {
-	for(int i=0; i<N; i++) {
-		if(a[i] < 0)
-			a[i] *= 2;
-		else
-			a[i] *= a[i]
-	}
+    for(int i=0; i<N; i++) {
+        if(a[i] < 0)
+            a[i] *= 2;
+        else
+            a[i] *= a[i]
+    }
 }
 void ex2(int a) {
-	if(a < 0)
-		for(int i=0; i<N1; i++) foo();
-	else
-		for(int i=0; i<N2; i++) bar();
+    if(a < 0)
+        for(int i=0; i<N1; i++) foo();
+    else
+        for(int i=0; i<N2; i++) bar();
 }
 ```
 
@@ -184,12 +184,12 @@ void ex2(int a) {
 
 ```cpp
 Type3 /* output */ toplevel(
-	Type1 /*input only, pass by val*/ in,
-	Type2 /*in/out pass by ref*/ &inout
+    Type1 /*input only, pass by val*/ in,
+    Type2 /*in/out pass by ref*/ &inout
 ) {
-	Type3 out;
-	// do work
-	return out;
+    Type3 out;
+    // do work
+    return out;
 }
 ```
 

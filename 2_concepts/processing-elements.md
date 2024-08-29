@@ -10,13 +10,13 @@ tags:
 Course Roadmap:
 - intro
 - models of computations (system specification)
-	- KPN, simply a leadup to:
-	- SDF
-	- State Charts
+    - KPN, simply a leadup to:
+    - SDF
+    - State Charts
 - perfomance estimation (system design and validation)
-	- SystemC (gives us an estimate of timing)
+    - SystemC (gives us an estimate of timing)
 - system architecture (still part of system design)
-	- PE, memory, on-chip interconnect
+    - PE, memory, on-chip interconnect
 ```
 
 ## Processing Elements Taxonomy

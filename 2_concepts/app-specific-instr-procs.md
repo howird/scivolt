@@ -39,7 +39,7 @@ float res = 0;
 
 int ii = START_VALUE; // initial index to circular input buffer
 for(int c=0; c<LARGE_VALUE; c++) {
-	res += input[(ii+c)%LARGE_VALUE] * coeff[c];
+    res += input[(ii+c)%LARGE_VALUE] * coeff[c];
 }
 ```
 
@@ -55,7 +55,7 @@ MOV Rcs1, LARGE_VALUE;
 MOV Ra, 0;
 
 RPT LARGE_VALUE;
-	MACa inputs[Rca0++], coeff[Rca1++];
+    MACa inputs[Rca0++], coeff[Rca1++];
 STR res, Ra;
 ```
 

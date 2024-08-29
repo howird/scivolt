@@ -1,6 +1,6 @@
 ---
 date: June 15, 2022
-status: backlog
+status: done
 tags:
   - '#deep-learning'
 ---
@@ -53,7 +53,7 @@ $$
   - this can be interpreted as a contrast normalization, while AlexNet's method is more of a brightness normalization
 - The optimal hyperparameters were found to be $k=2$, $n=5$, $\alpha=10^{-4}$, and $\beta=0.75$ through testing on validation sets
 - This led to a reduction in top-1 and top-5 error rates by 1.4% and 1.2%, respectively
-			
+            
 ### Overlapping Pooling
 
 - Max Pool layers traditionally use a stride that matches the size of the kernel, however, the authors of AlexNet chose to have a smaller stride leading to __overlapping pooling__

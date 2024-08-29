@@ -12,22 +12,22 @@ tags:
 
 ```c
 void thread1(int* a, int* b) {
-	*a = *b + 1;
+    *a = *b + 1;
 }
 
 void thread2(int* a, int* c) {
-	*c = *a + 1;
+    *c = *a + 1;
 }
 
 void main() {
-	int a = 0;
-	int b = 1;
-	int c;
+    int a = 0;
+    int b = 1;
+    int c;
 
-	// CREATE AND JOIN THREADS
+    // CREATE AND JOIN THREADS
 
-	if (c == 1) printf("thread 2 ran first.");
-	if (c == 2) printf("thread 1 ran first.")
+    if (c == 1) printf("thread 2 ran first.");
+    if (c == 2) printf("thread 1 ran first.")
 }
 ```
 
@@ -45,19 +45,19 @@ void main() {
 
 ```verilog
 module example32 (
-		output reg [31:0] c
-	);
+        output reg [31:0] c
+    );
 
-	reg [31:0] a=32'bX; // redundant; all vars init as X 
-	wire [31:0] b=32'h0001;
+    reg [31:0] a=32'bX; // redundant; all vars init as X 
+    wire [31:0] b=32'h0001;
 
-	always @(b) begin : thread_1
-		a <= b + 1;
-	end
+    always @(b) begin : thread_1
+        a <= b + 1;
+    end
 
-	always @(a) begin : thread_2
-		c <= a + 1;
-	end
+    always @(a) begin : thread_2
+        c <= a + 1;
+    end
 
 endmodule
 ```

@@ -23,7 +23,7 @@ tags:
 // N must be known at synthesis time
 #define N 3
 for(int i = 0; i<N; i++)
-	basic_block(); // where L=2, and has 2 stages S1, S2
+    basic_block(); // where L=2, and has 2 stages S1, S2
 ```
 
 - Here is a unpipelined timing diagram:
@@ -37,14 +37,14 @@ gantt
     axisFormat %s
     tickInterval 1second
     section 0
-	    S1:        s01, 0, 1
-	    S2:active, s02, after s01, 1s
+        S1:        s01, 0, 1
+        S2:active, s02, after s01, 1s
     section 1
-	    S1:        s11, after s02, 1s
-	    S2:active, s12, after s11, 1s
+        S1:        s11, after s02, 1s
+        S2:active, s12, after s11, 1s
     section 2
-	    S1:        s21, after s12, 1s
-	    S2:active, s22, after s21, 1s
+        S1:        s21, after s12, 1s
+        S2:active, s22, after s21, 1s
 ```
 
 - Pipelining does the following to the loop:
@@ -58,14 +58,14 @@ gantt
     axisFormat %s
     tickInterval 1second
     section 0
-	    S1:        s01, 0, 1
-	    S2:active, s02, after s01, 1s
+        S1:        s01, 0, 1
+        S2:active, s02, after s01, 1s
     section 1
-	    S1:        s11, after s01, 1s
-	    S2:active, s12, after s11, 1s
+        S1:        s11, after s01, 1s
+        S2:active, s12, after s11, 1s
     section 2
-	    S1:        s21, after s11, 1s
-	    S2:active, s22, after s21, 1s
+        S1:        s21, after s11, 1s
+        S2:active, s22, after s21, 1s
 ```
 
 ```ad-info
@@ -78,12 +78,12 @@ L_\text{pipelined} = N\times II + \underbrace{L_{bb}-II}_{L_0 \text{ without } I
 $$
 
 - where:
-	- $L_{bb}$ is the total latency (period) of the basic block
-	- $L_0$ is the latency without pipelining
-	- $L_\text{pipelined}$ is the latency after pipelining
-	- $II$ is the initialization interval latency: the time it takes to initialize the basic block or the period of the first pipelining stage of the block
-	- $N$ is the number of loop iterations to pipeline
-	- Notice that the last term is $L_0$ without the initialization interval
+    - $L_{bb}$ is the total latency (period) of the basic block
+    - $L_0$ is the latency without pipelining
+    - $L_\text{pipelined}$ is the latency after pipelining
+    - $II$ is the initialization interval latency: the time it takes to initialize the basic block or the period of the first pipelining stage of the block
+    - $N$ is the number of loop iterations to pipeline
+    - Notice that the last term is $L_0$ without the initialization interval
 ```
 
 ```ad-note
@@ -107,8 +107,8 @@ int a[N];
 int tmp = 1;
 int b[N];
 for(int i = 0; i<N; i++) {
-	tmp = (tmp*a[i]) + CONST;
-	b[i] = tmp;
+    tmp = (tmp*a[i]) + CONST;
+    b[i] = tmp;
 }
 ```
 
@@ -123,15 +123,15 @@ gantt
     axisFormat %s
     tickInterval 1second
     section 0
-	    load a[i]:            s01, 0, 1
-	    _*tmp:        active, s02, after s01, 1s
-	    tmp<=_+CONST:         s03, after s02, 1s
-	    b[i]<=tmp:    active, s04, after s03, 1s
+        load a[i]:            s01, 0, 1
+        _*tmp:        active, s02, after s01, 1s
+        tmp<=_+CONST:         s03, after s02, 1s
+        b[i]<=tmp:    active, s04, after s03, 1s
     section 1
-	    load a[i]:          s11, after s01, 1s
-	    _*tmp:        crit, s12, after s11, 1s
-	    tmp<=_+CONST: crit, s13, after s12, 1s
-	    b[i]<=tmp:    crit, s14, after s13, 1s
+        load a[i]:          s11, after s01, 1s
+        _*tmp:        crit, s12, after s11, 1s
+        tmp<=_+CONST: crit, s13, after s12, 1s
+        b[i]<=tmp:    crit, s14, after s13, 1s
 ```
 
 - Therefore, since `tmp` is only assigned in S3, the stage in next iteration which uses `tmp`, S2, must occur after the previous iteration's S3
@@ -145,20 +145,20 @@ gantt
     axisFormat %s
     tickInterval 1second
     section 0
-	    load a[i]:            s01, 0, 1
-	    _*tmp:        active, s02, after s01, 1s
-	    tmp+=CONST:         s03, after s02, 1s
-	    b[i]<=tmp:    active, s04, after s03, 1s
+        load a[i]:            s01, 0, 1
+        _*tmp:        active, s02, after s01, 1s
+        tmp+=CONST:         s03, after s02, 1s
+        b[i]<=tmp:    active, s04, after s03, 1s
     section 1
-	    load a[i]:          s11, after s02, 1s
-	    _*tmp:      active, s12, after s11, 1s
-	    tmp+=CONST:         s13, after s12, 1s
-	    b[i]<=tmp:  active, s14, after s13, 1s
+        load a[i]:          s11, after s02, 1s
+        _*tmp:      active, s12, after s11, 1s
+        tmp+=CONST:         s13, after s12, 1s
+        b[i]<=tmp:  active, s14, after s13, 1s
     section 2
-	    load a[i]:          s21, after s12, 1s
-	    _*tmp:      active, s22, after s21, 1s
-	    tmp+=CONST:         s23, after s22, 1s
-	    b[i]<=tmp:  active, s24, after s23, 1s
+        load a[i]:          s21, after s12, 1s
+        _*tmp:      active, s22, after s21, 1s
+        tmp+=CONST:         s23, after s22, 1s
+        b[i]<=tmp:  active, s24, after s23, 1s
 ```
 
 ```ad-note
@@ -170,8 +170,8 @@ This has the same effect as increasing $II$
 
 ```c
 for(j=0; j<J; j++)
-	for(k=0;k<K;k++)
-		BB(j, k);             // basic block length = L
+    for(k=0;k<K;k++)
+        BB(j, k);             // basic block length = L
 ```
 
 - In the above example,
@@ -204,10 +204,10 @@ for(jk=0; jk<J*K; jk++) {
 
 ```c
 for(j=0; j<J; j++) {
-	BB1;
-	for(k=0;k<K;k++)
-		BB2;
-	}
+    BB1;
+    for(k=0;k<K;k++)
+        BB2;
+    }
 }
 ```
 
@@ -215,10 +215,10 @@ for(j=0; j<J; j++) {
 
 ```c
 for(j=0; j<J; j++) {
-	for(k=0;k<K;k++)
-		if(k==0) BB1;
-		BB2;
-	}
+    for(k=0;k<K;k++)
+        if(k==0) BB1;
+        BB2;
+    }
 }
 ```
 
@@ -232,7 +232,7 @@ for(j=0; j<J; j++) {
 
 ```c
 for(i=0; i<N; i++)
-	BB;             // L=2
+    BB;             // L=2
 ```
 
 ```mermaid
@@ -244,23 +244,23 @@ gantt
     axisFormat %s
     tickInterval 1second
     section 0
-	    S1:        s01, 0, 1
-	    S2:active, s02, after s01, 1s
+        S1:        s01, 0, 1
+        S2:active, s02, after s01, 1s
     section 1
-	    S1:        s01, 0, 1
-	    S2:active, s02, after s01, 1s
+        S1:        s01, 0, 1
+        S2:active, s02, after s01, 1s
     section 2
-	    S1:        s01, 0, 1
-	    S2:active, s02, after s01, 1s
+        S1:        s01, 0, 1
+        S2:active, s02, after s01, 1s
     section 3
-	    S1:        s11, after s02, 1s
-	    S2:active, s12, after s11, 1s
+        S1:        s11, after s02, 1s
+        S2:active, s12, after s11, 1s
     section 4
-	    S1:        s11, after s02, 1s
-	    S2:active, s12, after s11, 1s
+        S1:        s11, after s02, 1s
+        S2:active, s12, after s11, 1s
     section 5
-	    S1:        s11, after s02, 1s
-	    S2:active, s12, after s11, 1s
+        S1:        s11, after s02, 1s
+        S2:active, s12, after s11, 1s
 ```
 
 - assuming no loop-carried dependencies
@@ -284,23 +284,23 @@ gantt
     axisFormat %s
     tickInterval 1second
     section 0
-	    S1:        s01, 0, 1
-	    S2:active, s02, after s01, 1s
+        S1:        s01, 0, 1
+        S2:active, s02, after s01, 1s
     section 1
-	    S1:        s01, 0, 1
-	    S2:active, s02, after s01, 1s
+        S1:        s01, 0, 1
+        S2:active, s02, after s01, 1s
     section 2
-	    S1:        s01, 0, 1
-	    S2:active, s02, after s01, 1s
+        S1:        s01, 0, 1
+        S2:active, s02, after s01, 1s
     section 3
-	    S1:        s11, after s01, 1s
-	    S2:active, s12, after s11, 1s
+        S1:        s11, after s01, 1s
+        S2:active, s12, after s11, 1s
     section 4
-	    S1:        s11, after s01, 1s
-	    S2:active, s12, after s11, 1s
+        S1:        s11, after s01, 1s
+        S2:active, s12, after s11, 1s
     section 5
-	    S1:        s11, after s01, 1s
-	    S2:active, s12, after s11, 1s
+        S1:        s11, after s01, 1s
+        S2:active, s12, after s11, 1s
 ```
 
 - latency $=ceil(\frac NM)\times II+L-II$
@@ -321,10 +321,10 @@ gantt
 
 ```ad-info
 The implications of partitioning are:
-	- Results in RTL with multiple small memories or multiple registers instead of one large memory
-	- Effectively increases the amount of read and write ports for the storage
-	- Potentially improves the throughput of the design
-	- Requires more memory instances or registers
+    - Results in RTL with multiple small memories or multiple registers instead of one large memory
+    - Effectively increases the amount of read and write ports for the storage
+    - Potentially improves the throughput of the design
+    - Requires more memory instances or registers
 ```
 
 - We can partition an array with various methods:
@@ -347,26 +347,26 @@ gantt
     axisFormat %s
     tickInterval 9second
     section cyclic
-	    a[0]:done,   s01, 0, 1
-	    a[1]:        s02, after s01, 1s
-	    a[2]:active, s03, after s02, 1s
-	    a[3]:done,   s04, after s03, 1s
-	    a[4]:        s05, after s04, 1s
-	    a[5]:active, s06, after s05, 1s
-	    a[6]:done,   s07, after s06, 1s
-	    a[7]:        s08, after s07, 1s
-	    a[8]:active, s09, after s08, 1s
+        a[0]:done,   s01, 0, 1
+        a[1]:        s02, after s01, 1s
+        a[2]:active, s03, after s02, 1s
+        a[3]:done,   s04, after s03, 1s
+        a[4]:        s05, after s04, 1s
+        a[5]:active, s06, after s05, 1s
+        a[6]:done,   s07, after s06, 1s
+        a[7]:        s08, after s07, 1s
+        a[8]:active, s09, after s08, 1s
     section block
-	    a[0]:done,   s01, 0, 1
-	    a[1]:done,   s02, after s01, 1s
-	    a[2]:done,   s03, after s02, 1s
-	    a[3]:        s04, after s03, 1s
-	    a[4]:        s05, after s04, 1s
-	    a[5]:        s06, after s05, 1s
-	    a[6]:active, s07, after s06, 1s
-	    a[7]:active, s08, after s07, 1s
-	    a[8]:active, s09, after s08, 1s
-	    
+        a[0]:done,   s01, 0, 1
+        a[1]:done,   s02, after s01, 1s
+        a[2]:done,   s03, after s02, 1s
+        a[3]:        s04, after s03, 1s
+        a[4]:        s05, after s04, 1s
+        a[5]:        s06, after s05, 1s
+        a[6]:active, s07, after s06, 1s
+        a[7]:active, s08, after s07, 1s
+        a[8]:active, s09, after s08, 1s
+        
 ```
 
 ````
@@ -374,7 +374,7 @@ gantt
 ```ad-info
 - There is another partioning method, **Complete partitioning**, where the array into individual elements
 - For a one-dimensional array, this corresponds to resolving a memory into individual registers
-	- This is extremely costly, thus this method is rarely used, only in very specific cases
+    - This is extremely costly, thus this method is rarely used, only in very specific cases
 - Here $M$ is not specified since $M=N$
 ```
 

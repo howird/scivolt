@@ -16,9 +16,9 @@ tags:
 
 ```ad-abstract
 - We want to calculate $R = A \times B$ where:
-	- $R \in \mathbb R^{I\times J}$ 
-	- $A \in \mathbb R^{I\times K}$
-	- $B \in \mathbb R^{K\times J}$
+    - $R \in \mathbb R^{I\times J}$ 
+    - $A \in \mathbb R^{I\times K}$
+    - $B \in \mathbb R^{K\times J}$
 ```
 
 ```ad-info
@@ -38,12 +38,12 @@ typedef int8_t a_b_t;
 typedef int16_t r_t;
 
 void multiply(a_b_t a[I][K], a_b_t a[I][K], r_t r[I][K]) {
-	for(int i=0; i<I; i++)
-		for(int j=0; j<J; j++) {
-			r[i][j] = 0;
-			for(int k=0; k<K; k++)
-				r[i][j] += a[i][k] * b[k][j];
-		}
+    for(int i=0; i<I; i++)
+        for(int j=0; j<J; j++) {
+            r[i][j] = 0;
+            for(int k=0; k<K; k++)
+                r[i][j] += a[i][k] * b[k][j];
+        }
 }
 ```
 
@@ -65,32 +65,32 @@ void multiply(a_b_t a[I][K], a_b_t a[I][K], r_t r[I][K]) {
 
 ```c
 void multiply(a_b_t a[I][K], a_b_t b[J][K], r_t r[I][J]) {
-	#pragma HLS INTERFACE axis register both port=r
-	#pragma HLS INTERFACE axis register both port=b
-	#pragma HLS INTERFACE axis register both port=a
-	a_b_t atmp[I][K], btmp [K][J];
-	r_t rtmp[I][J];
+    #pragma HLS INTERFACE axis register both port=r
+    #pragma HLS INTERFACE axis register both port=b
+    #pragma HLS INTERFACE axis register both port=a
+    a_b_t atmp[I][K], btmp [K][J];
+    r_t rtmp[I][J];
 
-	// step 1: copy A and B to local
-	Row_a_copy: for(int i=0; i<I; i++)
-		Col_a_copy: for(int k=0; k<K; k++)
-			atmp[i][k] = a[i][k];
-	Row_b_copy: for(int k=0; k<K; k++)
-		Col_b_copy: for(int j=0; j<J; j++)
-			btmp[k][j] = b[k][j];
+    // step 1: copy A and B to local
+    Row_a_copy: for(int i=0; i<I; i++)
+        Col_a_copy: for(int k=0; k<K; k++)
+            atmp[i][k] = a[i][k];
+    Row_b_copy: for(int k=0; k<K; k++)
+        Col_b_copy: for(int j=0; j<J; j++)
+            btmp[k][j] = b[k][j];
 
-	// step 2: calculate matmul
-	Row: for(int i=0; i<I; i++)
-		Col: for(int j=0; j<J; j++) {
-			rtmp[i][j] = 0;
-			Product: for(int k=0; k<K; k++)
-			rtmp[i][j] += atmp[i][k] * btmp[k][j];
-		}
+    // step 2: calculate matmul
+    Row: for(int i=0; i<I; i++)
+        Col: for(int j=0; j<J; j++) {
+            rtmp[i][j] = 0;
+            Product: for(int k=0; k<K; k++)
+            rtmp[i][j] += atmp[i][k] * btmp[k][j];
+        }
 
-	// step 3: copy local to R
-	Row_res_copy: for(int i=0; i<I; i++)
-		Col_res_copy: for(int j=0; j<J; j++)
-			r[i][j] = rtmp[i][j];
+    // step 3: copy local to R
+    Row_res_copy: for(int i=0; i<I; i++)
+        Col_res_copy: for(int j=0; j<J; j++)
+            r[i][j] = rtmp[i][j];
 }
 ```
 
@@ -105,37 +105,37 @@ void multiply(a_b_t a[I][K], a_b_t b[J][K], r_t r[I][J]) {
 
 ```c
 void multiply(a_b_t a[I][K], a_b_t b[J][K], r_t r[I][J]) {
-	#pragma HLS INTERFACE axis register both port=r
-	#pragma HLS INTERFACE axis register both port=b
-	#pragma HLS INTERFACE axis register both port=a
-	a_b_t atmp[I][K], btmp [K][J];
-	r_t rtmp[I][J];
+    #pragma HLS INTERFACE axis register both port=r
+    #pragma HLS INTERFACE axis register both port=b
+    #pragma HLS INTERFACE axis register both port=a
+    a_b_t atmp[I][K], btmp [K][J];
+    r_t rtmp[I][J];
 
-	// step 1: copy A and B to local
-	Row_a_copy: for(int i=0; i<I; i++)
-		Col_a_copy: for(int k=0; k<K; k++)
-			#pragma HLS PIPELINE
-			atmp[i][k] = a[i][k];
+    // step 1: copy A and B to local
+    Row_a_copy: for(int i=0; i<I; i++)
+        Col_a_copy: for(int k=0; k<K; k++)
+            #pragma HLS PIPELINE
+            atmp[i][k] = a[i][k];
 
-	Row_b_copy: for(int k=0; k<K; k++)
-		Col_b_copy: for(int j=0; j<J; j++)
-			#pragma HLS PIPELINE
-			btmp[k][j] = b[k][j];
+    Row_b_copy: for(int k=0; k<K; k++)
+        Col_b_copy: for(int j=0; j<J; j++)
+            #pragma HLS PIPELINE
+            btmp[k][j] = b[k][j];
 
-	// step 2: calculate matmul
-	Row: for(int i=0; i<I; i++)
-		Col: for(int j=0; j<J; j++) {
-			rtmp[i][j] = 0;
-			Product: for(int k=0; k<K; k++)
-				#pragma HLS PIPELINE
-				rtmp[i][j] += atmp[i][k] * btmp[k][j]; // NOTE
-		}
+    // step 2: calculate matmul
+    Row: for(int i=0; i<I; i++)
+        Col: for(int j=0; j<J; j++) {
+            rtmp[i][j] = 0;
+            Product: for(int k=0; k<K; k++)
+                #pragma HLS PIPELINE
+                rtmp[i][j] += atmp[i][k] * btmp[k][j]; // NOTE
+        }
 
-	// step 3: copy local to R
-	Row_res_copy: for(int i=0; i<I; i++)
-		Col_res_copy: for(int j=0; j<J; j++)
-			#pragma HLS PIPELINE
-			r[i][j] = rtmp[i][j];
+    // step 3: copy local to R
+    Row_res_copy: for(int i=0; i<I; i++)
+        Col_res_copy: for(int j=0; j<J; j++)
+            #pragma HLS PIPELINE
+            r[i][j] = rtmp[i][j];
 }
 ```
 
@@ -160,11 +160,11 @@ gantt
     axisFormat %s
     tickInterval 1second
     section 0
-	    read atmp, btmp, rtmp:          s01, 0, 1
-	    rtmp <= rtmp+atmp*btmp: active, s02, after s01, 1s
+        read atmp, btmp, rtmp:          s01, 0, 1
+        rtmp <= rtmp+atmp*btmp: active, s02, after s01, 1s
     section 1
-	    read atmp, btmp, rtmp:  crit, s11, after s01, 1s
-	    rtmp <= rtmp+atmp*btmp: crit, s12, after s11, 1s
+        read atmp, btmp, rtmp:  crit, s11, after s01, 1s
+        rtmp <= rtmp+atmp*btmp: crit, s12, after s11, 1s
 ```
 
 - In hardware, this means you can't start computing the next set of products until the previous set is fully calculated and added, limiting the ability to pipeline these operations without introducing additional mechanisms to manage these dependencies
@@ -179,11 +179,11 @@ gantt
     axisFormat %s
     tickInterval 1second
     section 0
-	    read atmp, btmp, rtmp:          s01, 0, 1
-	    rtmp <= rtmp+atmp*btmp: active, s02, after s01, 1s
+        read atmp, btmp, rtmp:          s01, 0, 1
+        rtmp <= rtmp+atmp*btmp: active, s02, after s01, 1s
     section 1
-	    read atmp, btmp, rtmp:          s11, after s02, 1s
-	    rtmp <= rtmp+atmp*btmp: active, s12, after s11, 1s
+        read atmp, btmp, rtmp:          s11, after s02, 1s
+        rtmp <= rtmp+atmp*btmp: active, s12, after s11, 1s
 ```
 
 ![](Pasted%20image%2020240223175209.png)
@@ -195,13 +195,13 @@ gantt
 ```c
 // step 2: calculate matmul
 Row: for(int i=0; i<I; i++)
-	Col: for(int j=0; j<J; j++) {
-		r_t acc = 0;
-		Product: for(int k=0; k<K; k++)
-			#pragma HLS PIPELINE
-			acc += atmp[i][k] * btmp[k][j];
-		rtmp[i][j] = acc;
-	}
+    Col: for(int j=0; j<J; j++) {
+        r_t acc = 0;
+        Product: for(int k=0; k<K; k++)
+            #pragma HLS PIPELINE
+            acc += atmp[i][k] * btmp[k][j];
+        rtmp[i][j] = acc;
+    }
 ```
 
 ```mermaid
@@ -213,18 +213,18 @@ gantt
     axisFormat %s
     tickInterval 1second
     section 0
-	    acc <= 0:              active, s00, 0, 1
-	    read atmp, btmp:               s01, 1, 2
-	    acc+=atmp*btmp: active, s02, after s01, 1s
+        acc <= 0:              active, s00, 0, 1
+        read atmp, btmp:               s01, 1, 2
+        acc+=atmp*btmp: active, s02, after s01, 1s
     section 1
-	    read atmp, btmp:          s11, after s01, 1s
-	    acc+=atmp*btmp: active, s12, after s11, 1s
-	section ...
-		...: active, sdot, 0, 6
-	section N
-	    read atmp, btmp:        s21, after s11, 1s
-	    acc+=atmp*btmp: active, s22, after s21, 1s
-	    rtmp <= acc:            s23, after s22, 1s
+        read atmp, btmp:          s11, after s01, 1s
+        acc+=atmp*btmp: active, s12, after s11, 1s
+    section ...
+        ...: active, sdot, 0, 6
+    section N
+        read atmp, btmp:        s21, after s11, 1s
+        acc+=atmp*btmp: active, s22, after s21, 1s
+        rtmp <= acc:            s23, after s22, 1s
 ```
 
 ```ad-note
@@ -269,29 +269,29 @@ BRAM specifications:
 
 ```c
 void multiply(a_b_t a[I][K], a_b_t b[J][K], r_t r[I][J]) {
-	#pragma HLS INTERFACE axis register both port=r
-	#pragma HLS INTERFACE axis register both port=b
-	#pragma HLS INTERFACE axis register both port=a
-	a_b_t atmp[I][K], btmp [K][J];
-	
-	#pragma HLS ARRAY_RESHAPE variable=atmp cyclic factor=4 dim=2
-	#pragma HLS ARRAY_RESHAPE variable=btmp cyclic factor=4 dim=1
-	r_t rtmp[I][J];
+    #pragma HLS INTERFACE axis register both port=r
+    #pragma HLS INTERFACE axis register both port=b
+    #pragma HLS INTERFACE axis register both port=a
+    a_b_t atmp[I][K], btmp [K][J];
+    
+    #pragma HLS ARRAY_RESHAPE variable=atmp cyclic factor=4 dim=2
+    #pragma HLS ARRAY_RESHAPE variable=btmp cyclic factor=4 dim=1
+    r_t rtmp[I][J];
 
-	// step 1: copy A and B to local
+    // step 1: copy A and B to local
 
-	// step 2: calculate matmul 
-	Row: for(int i=0; i<I; i++)
-		Col: for(int j=0; j<J; j++) {
-			r_t acc = 0;
-			Product: for(int k=0; k<K; k++)
-				#pragma HLS PIPELINE
-				#pragma HLS UNROLL factor=8
-				acc += atmp[i][k] * b[k][j];
-			rtmp[i][j] = acc;
-		}
+    // step 2: calculate matmul 
+    Row: for(int i=0; i<I; i++)
+        Col: for(int j=0; j<J; j++) {
+            r_t acc = 0;
+            Product: for(int k=0; k<K; k++)
+                #pragma HLS PIPELINE
+                #pragma HLS UNROLL factor=8
+                acc += atmp[i][k] * b[k][j];
+            rtmp[i][j] = acc;
+        }
 
-	// step 3: copy local to R
+    // step 3: copy local to R
 ```
 
 ```ad-example
@@ -300,8 +300,8 @@ void multiply(a_b_t a[I][K], a_b_t b[J][K], r_t r[I][J]) {
 - Note: all of the approaches will use `cyclic` partitioning since sequential accesses are being done
 - This cyclically splits the size $N$, 8 bit array into $M=4$ subarrays of size $N/4$ and then merges them into a single, $N/4$ length array with elements with bitwidth: $8\times M=32$
 - Each BRAM can support a single 18 bit read, thus, we must check if our hardware can handle our desired bits/cycle
-	- $\lceil \frac{32\text{kbit}}{18\text{kbit}} \rceil = 2$
-	- We have 2 BRAMs, so this is possible
+    - $\lceil \frac{32\text{kbit}}{18\text{kbit}} \rceil = 2$
+    - We have 2 BRAMs, so this is possible
 - no need to reshape $R$?
 
 #### Approach 2
@@ -310,7 +310,7 @@ void multiply(a_b_t a[I][K], a_b_t b[J][K], r_t r[I][J]) {
 - Splits the size $N$, 8 bit array into $M=8$ subarrays of size $N/8$ and then merges them into a single, $N/8$ length array with elements with bitwidth: $8\times M=64$
 - $\lceil \frac{64\text{kbit}}{18\text{kbit}} \rceil = 4$
 - the number of BRAMs for A and B must double ($2 \rightarrow 4$) to read 64 bit/cycle
-	
+    
 #### Approach 3
 
 - partitioning with $M=4$

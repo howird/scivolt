@@ -81,7 +81,8 @@ year: '2021/08'
 
 ### Methodology
 
--
+- Overview
+    - dataset, $\mathcal{M}$, with elements $m^i$ each of which consist of sequence of poses $\hat q ^i_t$ 
 
 ### Results
 

@@ -65,8 +65,8 @@ Data storage structures
 
 - we include `oreg` to add a one cycle latency
 - reads and writes can happen at the same time
-	- in this case, the read will take the value from 2 cycles ago if an `oreg` is used or the last cycle without `oreg`
-	- if we dont want the 1-2 cycle read latency, we can `mux` `wrdata` and `oreg` to output `rddata`, picking `wrdata` when `we && (wraddr == rdaddr)` 
+    - in this case, the read will take the value from 2 cycles ago if an `oreg` is used or the last cycle without `oreg`
+    - if we dont want the 1-2 cycle read latency, we can `mux` `wrdata` and `oreg` to output `rddata`, picking `wrdata` when `we && (wraddr == rdaddr)` 
 
 ```
 
@@ -74,35 +74,35 @@ Data storage structures
 
 ```systemverilog
 module mem #(
-	parameter [31:0] ADDRWIDTH=8,
-	parameter [31:0] DATAWIDTH=32
+    parameter [31:0] ADDRWIDTH=8,
+    parameter [31:0] DATAWIDTH=32
 ) (
-	input wire clk,
-	input wire rst,
-	input wire [DATAWIDTH - 1:0] wrdata,
-	output reg [DATAWIDTH - 1:0] rddata,
-	input wire [ADDRWIDTH - 1:0] wraddr,
-	input wire [ADDRWIDTH - 1:0] rdaddr,
-	input wire we
+    input wire clk,
+    input wire rst,
+    input wire [DATAWIDTH - 1:0] wrdata,
+    output reg [DATAWIDTH - 1:0] rddata,
+    input wire [ADDRWIDTH - 1:0] wraddr,
+    input wire [ADDRWIDTH - 1:0] rdaddr,
+    input wire we
 );
-	reg [DATAWIDTH - 1:0] mem[2 ** ADDRWIDTH - 1:0] /* num locations*/;
-	
-	integer i;
-	always @(posedge clk) begin
-		if(rst) begin
-			`ifndef SYNTHESIS
-				for (i=0; i <= 2**ADDRWIDTH - 1; i = i+1) begin
-					mem[i] <= i;
-				end 
-			`endif
-			rddata <= 0;
-		end else begin
-			if(we) begin
-				mem[wraddr] <= wrdata;
-			end
-			rddata <= mem[rdaddr];
-		end
-	end
+    reg [DATAWIDTH - 1:0] mem[2 ** ADDRWIDTH - 1:0] /* num locations*/;
+    
+    integer i;
+    always @(posedge clk) begin
+        if(rst) begin
+            `ifndef SYNTHESIS
+                for (i=0; i <= 2**ADDRWIDTH - 1; i = i+1) begin
+                    mem[i] <= i;
+                end 
+            `endif
+            rddata <= 0;
+        end else begin
+            if(we) begin
+                mem[wraddr] <= wrdata;
+            end
+            rddata <= mem[rdaddr];
+        end
+    end
 endmodule
 ```
 
@@ -110,7 +110,7 @@ endmodule
 
 - We wrap the resetting the `mem` ram block with `ifndef SYNTHESIS` so that it only runs in simulation
 - This is because resetting each element implies to the compiler that you want to be able to modify each register in a single cycle; thus this design will synthesize a bank of flip flops, NOT an SRAM
-	- obviously this is not what we want, and it is undesirable since the design will use more hardware resources
+    - obviously this is not what we want, and it is undesirable since the design will use more hardware resources
 
 ```
 
@@ -146,7 +146,7 @@ endmodule
 ```ad-note
 - Unlike the previous example, we now have variable $a$, $b$, and $c$, when calculating our polynomial function
 - To accomplish this without memory modules, we can simply increase the width of the memory (not the size)
-	- previously the memory stored $N$, $b$-bit numbers and now it stores $N$, $4b$-bit numbers
+    - previously the memory stored $N$, $b$-bit numbers and now it stores $N$, $4b$-bit numbers
 ```
 
 ### Memory Sharing
@@ -166,11 +166,11 @@ endmodule
 
 ```ad-note
 - Pack all input arrays x, a, b, and c into `ipmem`
-	- Output `y` array stored in `opmem`
+    - Output `y` array stored in `opmem`
 - Modify schedule table to load a input in first cycle
 - Modify datapath to provide a third “load” input to mux
 - Note: no multiplexers are required since input to operators -> all inputs in same memory
-	- If multiple input memories used, muxes need to be put back
+    - If multiple input memories used, muxes need to be put back
 - Note: throughput is 5
 ```
 
@@ -248,41 +248,41 @@ endmodule
 
 ```verilog
 module sreg #(
-	parameter DEPTH=8,
-	parameter DATAWIDTH=32
+    parameter DEPTH=8,
+    parameter DATAWIDTH=32
 ) (
-	input wire clk,
-	input wire rst,
-	input wire [DATAWIDTH - 1:0] data_in,
-	output wire [DATAWIDTH - 1:0] data_out,
-	input wire shift_en
+    input wire clk,
+    input wire rst,
+    input wire [DATAWIDTH - 1:0] data_in,
+    output wire [DATAWIDTH - 1:0] data_out,
+    input wire shift_en
 );
-	// instantiate shift register
-	// solution 1: multibit
-	reg [DATAWIDTH - 1:0] mem[DEPTH - 1:0];
-	// solution 2: 1 bit
-	reg [DATAWIDTH - 1:0] mem[DEPTH - 1:0];
+    // instantiate shift register
+    // solution 1: multibit
+    reg [DATAWIDTH - 1:0] mem[DEPTH - 1:0];
+    // solution 2: 1 bit
+    reg [DATAWIDTH - 1:0] mem[DEPTH - 1:0];
 
-	always @(posedge clk) begin
-		if(rst) begin
-			// reset all memory
-			for (i = 0; i<=DEPTH-1; i = i + 1) begin
-				mem[i] <= 0 ;
-			end
-		end else begin
-			if(shift_en) begin
-				// solution 1
-				mem[0] <= data_in;
-				for(i = 0; i<DEPTH - 1; i=i+1) begin
-					mem[i + 1] <= mem[i];
-				end
-				// solution 2: concatenation works for 1 bit signals
-				mem[DEPTH-1:0] <= {mem[DEPTH - 2:0],data_in};
-			end
-		end
-	end
-	
-	assign data_out = mem[DEPTH - 1];
+    always @(posedge clk) begin
+        if(rst) begin
+            // reset all memory
+            for (i = 0; i<=DEPTH-1; i = i + 1) begin
+                mem[i] <= 0 ;
+            end
+        end else begin
+            if(shift_en) begin
+                // solution 1
+                mem[0] <= data_in;
+                for(i = 0; i<DEPTH - 1; i=i+1) begin
+                    mem[i + 1] <= mem[i];
+                end
+                // solution 2: concatenation works for 1 bit signals
+                mem[DEPTH-1:0] <= {mem[DEPTH - 2:0],data_in};
+            end
+        end
+    end
+    
+    assign data_out = mem[DEPTH - 1];
 
 ```
 

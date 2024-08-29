@@ -13,12 +13,12 @@ tags:
 
 ```mermaid
 graph TD
-	r([requirements]) --> s([system spec])
-	s --> h([hardware blocks])
-	s --> a([architecture])
-	s --> w([software blocks])
+    r([requirements]) --> s([system spec])
+    s --> h([hardware blocks])
+    s --> a([architecture])
+    s --> w([software blocks])
 
-	style s fill:#f00
+    style s fill:#f00
 ```
 
 - the high-level system specification:
@@ -68,14 +68,14 @@ graph TD
 
 ```mermaid
 graph TD
-	s1((S1)) -->|0/0| s2((S2))
-	s1 -->|1/0| s1
-	
-	s2 -->|0/1| s2
-	s2 -->|1/0| s3((S3))
+    s1((S1)) -->|0/0| s2((S2))
+    s1 -->|1/0| s1
+    
+    s2 -->|0/1| s2
+    s2 -->|1/0| s3((S3))
 
-	s3 -->|1/1| s1
-	s3 -->|0/0| s3
+    s3 -->|1/1| s1
+    s3 -->|0/0| s3
 ```
 
 ![](Pasted%20image%2020240224193126.png)
@@ -92,15 +92,15 @@ graph TD
 
 ```mermaid
 graph TD
-	s1 --> p((+))
-	s2 --> p
+    s1 --> p((+))
+    s2 --> p
 
-	s3 --> m(( - ))
-	s4 --> m
+    s3 --> m(( - ))
+    s4 --> m
 
-	p --> t((*))
-	m --> t
-	t --> s1234
+    p --> t((*))
+    m --> t
+    t --> s1234
 ```
 
 - Nodes: data operations

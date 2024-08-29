@@ -42,13 +42,13 @@ Instuctions can only be reordered or scheduled in parallel if __data dependencie
 a, c = 0;                   // block A
 x = rand();                 // block B
 if (x > 0) // loop:         // block C
-	a+=x;                   // block D
+    a+=x;                   // block D
 else
-	a-=x;                   // block E
+    a-=x;                   // block E
 c++;                        // block F
 if (c<CONST) goto loop      // block F
 printf("%d", a);            // block G
-	
+    
 ```
 
 ```mermaid
@@ -96,16 +96,16 @@ graph TD
     B --> star2((*))
     C --> star2
 
-	CONST --> plus1((+))
-	star1 --> plus1
+    CONST --> plus1((+))
+    star1 --> plus1
 
-	d --> shft((>>))
-	star2 --> shft
+    d --> shft((>>))
+    star2 --> shft
 
-	plus1 --> plus2((+))
-	shft --> plus2
+    plus1 --> plus2((+))
+    shft --> plus2
 
-	plus2 --> res
+    plus2 --> res
 ```
 
 - registers are inserted in the DFG to shorten critical path length
@@ -150,6 +150,6 @@ See the [05-pipelining](05-pipelining.md) and [06-scheduling](06-scheduling.md) 
 ```ad-tip
 
 - Try to structure branches so that they calculate values to be assigned to a variable
-	- Use ternary operators!
+    - Use ternary operators!
 - This allows flattening which is important for achieving good performance
 ```

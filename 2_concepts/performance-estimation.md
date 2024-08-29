@@ -69,9 +69,9 @@ tags:
 
 ```mermaid
 graph TD
-	a[determine affected modules] --> b
-	b[call process functions for each module] --> c
-	c[resume event from queue] --> a
+    a[determine affected modules] --> b
+    b[call process functions for each module] --> c
+    c[resume event from queue] --> a
 ```
 
 - new events may share the same time
@@ -110,16 +110,16 @@ graph TD
 using namespace sc_core;
 
 SC_MODULE(nand) { // declare a module (basically a class)
-	sc_in<bool> A, B;
-	sc_out<bool> F;
+    sc_in<bool> A, B;
+    sc_out<bool> F;
 
-	void evaluate() {
-		F.write( !(A.read() && B.read()) );
-	}
-	SC~_CTOR(nand) { // constructor
-		SC_METHOD(evaluate); // registers function with the simulations kernel
-		sensitive << A << B; // sensitivity list for the last registered method
-	}
+    void evaluate() {
+        F.write( !(A.read() && B.read()) );
+    }
+    SC~_CTOR(nand) { // constructor
+        SC_METHOD(evaluate); // registers function with the simulations kernel
+        sensitive << A << B; // sensitivity list for the last registered method
+    }
 }
 ```
 
@@ -132,23 +132,23 @@ SC_MODULE(nand) { // declare a module (basically a class)
 using namespace sc_core;
 
 SC_MODULE(xor) { // declare a module (basically a class)
-	sc_in<bool> A, B;
-	sc_out<bool> F;
-	nand n1, n2, n3, n4;
-	sc_signal<bool> s1, s2, s3;
+    sc_in<bool> A, B;
+    sc_out<bool> F;
+    nand n1, n2, n3, n4;
+    sc_signal<bool> s1, s2, s3;
 
-	SC_CTOR n1("N1"), n2("N2"), n3("N3"), n4("N4") {
-		n1.A(A);
-		n1.B(B);
-		n1.F(s1);
-		
-		SC_METHOD(evaluate); // registers function with the simulations kernel
-		n2 << A << s1 << s2;
+    SC_CTOR n1("N1"), n2("N2"), n3("N3"), n4("N4") {
+        n1.A(A);
+        n1.B(B);
+        n1.F(s1);
+        
+        SC_METHOD(evaluate); // registers function with the simulations kernel
+        n2 << A << s1 << s2;
 
-		n3(s1);
-		n3(B);
-		n3(s3);
-	}
+        n3(s1);
+        n3(B);
+        n3(s3);
+    }
 }
 ```
 
@@ -179,15 +179,15 @@ SC_MODULE(xor) { // declare a module (basically a class)
 class write_if : public sc_interface // abstract class; cant instantiate
 {
 public:
-	virual void write(char) = 0;
-	virual void reset() = 0;
+    virual void write(char) = 0;
+    virual void reset() = 0;
 };
 
 class read_if : public sc_interface
 {
 public:
-	virtual void read(char &) = 0;
-	virtual int num_available() = 0;
+    virtual void read(char &) = 0;
+    virtual int num_available() = 0;
 };
 
 ```
@@ -203,7 +203,7 @@ public:
 
 ```cpp
 int sc_main() {
-	top t1("top");
-	sc_start(); // runs the simulation
+    top t1("top");
+    sc_start(); // runs the simulation
 }
 ```

@@ -36,10 +36,10 @@ tags:
 process f(in int u, in int v, out int w) {
   bool b = true;
   for(;;) {
-	  int i = b ? wait(u) : wait(v);
-	  printf("%d\n", i);
-	  send(i, 1);
-	  b = !b;
+      int i = b ? wait(u) : wait(v);
+      printf("%d\n", i);
+      send(i, 1);
+      b = !b;
   }
 }
 ```
@@ -48,10 +48,10 @@ process f(in int u, in int v, out int w) {
 process g(in int u, in int v, out int w) {
   bool b = true;
   for(;;) {
-	  int i = wait(u);
-	  if(b) send(i, v);
-	  else send(i, u);
-	  b = !b;
+      int i = wait(u);
+      if(b) send(i, v);
+      else send(i, u);
+      b = !b;
   }
 }
 ```
@@ -61,9 +61,9 @@ process h(in int u, out int v, int init) {
   int i = init;
   send(i, v);
   for(;;) {
-	  i = wait(u);
-	  if(b) send(i, v);
-	  else send(i, v);
+      i = wait(u);
+      if(b) send(i, v);
+      else send(i, v);
   }
 }
 ```
