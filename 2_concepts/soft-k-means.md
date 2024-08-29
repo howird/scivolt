@@ -1,8 +1,9 @@
 ---
 date: April 22, 2022
+status: backlog
 tags:
-  - "#ai/ml"
-  - application/clustering
+  - '#ai/ml'
+  - '#application/clustering'
 ---
 
 # Soft K-Means Clustering

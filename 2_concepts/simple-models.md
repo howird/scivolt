@@ -1,7 +1,8 @@
 ---
 date: March 18, 2021
+status: backlog
 tags:
-- '#ai/comp-neuroscience/encoding'
+  - '#ai/comp-neuroscience/encoding'
 ---
 
 # 2.2 Neural Encoding: Simple Models

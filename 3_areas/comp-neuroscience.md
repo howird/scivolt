@@ -1,7 +1,7 @@
 ---
 tags:
-- '#type/area'
-- '#ai/comp-neuroscience'
+  - '#type/area'
+  - '#ai/comp-neuroscience'
 ---
 
 ## 1 Biology

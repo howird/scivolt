@@ -1,7 +1,8 @@
 ---
-date: null
+date:
+status: backlog
 tags:
-- '#hwe/embedded-computer-systems'
+  - '#hwe/embedded-computer-systems'
 ---
 
 # Kahn Process Networks

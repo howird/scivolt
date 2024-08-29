@@ -1,6 +1,7 @@
 ---
+status: backlog
 tags:
-- '#ai/dl'
+  - '#ai/dl'
 ---
 
 #### 9.1 Transformers operate on sequences of vectors

@@ -1,7 +1,8 @@
 ---
 date: November 1, 2022
+status: backlog
 tags:
-- '#signals/controls'
+  - '#signals/controls'
 ---
 
 # Frequency Response

@@ -1,6 +1,7 @@
 ---
+status: backlog
 tags:
-- '#ai/dl'
+  - '#ai/dl'
 ---
 
 #### 7.1 Convolution is related to correlation

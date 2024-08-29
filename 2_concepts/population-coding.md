@@ -1,7 +1,8 @@
 ---
 date: April 30, 2021
+status: backlog
 tags:
-- '#ai/comp-neuroscience/decoding'
+  - '#ai/comp-neuroscience/decoding'
 ---
 
 # 3.2 Population Coding and Bayesian Estimation

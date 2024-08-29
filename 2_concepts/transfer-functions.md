@@ -1,7 +1,8 @@
 ---
 date: October 15, 2022
+status: backlog
 tags:
-- '#signals/controls'
+  - '#signals/controls'
 ---
 
 # Transfer Functions

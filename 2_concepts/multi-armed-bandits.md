@@ -1,3 +1,7 @@
+---
+status: backlog
+---
+
 ## Multi-armed Bandits
 
 - suppose you form estimates $Q_t(a)=q\_*(a)$

@@ -1,7 +1,7 @@
 ---
-lectures: w1d1, w1d2 (1st half)
 tags:
-- '#hwe/embedded-computer-systems'
+  - '#hwe/embedded-computer-systems'
+  - '#type/area'
 ---
 
 [2.1 high-level-synthesis](high-level-synthesis.md)

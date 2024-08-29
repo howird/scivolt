@@ -1,6 +1,7 @@
 ---
+status: backlog
 tags:
-- '#signals/controls'
+  - '#signals/controls'
 ---
 
 # Fourier Series Part 1

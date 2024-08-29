@@ -1,6 +1,7 @@
 ---
+status: backlog
 tags:
-- '#ai/dl'
+  - '#ai/dl'
 ---
 
 #### 4.0 Gradient Descent Background

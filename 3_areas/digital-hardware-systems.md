@@ -1,6 +1,7 @@
 ---
 tags:
-- '#hwe/digital-hardware-eng'
+  - '#hwe/digital-hardware-eng'
+  - '#type/area'
 ---
 
 [02 simulation](simulation.md)

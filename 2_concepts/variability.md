@@ -1,7 +1,8 @@
 ---
 date: April 26, 2021
+status: backlog
 tags:
-- '#ai/comp-neuroscience/encoding'
+  - '#ai/comp-neuroscience/encoding'
 ---
 
 # 2.4 Variability

@@ -1,7 +1,7 @@
 ---
-lectures: w3d2,
+status: backlog
 tags:
-- '#hwe/embedded-computer-systems'
+  - '#hwe/embedded-computer-systems'
 ---
 
 # Transaction Level Parallelism

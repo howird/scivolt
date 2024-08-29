@@ -16,14 +16,14 @@ def update_markdown_files(path: Path, fns = [], glob="*.md", recursive=False):
 
 
 def print_tree_level(dct, level=0):
-    for key, value in dct.items():
+    for key in sorted(dct.keys()):
         print(
             "    " * (level - 1),
             "|-" if level else "",
             key,
             sep="",
         )
-        print_tree_level(value, level + 1)
+        print_tree_level(dct[key], level + 1)
 
 
 def read_markdown_frontmatter(path: Path, fns = [], glob="*.md", recursive=False):
@@ -72,7 +72,8 @@ def add_key(metadata, key, value):
 
 
 def remove_key(metadata, key):
-    del metadata[key]
+    if key in metadata:
+        del metadata[key]
 
 
 def set_key(metadata, key, val):
@@ -131,8 +132,7 @@ def set_folder_names_as_tags():
     )
 
 
-if __name__ == "__main__":
-    # path = Path("./0_meta/templates")
+def format_concepts():
     path = Path("./2_concepts")
 
     # LINTING!
@@ -149,3 +149,34 @@ if __name__ == "__main__":
 
     # ANALYSIS!
     read_markdown_frontmatter(path)
+
+
+def format_areas():
+    path = Path("./3_areas")
+
+    # LINTING!
+    update_markdown_files(
+        path,
+        fns = [
+            p(modify_frontmatter, fn=p(set_tags, value="#type/area")),
+        ]
+    )
+    subprocess.run(["mdformat", str(path)])
+
+
+def format_templates():
+    path = Path("./0_meta/templates")
+
+    # LINTING!
+    update_markdown_files(
+        path,
+        fns = [
+        ]
+    )
+    subprocess.run(["mdformat", str(path)])
+
+
+if __name__ == "__main__":
+    format_templates()
+    format_areas()
+    format_concepts()

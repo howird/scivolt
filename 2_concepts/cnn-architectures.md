@@ -1,6 +1,7 @@
 ---
+status: backlog
 tags:
-- '#ai/dl'
+  - '#ai/dl'
 ---
 
 #### 8.1 The earliest convolutional networks were LeNets, developed for handwritten digit recognition

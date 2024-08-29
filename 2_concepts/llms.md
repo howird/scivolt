@@ -1,6 +1,7 @@
 ---
+status: backlog
 tags:
-- '#ai/dl'
+  - '#ai/dl'
 ---
 
 #### 10.1 Large language models (LLMs) can perform new tasks without fine tuning

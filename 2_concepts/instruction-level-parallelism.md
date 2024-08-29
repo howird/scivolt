@@ -1,7 +1,7 @@
 ---
-lectures: w2d1 (last page), w2d2
+status: backlog
 tags:
-- '#hwe/embedded-computer-systems'
+  - '#hwe/embedded-computer-systems'
 ---
 
 # Instruction Level Parallelism (ILP)

@@ -1,7 +1,8 @@
 ---
 date: October 22, 2022
+status: backlog
 tags:
-- '#signals/controls'
+  - '#signals/controls'
 ---
 
 # Steady State Errors

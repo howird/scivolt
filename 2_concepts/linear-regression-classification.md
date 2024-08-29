@@ -1,8 +1,9 @@
 ---
+status: backlog
 tags:
-- '#type/theory'
-- '#statistics/regression'
-- '#ai/dl'
+  - '#type/theory'
+  - '#statistics/regression'
+  - '#ai/dl'
 ---
 
 #### 2.1 Regression and classification are prediction of continuous and categorical values, respectively

@@ -1,7 +1,9 @@
 ---
 tags:
-- '#signals'
+  - '#signals'
+  - '#type/area'
 ---
+
 # signals
 
 [Fourier Series](fourier-series.md)

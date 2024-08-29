@@ -1,8 +1,9 @@
 ---
 date: April 20, 2022
+status: backlog
 tags:
-  - "#ai/ml"
-  - "#application/clustering"
+  - '#ai/ml'
+  - '#application/clustering'
 ---
 
 # K-Means Clustering

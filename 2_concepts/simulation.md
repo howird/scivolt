@@ -1,7 +1,8 @@
 ---
 date: January 16, 2024
+status: backlog
 tags:
-- '#hwe/digital-hardware-eng'
+  - '#hwe/digital-hardware-eng'
 ---
 
 # Simulation in Digital Hardware

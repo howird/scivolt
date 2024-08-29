@@ -1,8 +1,9 @@
 ---
 date: June 9, 2022
+status: backlog
 tags:
-  - "#ai/ml"
-  - application/classification
+  - '#ai/ml'
+  - '#application/classification'
 ---
 
 # Support Vector Machines

@@ -1,3 +1,8 @@
+---
+tags:
+  - '#type/area'
+---
+
 [1 intro](intro.md)
 [10a llms](llms.md)
 [2 linear-regression-classification](linear-regression-classification.md)
