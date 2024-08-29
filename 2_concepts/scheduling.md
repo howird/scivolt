@@ -32,5 +32,5 @@ tags:
 - s11: add pic of our changes
   - latency = 7
     - latency: Time required for the first output(s) to emerge from the circuit for a given input
-  - throughput $= \\frac26 = \\frac13$
-  - efficiency = $\\frac{6\\times4-3}{6\\times4}$
+  - throughput $= \frac26 = \frac13$
+  - efficiency = $\frac{6\times4-3}{6\times4}$

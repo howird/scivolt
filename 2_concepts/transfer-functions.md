@@ -7,10 +7,10 @@ tags:
 
 # Transfer Functions
 
-- The transfer function is obtained by the $\\mathcal{L}$-transform and solving for the ratio between input and output
+- The transfer function is obtained by the $\mathcal{L}$-transform and solving for the ratio between input and output
 
 $$
-Y(s)=G(s)U(s) \\implies G(s)=\\frac{Y(s)}{G(s)}
+Y(s)=G(s)U(s) \implies G(s)=\frac{Y(s)}{G(s)}
 $$
 
 ## Poles and Zeros
@@ -18,13 +18,13 @@ $$
 - The frequencies that elicit __zero system response__ are the __zeros__ of the transfer function, and can be represented by the roots of the numerator polynomial
 
 $$
-{s|s\\in \\mathbb{Z},0 = \\text{numerator}(s)}
+{s|s\in \mathbb{Z},0 = \text{numerator}(s)}
 $$
 
 - The frequencies where the system response is __undefined__ are the __poles__ and can be represented by the roots of the denominator polynomial
 
 $$
-{s|s\\in \\mathbb{Z},0 = \\text{denominator}(s)}
+{s|s\in \mathbb{Z},0 = \text{denominator}(s)}
 $$
 
 ## 1st and 2nd order systems
@@ -44,12 +44,12 @@ $$
 
 ## under dampened systems
 
-- $0\<\\zeta\<1$
+- $0\<\zeta\<1$
 
 - obsreve the magnitude plot
 
   - roughly the system bandwidth is approx
-  - wen the dampening ratio is small $0\<\\zeta\<\\frac 1 {\\sqrt{2}}$ the mag plot has a peak and it occurs at \\omega=\\omega_n\\sqrt{1-\\omegan}
+  - wen the dampening ratio is small $0\<\zeta\<\frac 1 {\sqrt{2}}$ the mag plot has a peak and it occurs at \omega=\omega_n\sqrt{1-\omegan}
 
 - impulse response (tf: g(s)=)
 
@@ -68,5 +68,5 @@ $$
 
 ### over dampened system
 
-- $s=-\\zeta\\omega_n \\pm \\omega_n \\sqrt{1-z^2}$
+- $s=-\zeta\omega_n \pm \omega_n \sqrt{1-z^2}$
 -

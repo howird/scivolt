@@ -260,10 +260,10 @@ BRAM specifications:
 
 - Existing BRAM usage (in solution 3):
 
-  - size of A or B = $64\\times64\\times8\\text{bit}=32\\text{kbit}$
-    - $\\text{ceil}(\\frac{32\\text{kbit}}{18\\text{kbit}}) = 2$ BRAMs
-  - size of R = $64\\times64\\times16\\text{bit}=64\\text{kbit}$
-    - $\\text{ceil}(\\frac{64\\text{kbit}}{18\\text{kbit}}) = 4$ BRAMs
+  - size of A or B = $64\times64\times8\text{bit}=32\text{kbit}$
+    - $\text{ceil}(\frac{32\text{kbit}}{18\text{kbit}}) = 2$ BRAMs
+  - size of R = $64\times64\times16\text{bit}=64\text{kbit}$
+    - $\text{ceil}(\frac{64\text{kbit}}{18\text{kbit}}) = 4$ BRAMs
   - solution 3 uses 2 BRAMs of width 8 for each of $A$ and $B$ and 4 BRAMs of width 16 for $R$
     - 8 total
 

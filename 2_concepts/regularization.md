@@ -37,7 +37,7 @@ tags:
 - L1 regularization makes weights sparse
   - Sets some weights to zero
   - This can be useful at the input for feature selection, and possibly for more efficient computation, depending on hardware
-  - Adds $\\alpha \\text{ sgn}(\\boldsymbol w)$ term to loss
+  - Adds $\alpha \text{ sgn}(\boldsymbol w)$ term to loss
 
 #### 6.6 Dropout is a practical approximation of bagging for large networks
 
@@ -48,7 +48,7 @@ tags:
   - Include all units and undo weight rescaling
 - This approximates bagging in a way that is practical for large models
   - In contrast with bagging:
-    - There are as many models as training passes (sampled from $2^{n\_{units}}$ possibilities)
+    - There are as many models as training passes (sampled from $2^{n_{units}}$ possibilities)
     - Parameters are shared between models
     - Each model sees at most one training example (or batch)
 - Inference method approximates averaging over many random network samples

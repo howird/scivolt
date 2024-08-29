@@ -32,7 +32,7 @@ year: 2020/05
 ## Arch
 
 - The overall DETR architecture contains three main components a CNN backbone to extract a compact feature representation, an encoder-decoder transformer, and a simple feed forward network (FFN) that makes the final detection prediction
-- Starting from the initial image $x\_{img} \\in \\mathcal{R}^3 \\times H_0 \\times W_0$ , a conventional CNN backbone generates a lower-resolution activation
+- Starting from the initial image $x_{img} \in \mathcal{R}^3 \times H_0 \times W_0$ , a conventional CNN backbone generates a lower-resolution activation
   0 W0
   map f ∈ RC×H×W . Typical values we use are C = 2048 and H, W = H
   32 , 32 .

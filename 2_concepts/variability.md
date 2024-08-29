@@ -10,7 +10,7 @@ tags:
 ## The Gaussian
 
 $$
-p(x) = Ae^{ -\\frac12{( x - \\mu/\\sigma)^2}}
+p(x) = Ae^{ -\frac12{( x - \mu/\sigma)^2}}
 $$
 
 ![](2.4.1.png#center){ width=30% }
@@ -18,11 +18,11 @@ $$
 ![](2.4.2.png#center){ width=70% }
 
 - $s_f$ meaning the stimulus projected on a filter, $f$
-- Instead of using PCA to find filter $f$, we could simply look for a choice of f that would produce a $P(\\text{s}\_f | \\text{ spike})$ that is most different
+- Instead of using PCA to find filter $f$, we could simply look for a choice of f that would produce a $P(\text{s}_f | \text{ spike})$ that is most different
 - We can us the Kullback-Leibler divergence to do this:
 
 $$
-D\_{KL}(P(s), Q(s))=\\int ds P(s)\\log_2(P(s)/ Q(s))\\D\_{KL}(P(\\text{s}\_f | \\text{ spike}), P(\\text{s}\_f))
+D_{KL}(P(s), Q(s))=\int ds P(s)\log_2(P(s)/ Q(s))\D_{KL}(P(\text{s}_f | \text{ spike}), P(\text{s}_f))
 $$
 
 ## Maximally-Informative Dimensions
@@ -43,28 +43,28 @@ $$
 
 - The next issue to deal with is to generate the arrival time of spikes $p(t),$ from  $r(t)$
 - Over a time period $t$ which is divided into $n$ time bins:
-  - Each time bin is $\\Delta t$ long where $\\Delta t= \\frac T n$
-  - Over $t$ the probability that $k$ spikes occur is $P_n\[k\] = \\binom nk p^k(1-p)^k$
+  - Each time bin is $\Delta t$ long where $\Delta t= \frac T n$
+  - Over $t$ the probability that $k$ spikes occur is $P_n\[k\] = \binom nk p^k(1-p)^k$
   - The mean or average number of spikes is $<k> = np$
   - The variance is $Var(k) = np(1-p)$
 
 ## Poisson Spiking
 
 - When there are many time bins and the probability of a spike in any bend becomes very small, we want to use a different form for the distribution
-- We use the Poisson Distribution which is the Binomial with $n \\rightarrow \\infin \\text{ and } p \\rightarrow 0$
+- We use the Poisson Distribution which is the Binomial with $n \rightarrow \infin \text{ and } p \rightarrow 0$
   - Thus the Poisson Distribution can be used to provide a reasonable approx. to the binomial if $n$ is large and $p$ is small
 
-  - Distribution: $P_T\[k\] = (rT)^k \\exp(-rT)/k!$ where $r = \\frac {P}{\\Delta t}$
+  - Distribution: $P_T\[k\] = (rT)^k \exp(-rT)/k!$ where $r = \frac {P}{\Delta t}$
 
   - Mean: $<k>= rT$
 
   - Variance: $Var(k)= rT$
 
-  - Fano Factor: $F = \\frac {\\sigma^2}{\\mu} = 1$, a distribution is Poisson if $F = 1$
+  - Fano Factor: $F = \frac {\sigma^2}{\mu} = 1$, a distribution is Poisson if $F = 1$
 
   - The intervals between successive spikes have an exponential distribution:
 
-    $P(T)= r \\exp(-rT)$
+    $P(T)= r \exp(-rT)$
 
     - The negative exponential means that a consecutive spike is likely to occur soon after the first spike
     - However there a physical limitations as neurons take time to regenerate their negative potential (the refractory period) so no spikes occur within 10 milliseconds of the first spike

@@ -14,7 +14,7 @@ tags:
 
 - **Multiply-Accumulate (MAC) Instructions**: This is a fundamental operation in many signal processing algorithms.
 
-  - `MACa Ri, Rj;` $\\implies R_a := R_a + R_i \\times R_j$
+  - `MACa Ri, Rj;` $\implies R_a := R_a + R_i \times R_j$
   - The `MACa Ri, Rj;` instruction multiplies two registers, `Ri`​ and `Rj`, ​ and accumulates the result into a third register, `Ra`
   - This single instruction, doing both multiplication and addition, enhances performance for tasks such as filtering and convolution operations
 

@@ -11,7 +11,7 @@ tags:
 
 ## How does Reinforcement Learning differ from other ML
 
-- Generally, in ML, we have a labelled dataset $\\mathcal D = {(x_i, y_i)}$
+- Generally, in ML, we have a labelled dataset $\mathcal D = {(x_i, y_i)}$
   - The data is independently and identically distributed (i.i.d)
   - The ground truth is known during training
 - In Reinforcement Learning (RL),

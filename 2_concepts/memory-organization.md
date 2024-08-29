@@ -12,23 +12,23 @@ tags:
 
 - The average memory access time ($t_avg$​) is a fundamental metric used to understand the efficiency of memory hierarchies in processors
 
-- It is calculated based on the hit time ($t\_{hit}$​), the miss rate ($% \\times t\_{miss}$​), and the time it takes to retrieve data from the next level of cache or memory when there is a miss
+- It is calculated based on the hit time ($t_{hit}$​), the miss rate ($% \times t_{miss}$​), and the time it takes to retrieve data from the next level of cache or memory when there is a miss
   $$
-  \\displaylines{
-  t\_{avg} = t\_{hit} + % \\times t\_{miss} \\
-  L1: t\_{miss} = t\_{arg}(L2) \\
-  L2: t\_{miss} = t\_{arg}(L3) \\
-  L3: t\_{miss} = t\_{DRAM} \\
+  \displaylines{
+  t_{avg} = t_{hit} + % \times t_{miss} \\
+  L1: t_{miss} = t_{arg}(L2) \\
+  L2: t_{miss} = t_{arg}(L3) \\
+  L3: t_{miss} = t_{DRAM} \\
   }
   $$
 
 - Where:
 
-  - $t\_{hit}$​ is the time to access data in the cache if it is present
+  - $t_{hit}$​ is the time to access data in the cache if it is present
   - $%$ represents the miss rate percentage
-  - $t\_{miss}$ is the time taken to handle a cache miss, including fetching data from a lower level of the memory hierarchy
+  - $t_{miss}$ is the time taken to handle a cache miss, including fetching data from a lower level of the memory hierarchy
 
-- The rule of thumb that doubling the cache size typically reduces the miss rate by $\\sqrt 2$
+- The rule of thumb that doubling the cache size typically reduces the miss rate by $\sqrt 2$
 
 ## Inclusivity Options
 
@@ -36,17 +36,17 @@ tags:
 
 - **(1) Inclusive**: All data in a lower-level cache (e.g., L1) is also present in the higher-level cache (e.g., L3)
 
-  - $L_i \\subset L\_{i+1}$
+  - $L_i \subset L_{i+1}$
   - This simplifies cache coherency protocols because only the highest-level cache needs to be checked for coherency issues, and ensures a single point of update or invalidation.
 
 - \*\* (2) Exclusive\*\*: Data stored in a lower-level cache (L1) is not stored in any higher-level cache (L3)
 
-  - $L_i \\cap L\_{i+1} = 0$
+  - $L_i \cap L_{i+1} = 0$
   - This maximizes the total unique data stored across all caches but can complicate cache coherency and require more frequent access to slower memory.
 
 - **(3) Non-inclusive**: There is no strict relationship between lower and higher-level caches
 
-  - $L_i \\cap L\_{i+1} \\ne 0$
+  - $L_i \cap L_{i+1} \ne 0$
   - Some data may be duplicated, and some may not
   - This offers a balance, potentially optimizing different aspects of cache utilization and coherency handling
 
@@ -120,7 +120,7 @@ In systems with multiple cores or processing elements, how memory is accessed ca
 
 - multi-ported (multiple accesses to same memory)
 
-  - $N \\ge C$, latency=1
+  - $N \ge C$, latency=1
   - $N\<C$ latency=$C/N$
 
 ![](Pasted%20image%2020240415154054.png)

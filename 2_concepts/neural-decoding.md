@@ -48,7 +48,7 @@ tags:
 ![](3.1.5.png#center){ width=50% }
 
 - Given these distributions, we want to produce a policy that maps some value $r$, into either an upward direction or a negative direction
-- This can be done by choosing a threshold, $z$, that maximizes the probability of a correct answer. Here the probability of getting an incorrect answer is  $p(r \\ge z|-)$ and $p(r \\le z|+)$
+- This can be done by choosing a threshold, $z$, that maximizes the probability of a correct answer. Here the probability of getting an incorrect answer is  $p(r \ge z|-)$ and $p(r \le z|+)$
 
 # Accumulated Evidence
 
@@ -56,8 +56,8 @@ tags:
 
 ![](3.1.6.png#center){ width=85% }
 
-- Given a noise $r$, we can calculate the likelihoods of the sound belonging to either class and then compute their ratio: $l(s) = \\frac {P(s|tiger)}{P(s|breeze)}$
-- If  $l \\gt 1$, then $p(tiger)$ was more likely and if  $l \\lt 1$, then $p(breeze)$ was more likely. In this case, the likelihood ratio is less than 1
+- Given a noise $r$, we can calculate the likelihoods of the sound belonging to either class and then compute their ratio: $l(s) = \frac {P(s|tiger)}{P(s|breeze)}$
+- If  $l \gt 1$, then $p(tiger)$ was more likely and if  $l \lt 1$, then $p(breeze)$ was more likely. In this case, the likelihood ratio is less than 1
 - As we accumulate this evidence over time, every sample is independent so we're multiplying the probabilities together. So, instead let's take the log and sum them
 - Starting at $counter = 0$, and time, $t=0$, we sum the logs of the likelihood ratio
 
@@ -97,7 +97,7 @@ def is_tiger(tiger_threshold, breeze_threshold, p_dist_tiger, p_dist_breeze):
 - After all, the probability that there actually is a tiger is very small
 - So, if we're thinking correctly, we should include in our criterion the fact that these distributions don't generally have the same weight
 - They should be scaled up and down by the factors, the probability of the breeze, and soon by the probability that there was in fact, a tiger
-- Currently, we only calculate $P(s|tiger)$ and $P(s|breeze)$ however, we should be calculating $P(tiger) \\times P(s|tiger)$ and $P(breeze)\\times P(s|breeze)$
+- Currently, we only calculate $P(s|tiger)$ and $P(s|breeze)$ however, we should be calculating $P(tiger) \times P(s|tiger)$ and $P(breeze)\times P(s|breeze)$
 - This means that we need to take into account the role of priors. These prior probabilities that these stimuli were in fact present.
 
 # Evidence for Scaling by Priors

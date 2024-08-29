@@ -15,19 +15,19 @@ tags:
 
 - In Linear Regression:
 
-  - the prediction, $\\hat y$, is a linear (or affine) function of the inputs, $x$
+  - the prediction, $\hat y$, is a linear (or affine) function of the inputs, $x$
     $$
-    \\hat y = \\boldsymbol{w}^T\\boldsymbol{x}+b
+    \hat y = \boldsymbol{w}^T\boldsymbol{x}+b
     $$
 
 - In Linear Classification:
 
-  - the prediction, $\\hat y$, uses a linear decision boundary
+  - the prediction, $\hat y$, uses a linear decision boundary
     $$
-    \\hat y = \\begin{cases}
-    0 &\\text{if } \\boldsymbol{w}^T\\boldsymbol{x}+b \< 0 \\
-    1 &\\text{if } \\boldsymbol{w}^T\\boldsymbol{x}+b \\ge 0
-    \\end{cases}
+    \hat y = \begin{cases}
+    0 &\text{if } \boldsymbol{w}^T\boldsymbol{x}+b \< 0 \\
+    1 &\text{if } \boldsymbol{w}^T\boldsymbol{x}+b \ge 0
+    \end{cases}
     $$
 
 - If $x$ is $D$-dimensional, then the decision is based on
@@ -36,34 +36,34 @@ tags:
 
 - Non-linear basis functions allow approximations and decision boundaries that are not linear
 
-  - replace $\\boldsymbol x$ with $\\boldsymbol{f(x)}$
+  - replace $\boldsymbol x$ with $\boldsymbol{f(x)}$
 
 - linear methods work well with input dimensions
 
 #### 2.3 Regression and classification are supervised learning problems
 
 - Learning a function that approximates examples of input-output pairs
-- The function has a generic form with parameters $\\theta$
-- The differences between predictions $\\hat y$ and target values $y$ are summarized with a loss function
+- The function has a generic form with parameters $\theta$
+- The differences between predictions $\hat y$ and target values $y$ are summarized with a loss function
 
 #### 2.4 Linear regression typically minimizes squared-error loss
 
 - Sum squared error (SSE) is:
   $$
-  L = \\sum\_{i=1}^N (\\hat y_i - y_i)^2
+  L = \sum_{i=1}^N (\hat y_i - y_i)^2
   $$
 - Minimizing this is the same as minimizing the mean-squared error
-- SSE in matrix form is (where we merge the bias term into $\\boldsymbol w$):
+- SSE in matrix form is (where we merge the bias term into $\boldsymbol w$):
   $$
-  \\displaylines{
+  \displaylines{
 
-L = ||X\\boldsymbol{w}-\\boldsymbol{y}||^2 \\
-L = (X\\boldsymbol{w}-\\boldsymbol{y})^T(X\\boldsymbol{w}-\\boldsymbol{y}) \\
-L = \\boldsymbol{w}^TX^TX\\boldsymbol{w} - X^T\\boldsymbol{w}^T\\boldsymbol{y} - \\boldsymbol{y}^TX\\boldsymbol{w} + \\boldsymbol{y}^T\\boldsymbol{y} \\
-\\frac{\\partial L}{\\partial \\boldsymbol w} = 2X^TX\\boldsymbol{w} - 2X^T\\boldsymbol{y} \\
-\\frac{\\partial L}{\\partial \\boldsymbol w} = 0 \\
-0 = X^TX\\boldsymbol{w} - X^T\\boldsymbol{y} \\
-\\boldsymbol{w}^\* = (X^TX)^{-1}X^T\\boldsymbol{y} \\
+L = ||X\boldsymbol{w}-\boldsymbol{y}||^2 \\
+L = (X\boldsymbol{w}-\boldsymbol{y})^T(X\boldsymbol{w}-\boldsymbol{y}) \\
+L = \boldsymbol{w}^TX^TX\boldsymbol{w} - X^T\boldsymbol{w}^T\boldsymbol{y} - \boldsymbol{y}^TX\boldsymbol{w} + \boldsymbol{y}^T\boldsymbol{y} \\
+\frac{\partial L}{\partial \boldsymbol w} = 2X^TX\boldsymbol{w} - 2X^T\boldsymbol{y} \\
+\frac{\partial L}{\partial \boldsymbol w} = 0 \\
+0 = X^TX\boldsymbol{w} - X^T\boldsymbol{y} \\
+\boldsymbol{w}^\* = (X^TX)^{-1}X^T\boldsymbol{y} \\
 }
 $$
 
@@ -90,15 +90,15 @@ $$
 - For polynomial regression, as the order increases, so does the magnitude of the weights
 - This can be rectified by penalizing large weights within the loss function:
   $$
-  \\displaylines{
-  \\tilde L = \\sum\_{i=0}^N \\overbrace{(\\hat y_i - y_i)^2}^\\text{prediction errors are bad} + \\overbrace{\\lambda \\boldsymbol w^T \\boldsymbol w}^\\text{large weights are bad} \\
-  \\implies \\boldsymbol{w}^\* = (\\lambda I + X^TX)^{-1}X^T\\boldsymbol{y} \\
+  \displaylines{
+  \tilde L = \sum_{i=0}^N \overbrace{(\hat y_i - y_i)^2}^\text{prediction errors are bad} + \overbrace{\lambda \boldsymbol w^T \boldsymbol w}^\text{large weights are bad} \\
+  \implies \boldsymbol{w}^\* = (\lambda I + X^TX)^{-1}X^T\boldsymbol{y} \\
   }
   $$
 
 #### 2.8 A linear discriminant uses a linear boundary to separate examples into different categories
 
-- $\\boldsymbol{w}$ determines the orientation of the decision surface, and $b$ determines its distance from the origin
+- $\boldsymbol{w}$ determines the orientation of the decision surface, and $b$ determines its distance from the origin
 - Ways to find a linear discriminant
   - Logistic regression
   - Perceptron learning rule
@@ -107,26 +107,26 @@ $$
 
 - For the perceptron binary classification task, we use target values of:
   $$
-  y\\in {-1, 1}
+  y\in {-1, 1}
   $$
 - The Perceptron function is:
   $$
-  \\displaylines{
-  \\hat y = f (\\boldsymbol{w}^T\\boldsymbol{x}) \\
-  \\text{where: }
-  f(a) = \\begin{cases}
-  -1 &\\text{if } a \< 0 \\
-  1 &\\text{if } a \\ge 0
-  \\end{cases}
+  \displaylines{
+  \hat y = f (\boldsymbol{w}^T\boldsymbol{x}) \\
+  \text{where: }
+  f(a) = \begin{cases}
+  -1 &\text{if } a \< 0 \\
+  1 &\text{if } a \ge 0
+  \end{cases}
   }
   $$
-- The activation function is a step function from $-1 \\rightarrow 1$ at $x=0$
+- The activation function is a step function from $-1 \rightarrow 1$ at $x=0$
 - To optimize the weights of the perceptron, we use a modified gradient descent that uses a single example at a time
-- Loop through examples and update $\\boldsymbol{w}$ to reduce error on the $n$th misclassified example:
+- Loop through examples and update $\boldsymbol{w}$ to reduce error on the $n$th misclassified example:
   $$
-  \\boldsymbol{w}^{(\\tau+1)} = \\boldsymbol{w}^\\tau - \\eta \\nabla L (\\boldsymbol{w}) = \\boldsymbol{w}^\\tau + \\eta\\boldsymbol{x}\_n y_n
+  \boldsymbol{w}^{(\tau+1)} = \boldsymbol{w}^\tau - \eta \nabla L (\boldsymbol{w}) = \boldsymbol{w}^\tau + \eta\boldsymbol{x}_n y_n
   $$
-- where $\\tau$ is the iteration number, and $\\eta$ is the learning rate
+- where $\tau$ is the iteration number, and $\eta$ is the learning rate
   - learning rate is not too important here
 - this method is not good at separating linear separable examples
 
@@ -134,17 +134,17 @@ $$
 
 - Logistic regression function:
   $$
-  p(x) = \\frac 1{1+\\exp(-(\\boldsymbol{w}^T\\boldsymbol{x}+b))}
+  p(x) = \frac 1{1+\exp(-(\boldsymbol{w}^T\boldsymbol{x}+b))}
   $$
 - This isn’t a classifier on its own, but it just needs a threshold such as $p(x) = 0.5$
-- The $\\boldsymbol{w}^T\\boldsymbol{x}+b$ term is called the log-odds and the unit of this term is a "logit"
+- The $\boldsymbol{w}^T\boldsymbol{x}+b$ term is called the log-odds and the unit of this term is a "logit"
 - The loss function which is used to iteratively optimize this function is:
   $$
-  \\text{where: }
-  L_k = \\begin{cases}
-  -\\ln(p(\\boldsymbol{x}\_k)) &\\text{if } y_k = 1 \\
-  -\\ln(1-p(\\boldsymbol{x}\_k)) &\\text{if } y_k = 0
-  \\end{cases}
+  \text{where: }
+  L_k = \begin{cases}
+  -\ln(p(\boldsymbol{x}_k)) &\text{if } y_k = 1 \\
+  -\ln(1-p(\boldsymbol{x}_k)) &\text{if } y_k = 0
+  \end{cases}
   $$
 
 #### 2.11 Linear classifiers can implement Boolean logic, except for XOR

@@ -24,7 +24,7 @@ void toplevel(args) {
 
 - throughput improvement comes from the pipeline's ability to process new inputs at the interval of the longest module latency
 
-  - interval = $\\text{max}(L_1, L_2, L_3)$
+  - interval = $\text{max}(L_1, L_2, L_3)$
 
 - effectively allowing for continuous data flow and processing, enhancing the system's overall efficiency
 

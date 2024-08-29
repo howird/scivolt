@@ -56,7 +56,7 @@ tags:
 - The loss is a measure of this performance; its the difference between the network output and the desired output
 - For regression tasks, a typical loss is mean-squared error (MSE)
   $$
-  \\text{MSE} = \\frac 1n \\sum^n\_{i=1} (o_i -  t_i)^2
+  \text{MSE} = \frac 1n \sum^n_{i=1} (o_i -  t_i)^2
   $$
 - $i$ is a the index of a labeled input and output pair
 - $o_i$ is the network's output given the $i$th labeled input

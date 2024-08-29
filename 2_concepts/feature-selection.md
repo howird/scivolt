@@ -48,20 +48,20 @@ tags:
 
 ## Determining Non-Linear Input/Output Function
 
-- We have discussed how to estimate the linear filter with a Spike Triggered Average $P(\\text{spike } | \\text{ stimulus})$ , next. we want to find the input/output function
+- We have discussed how to estimate the linear filter with a Spike Triggered Average $P(\text{spike } | \text{ stimulus})$ , next. we want to find the input/output function
 
 ![](2.3.3.png#center){ width=100% }
 
-$\\text{The input/output function is: (where s}\_1: \\text{is the STA )}$
+$\text{The input/output function is: (where s}_1: \text{is the STA )}$
 
 $$
-P(\\text{spike } | \\text{ stimulus}) \\rightarrow P(\\text{spike } | \\text{ s}\_1) , \\text{where s}\_1: \\text{is the STA}
+P(\text{spike } | \text{ stimulus}) \rightarrow P(\text{spike } | \text{ s}_1) , \text{where s}_1: \text{is the STA}
 $$
 
-$\\text{This can be found from the data using Bayes' Rule:}$
+$\text{This can be found from the data using Bayes' Rule:}$
 
 $$
-P(\\text{spike } | \\text{ s}\_1) = \\frac{ P(\\text{ s}\_1 | \\text{ spike})P(\\text{spike}) } {P(\\text{s}\_1)}
+P(\text{spike } | \text{ s}_1) = \frac{ P(\text{ s}_1 | \text{ spike})P(\text{spike}) } {P(\text{s}_1)}
 $$
 
 ![](2.3.4.png#center){ width=100% }

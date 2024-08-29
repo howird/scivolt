@@ -29,12 +29,12 @@ Here is the function definition, whose inputs are:
 - a point set/dataset $X$, which is an $(N, D)$ matrix where $N$ is the number of points, and $D$ is the number of dimensions
 
 $$
-\\begin{bmatrix}
-x\_{1,1} & \\dots  & x\_{1,d} \\
-x\_{2,1} & \\dots  & x\_{2,d} \\
-\\vdots  & \\ddots & \\vdots \\
-x\_{N,1} & \\dots  & x\_{N,d}
-\\end{bmatrix}
+\begin{bmatrix}
+x_{1,1} & \dots  & x_{1,d} \\
+x_{2,1} & \dots  & x_{2,d} \\
+\vdots  & \ddots & \vdots \\
+x_{N,1} & \dots  & x_{N,d}
+\end{bmatrix}
 $$
 
 - a positive integer $k$, which is the number of classes/means to classify from
@@ -65,40 +65,40 @@ def euclidean(X, means):
 - Thus we have a list of $k$ row vectors with $N$ length:
 
 $$
-\\begin{bmatrix}
-\\text{dist}_{1,1} & \\text{dist}_{1,2} & \\dots & \\text{dist}\_{1,N}
-\\end{bmatrix}
+\begin{bmatrix}
+\text{dist}_{1,1} & \text{dist}_{1,2} & \dots & \text{dist}_{1,N}
+\end{bmatrix}
 $$
 
 $$
-\\dots
+\dots
 $$
 
 $$
-\\begin{bmatrix}
-\\text{dist}_{k,1} & \\text{dist}_{k,2} & \\dots & \\text{dist}\_{k,N}
-\\end{bmatrix}
+\begin{bmatrix}
+\text{dist}_{k,1} & \text{dist}_{k,2} & \dots & \text{dist}_{k,N}
+\end{bmatrix}
 $$
 
 - Next, we stack the $k$ row vectors to get a $(k, N)$ matrix:
 
 $$
-\\begin{bmatrix}
-\\text{dist}_{1,1} & \\text{dist}_{1,2} & \\dots  & \\text{dist}_{1,N} \\
-\\vdots            & \\vdots            & \\ddots & \\vdots \\
-\\text{dist}_{k,1} & \\text{dist}_{k,2} & \\dots  & \\text{dist}_{k,N}
-\\end{bmatrix}
+\begin{bmatrix}
+\text{dist}_{1,1} & \text{dist}_{1,2} & \dots  & \text{dist}_{1,N} \\
+\vdots            & \vdots            & \ddots & \vdots \\
+\text{dist}_{k,1} & \text{dist}_{k,2} & \dots  & \text{dist}_{k,N}
+\end{bmatrix}
 $$
 
 - Then transpose that matrix to get a $(N, k)$ matrix of distances for each mean
 
 $$
-\\begin{bmatrix}
-\\text{dist}_{1,1} & \\dots  & \\text{dist}_{1,k} \\
-\\text{dist}_{2,1} & \\dots  & \\text{dist}_{2,k} \\
-\\vdots            & \\ddots & \\vdots \\
-\\text{dist}_{N,1} & \\dots  & \\text{dist}_{N,k}
-\\end{bmatrix}
+\begin{bmatrix}
+\text{dist}_{1,1} & \dots  & \text{dist}_{1,k} \\
+\text{dist}_{2,1} & \dots  & \text{dist}_{2,k} \\
+\vdots            & \ddots & \vdots \\
+\text{dist}_{N,1} & \dots  & \text{dist}_{N,k}
+\end{bmatrix}
 $$
 
 ### Main Loop
@@ -124,12 +124,12 @@ dists = euclidean(X, means)
 - We now have `dists`, a $(k, N)$ matrix of distances from each of the k means:
 
 $$
-\\begin{bmatrix}
-\\text{dist}_{1,1} & \\dots  & \\text{dist}_{1,k} \\
-\\text{dist}_{2,1} & \\dots  & \\text{dist}_{2,k} \\
-\\vdots            & \\ddots & \\vdots \\
-\\text{dist}_{N,1} & \\dots  & \\text{dist}_{N,k}
-\\end{bmatrix}
+\begin{bmatrix}
+\text{dist}_{1,1} & \dots  & \text{dist}_{1,k} \\
+\text{dist}_{2,1} & \dots  & \text{dist}_{2,k} \\
+\vdots            & \ddots & \vdots \\
+\text{dist}_{N,1} & \dots  & \text{dist}_{N,k}
+\end{bmatrix}
 $$
 
 ### Loop Step 2
@@ -142,16 +142,16 @@ labels = np.argmin(dists, axis=1)
 - This gives us a vector, `labels` which contains column index of the smallest euclidean distance for each point, this column index corresponds to the nearest mean
 
 $$
-\\begin{bmatrix}
-\\text{label}_{1} \\
-\\text{label}_{2} \\
-\\vdots \\
-\\text{label}\_{N}
-\\end{bmatrix}
+\begin{bmatrix}
+\text{label}_{1} \\
+\text{label}_{2} \\
+\vdots \\
+\text{label}_{N}
+\end{bmatrix}
 $$
 
 $$
-\\text{where: } \\text{ label}\_{i} \\in \[0, k), \\mathbb{Z}
+\text{where: } \text{ label}_{i} \in \[0, k), \mathbb{Z}
 $$
 
 ### Loop Step 3

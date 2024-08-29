@@ -20,7 +20,7 @@ tags:
 
   - in the case of a discrete MDP, the transition matrix adds a dimension for actions
 
-- $MDP(S, A, T, R, \\gamma, H)$:
+- $MDP(S, A, T, R, \gamma, H)$:
 
   - Set of states $S$
   - Set of actions $A$
@@ -28,7 +28,7 @@ tags:
   - Reward function $R(s, a, s')$
     - note: the reward at
   - Start state $s_0$
-  - Discount factor $\\gamma \\in \[0,1\]$
+  - Discount factor $\gamma \in \[0,1\]$
   - Horizon $H$
 
 - __Reinforcement Learning__ (RL) defines the state to encapsulate an agent and environment
@@ -38,24 +38,24 @@ tags:
 
 ![MarkovDecision Process Diagram](Pasted%20image%2020240821184927.png)
 
-- Goal of RL is to learn a policy, $\\pi$, that will maximize the (discounted) expected reward:
+- Goal of RL is to learn a policy, $\pi$, that will maximize the (discounted) expected reward:
   $$
-  \\pi(s) = \\arg\\max\_\\pi E\[\\sum\_{t=0}^H\\gamma_tR(S_t, A_t, S\_{t+1}|\\pi)\]
+  \pi(s) = \arg\max_\pi E\[\sum_{t=0}^H\gamma_tR(S_t, A_t, S_{t+1}|\pi)\]
   $$
-- note: the policy $\\pi(s)$ returns a probability distribution over all possible actions
+- note: the policy $\pi(s)$ returns a probability distribution over all possible actions
 
 > \[!question\]
 >
 > - (1) One confusing aspect is the alignment of the state actions and rewards at each time step:
 >
 >   - $S_t$ is the state at the current time step
->   - $R_t$ is the reward we received when we transition\_\_ed\_\_, from the previous state to the current state ($S\_{t-1}\\rightarrow S_t$) via the previous action $A\_{t-1}$
->   - $A_t$ is the action we __will__ take to transition from $S_t\\rightarrow S\_{t+1}$
+>   - $R_t$ is the reward we received when we transition__ed__, from the previous state to the current state ($S_{t-1}\rightarrow S_t$) via the previous action $A_{t-1}$
+>   - $A_t$ is the action we __will__ take to transition from $S_t\rightarrow S_{t+1}$
 >
-> - Thus, the function above can be clarified by changing $R \\rightarrow R\_{t+1}$
+> - Thus, the function above can be clarified by changing $R \rightarrow R_{t+1}$
 >
 >   - note: $R_t$ does not exist in the equation since, it doesn't matter anymore
 >
-> - (2) Why is $S\_{t+1}$ an __input__ to the reward function $R$ (not just $S_t$ and $A_t$)?
+> - (2) Why is $S_{t+1}$ an __input__ to the reward function $R$ (not just $S_t$ and $A_t$)?
 >
->   - Since the transition function is probabilistic, we cannot know what the next state will be with just $S_t$ and $A_t$, and the reward received at the next step $R\_{t+1}$ cannot be know with out the next state $S\_{t+1}$
+>   - Since the transition function is probabilistic, we cannot know what the next state will be with just $S_t$ and $A_t$, and the reward received at the next step $R_{t+1}$ cannot be know with out the next state $S_{t+1}$

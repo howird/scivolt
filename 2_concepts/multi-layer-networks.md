@@ -40,25 +40,25 @@ tags:
 
 #### 3.6 Classification and Regression employ different output and loss functions
 
-- We want to perform maximum likelihood estimation of the network parameters, $\\theta$
+- We want to perform maximum likelihood estimation of the network parameters, $\theta$
   - we adjust the parameters to maximize the probability of the target given the input and the parameters
     $$
-    \\displaylines{
+    \displaylines{
 
-p(\\boldsymbol{y|\\theta})=\\prod\_{n=1}^Np(y_n|\\boldsymbol{\\theta}) \\
+p(\boldsymbol{y|\theta})=\prod_{n=1}^Np(y_n|\boldsymbol{\theta}) \\
 
-L(\\boldsymbol{\\theta}) = -\\ln(p(\\boldsymbol{y|\\theta}))=\\sum\_{n=1}^N-\\ln(p(y_n|\\boldsymbol{\\theta}))
+L(\boldsymbol{\theta}) = -\ln(p(\boldsymbol{y|\theta}))=\sum_{n=1}^N-\ln(p(y_n|\boldsymbol{\theta}))
 
 }
 $$
 
 - The negative log-likelihood is:
   $$
-  \\displaylines{
+  \displaylines{
 
-p(\\boldsymbol{y|\\theta})=\\prod\_{n=1}^N \\hat y ^{y_n} (1-\\hat y_n)^{1-y_n} \\
+p(\boldsymbol{y|\theta})=\prod_{n=1}^N \hat y ^{y_n} (1-\hat y_n)^{1-y_n} \\
 
-L(\\boldsymbol{\\theta}) = -\\ln(p(\\boldsymbol{y|\\theta}))=-\\sum\_{n=1}^N y_n\\ln(\\hat y) + (1-y_n)\\ln(1-\\hat y_n)
+L(\boldsymbol{\theta}) = -\ln(p(\boldsymbol{y|\theta}))=-\sum_{n=1}^N y_n\ln(\hat y) + (1-y_n)\ln(1-\hat y_n)
 
 }
 $$

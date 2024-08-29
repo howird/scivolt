@@ -142,7 +142,7 @@ The CLB diagram consists of 2 main components:
   - eg. for (i=0, i \<CONST;i++)
     - for(j=i, j\< CONST; j++)
       - foo(i,j);
-    - the number of ierations of foo() = $\\sum\_{j=1}^{CONST}j = \\frac{(const)(const + 1)}2$
+    - the number of ierations of foo() = $\sum_{j=1}^{CONST}j = \frac{(const)(const + 1)}2$
 
 #### 3. avoid branches that cannot be "flattened"
 

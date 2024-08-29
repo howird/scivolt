@@ -67,7 +67,7 @@ graph TD
   - 1. evaluate all internally generated events
   - 2. apply transitions and repeat until stable
     - repeat 1 and 2
-  - 3. advance simulation time to next external event (or timeout\_)
+  - 3. advance simulation time to next external event (or timeout_)
 - examples:
   - models a swap
   - when we transition these states we can set initial values (see edge on the right)

@@ -176,12 +176,12 @@ for(j=0; j<J; j++)
 
 - In the above example,
 
-  - the inner loop latency = $K\\times II +L-II$
-  - the overall loop latency = $J\\times (K\\times II +L-II)$
+  - the inner loop latency = $K\times II +L-II$
+  - the overall loop latency = $J\times (K\times II +L-II)$
 
 - if we flatten the loops, we can avoid the cost incurred by the tail of the inner loop, which is multiplied by $J$
 
-- Here is the flattened loop, where we calculate `j` and `k` in parallel with `BB` so $\\Delta L=0$
+- Here is the flattened loop, where we calculate `j` and `k` in parallel with `BB` so $\Delta L=0$
 
 ```c
 for(jk=0; jk<J*K; jk++) {
@@ -191,7 +191,7 @@ for(jk=0; jk<J*K; jk++) {
 }
 ```
 
-- overall loop latency = $J \\times (K \\times II) + L-II$
+- overall loop latency = $J \times (K \times II) + L-II$
 
   - notice, $J-II$ gets moved out of the loop
   - this comes at the cost of increasing the area cost
@@ -223,7 +223,7 @@ for(j=0; j<J; j++) {
 ```
 
 - if BB1 and BB2 are independent, then BB1 and BB2 can be executed in parallel
-  - this is only worth it if $L\_{BB1} \\le L\_{BB2}$, since if $L\_{BB1}>L\_{BB2}$ it would increase the latency of every single inner loop iteration
+  - this is only worth it if $L_{BB1} \le L_{BB2}$, since if $L_{BB1}>L_{BB2}$ it would increase the latency of every single inner loop iteration
 - the HLS compiler will try this
 
 ### Unrolling Loops
@@ -269,7 +269,7 @@ gantt
 
 - let unroll factor, $M=3$, and $L=2$
 
-- latency $=ceil (\\frac NM ) \\times L$
+- latency $=ceil (\frac NM ) \times L$
 
 - increases area cost by $M$
 
@@ -303,7 +303,7 @@ gantt
 	    S2:active, s12, after s11, 1s
 ```
 
-- latency $=ceil(\\frac NM)\\times II+L-II$
+- latency $=ceil(\frac NM)\times II+L-II$
 - unrolling requires more interface/memory bandwidth
 
 ## Array Optimizations
@@ -332,7 +332,7 @@ The implications of partitioning are:
     - preferred when accesses are sequential, distributing elements evenly across memories
   - **Block partitioning**: creates smaller arrays from consecutive blocks of the original array
     - better for strided accesses, where accesses jump by a certain stride (like looping through a column in a 2D array), grouping contiguous blocks of data in the same memory
-- Both partitioning types will create $M \\times \\text{sizeof}(a\[i\])$ memories/interfaces
+- Both partitioning types will create $M \times \text{sizeof}(a\[i\])$ memories/interfaces
 
 ````ad-example
 

@@ -33,14 +33,14 @@ tags:
 - A RPN takes an image (of any size) as input and outputs a set of rectangular object proposals, each with an objectness score
   - "objectness": membership to an object class vs background
 - To generate region proposals, we slide a small network over the convolutional feature map output by the last shared convolutional layer
-- This small network takes as input an $n \\times n$ spatial window of the input convolutional feature map
+- This small network takes as input an $n \times n$ spatial window of the input convolutional feature map
   - We use $n = 3$ in this paper, noting that the effective receptive field on the input image is large (228 pixels for VGG)
-- Each sliding window is mapped to a lower-dimensional feature ($512-d$ for VGG, with $\\text{ReLU}$ following)
+- Each sliding window is mapped to a lower-dimensional feature ($512-d$ for VGG, with $\text{ReLU}$ following)
 - This feature is fed into two sibling fully-connected layers:
   - a box-regression layer (_reg_)
   - a box-classification layer (_cls_)
 - Note: because the mini-network operates in a sliding-window fashion, the fully-connected layers are shared across all spatial locations
-- This architecture is naturally implemented with an $n\\times n$ convolutional layer followed by two sibling $1 \\times 1$ convolutional layers (for _reg_ and _cls_, respectively)
+- This architecture is naturally implemented with an $n\times n$ convolutional layer followed by two sibling $1 \times 1$ convolutional layers (for _reg_ and _cls_, respectively)
 
 ### Anchors
 
@@ -50,7 +50,7 @@ tags:
   - the _cls_ layer is implemented as a two class softmax layer, alternatively a single logistic regression unit can be used to produce $k$ scores
 - The $k$ proposals are parameterized relative to $k$ reference boxes, which we call anchors
 - An anchor is centered at the sliding window in question, and is associated with a scale and aspect ratio
-- By default we use 3 scales and 3 aspect ratios, yielding $k = 9$ anchors at each sliding position. For a convolutional feature map of a size $W \\times H$ (typically $\\sim 2400$), there are $WHk$ anchors in total
+- By default we use 3 scales and 3 aspect ratios, yielding $k = 9$ anchors at each sliding position. For a convolutional feature map of a size $W \times H$ (typically $\sim 2400$), there are $WHk$ anchors in total
 
 Multi-Scale Anchors as Regression References
 
@@ -75,7 +75,7 @@ Multi-Scale Anchors as Regression References
   - (ii) an anchor that has an IoU overlap higher than 0.7 with any ground-truth box.
   - Note: that a single ground-truth box may assign positive labels to multiple anchors. Usually the second condition is sufficient to determine the positive samples; but we still adopt the first condition for the reason that in some rare cases the second condition may find no positive sample. We assign a negative label to a non-positive anchor if its IoU ratio is lower than 0.3 for all ground-truth boxes. Anchors that are neither positive nor negative do not contribute to the training objective. With these definitions, we minimize an objective function following the multi-task loss in Fast R-CNN \[2\]. Our loss function for an image is defined as:
     $$
-    L({p_i},{t_i}) = \\frac{1}{N\_{cls}}\\sum_iL\_{cls}(p_i, p_i^*) + \\lambda\\frac{1}{N\_{reg}}\\sum p_i^* L\_{reg}(t_i, t_i^\*)
+    L({p_i},{t_i}) = \frac{1}{N_{cls}}\sum_iL_{cls}(p_i, p_i^*) + \lambda\frac{1}{N_{reg}}\sum p_i^* L_{reg}(t_i, t_i^\*)
     $$
 
 ## Fast RCNN

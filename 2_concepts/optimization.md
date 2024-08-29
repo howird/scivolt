@@ -18,16 +18,16 @@ tags:
 
 - Glorot Initialization: suggests uniformly distributed weights:
   $$
-  x \\sim U(-\\sqrt \\frac{6}{m+n}, \\sqrt \\frac{6}{m+n})
+  x \sim U(-\sqrt \frac{6}{m+n}, \sqrt \frac{6}{m+n})
   $$
 
-- When $m=n$, the variance of $x$ is $\\frac 1 m$
+- When $m=n$, the variance of $x$ is $\frac 1 m$
 
-- This keeps the scale of the variances and $\\delta$s (during backprop) at a consistent scale throughout the network
+- This keeps the scale of the variances and $\delta$s (during backprop) at a consistent scale throughout the network
 
 - Kaiming Intialization: suggest normally distributed weights:
   $$
-  x \\sim N(\\sqrt \\frac 2 m, -\\sqrt \\frac 2 m)
+  x \sim N(\sqrt \frac 2 m, -\sqrt \frac 2 m)
   $$
 
 - Variance will go from 1 to 2 after layers
@@ -43,32 +43,32 @@ tags:
 #### 5.5 Momentum helps find directions with small but consistent gradients
 
 - Momentum
-  - $g = \\nabla \\frac{\\partial L}{\\partial \\theta}$
-  - $v = \\alpha v - \\epsilon g$
-  - $\\theta \\leftarrow \\theta + v$
+  - $g = \nabla \frac{\partial L}{\partial \theta}$
+  - $v = \alpha v - \epsilon g$
+  - $\theta \leftarrow \theta + v$
 - Nesterov Momentum
-  - $\\tilde\\theta \\leftarrow \\theta + \\alpha v$
-  - $g = \\nabla \\frac{\\partial L}{\\partial \\tilde\\theta}$
-  - $v = \\alpha v - \\epsilon g$
-  - $\\theta \\leftarrow \\theta + v$
+  - $\tilde\theta \leftarrow \theta + \alpha v$
+  - $g = \nabla \frac{\partial L}{\partial \tilde\theta}$
+  - $v = \alpha v - \epsilon g$
+  - $\theta \leftarrow \theta + v$
 
 #### 5.6 Adaptive algorithms reduce updates in steep directions
 
 - AdaGrad:
-  - $g = \\nabla \\frac{\\partial L}{\\partial \\theta}$
-  - $r \\leftarrow r + g \\odot g$
-  - $\\theta \\leftarrow \\theta + \\frac \\epsilon {\\delta + \\sqrt r} \\odot g$
+  - $g = \nabla \frac{\partial L}{\partial \theta}$
+  - $r \leftarrow r + g \odot g$
+  - $\theta \leftarrow \theta + \frac \epsilon {\delta + \sqrt r} \odot g$
 - RMSProp:
-  - $g = \\nabla \\frac{\\partial L}{\\partial \\theta}$
-  - $r \\leftarrow \\rho r + (1-\\rho)g \\odot g$
-  - $\\theta \\leftarrow \\theta + \\frac \\epsilon {\\sqrt{\\delta + r}} \\odot g$
+  - $g = \nabla \frac{\partial L}{\partial \theta}$
+  - $r \leftarrow \rho r + (1-\rho)g \odot g$
+  - $\theta \leftarrow \theta + \frac \epsilon {\sqrt{\delta + r}} \odot g$
 - Adam:
-  - $g = \\nabla \\frac{\\partial L}{\\partial \\theta}$
-  - $s \\leftarrow \\rho_1 s + (1-\\rho_1)g$
-  - $r \\leftarrow \\rho_2 r + (1-\\rho_2)g \\odot g$
-  - $\\hat s \\leftarrow \\frac s{1-\\rho_1}$
-  - $\\hat r \\leftarrow \\frac r{1-\\rho_2}$
-  - $\\theta \\leftarrow \\theta - \\epsilon \\frac{\\hat s}{\\sqrt{\\delta + \\hat r}}$
+  - $g = \nabla \frac{\partial L}{\partial \theta}$
+  - $s \leftarrow \rho_1 s + (1-\rho_1)g$
+  - $r \leftarrow \rho_2 r + (1-\rho_2)g \odot g$
+  - $\hat s \leftarrow \frac s{1-\rho_1}$
+  - $\hat r \leftarrow \frac r{1-\rho_2}$
+  - $\theta \leftarrow \theta - \epsilon \frac{\hat s}{\sqrt{\delta + \hat r}}$
 
 #### 5.7 Batch normalization reduces coupling between parameters in different layers
 

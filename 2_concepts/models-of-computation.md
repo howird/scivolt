@@ -36,7 +36,7 @@ graph TD
   - interleaving of operations is possible by default
   - race conditions occur by default
     - programmer must restrict parallelism to ensure correctness (mutex, semaphores, conditional variables)
-  - however $\\uparrow$ synchronization $\\implies$ $\\downarrow$ parallelism, $\\downarrow$ performance
+  - however $\uparrow$ synchronization $\implies$ $\downarrow$ parallelism, $\downarrow$ performance
   - bugs are hard to find
   - it would be safer to have a deterministic model where the programmer specifies which parallelism to allow: trades safety for performance
 - problem #2: there is no explicit concept of time

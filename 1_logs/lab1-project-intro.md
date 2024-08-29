@@ -15,9 +15,9 @@ tags:
 ### Color Spaces
 
 - bitmaps (`.bmp` files) and screen output are normally in the RGB (red green blue) space
-  - where each pixel is represented using 8 bits per color $\\in \[0, 255\]$
+  - where each pixel is represented using 8 bits per color $\in \[0, 255\]$
 - Instead of the RGB color space, we use YCbCr (luminance, blue chrominance, red chrominance)
-  - also using 8 bits per color $\\in \[0, 255\]$
+  - also using 8 bits per color $\in \[0, 255\]$
 
 ```ad-info
 Human eyes are more sensitive to changes in brightness (luminance) than changes in colour (chrominance)
@@ -54,11 +54,11 @@ the program processes them in this order
       - majority will be i-frames
       - stored as a normal jpeg image
       - DC coefficient is differential between successive blocks (as you process them sequentially)
-        - $\\Delta DC_i = DC_i - DC\_{i-1}$
+        - $\Delta DC_i = DC_i - DC_{i-1}$
     - progressive (p-)
       - differential encoding of DC and AC coefficients between frames
-        - $\\Delta DC_i^j=DC_i^i - DC_i^{j-1}$
-        - $\\Delta AC_i^i(x,y)=AC_i^i(x,y) - AC_i^{j-1}(x,y)$
+        - $\Delta DC_i^j=DC_i^i - DC_i^{j-1}$
+        - $\Delta AC_i^i(x,y)=AC_i^i(x,y) - AC_i^{j-1}(x,y)$
           - $j$ is frame number
           - what is the difference between the $j$ frame number and $i$ frame number
 
@@ -92,7 +92,7 @@ the program processes them in this order
   - (2) dequantize block (multiply by quantization table values)
   - (3) apply inverse DCT (IDCT)
     - for x=0..7, y=0..7:
-      - $f(x,y) = 1/4 \\sum_u \\sum_v C(u)C(v)F(u, v)\\times cos(\\frac{(2x+1)u\\pi}{16})cos(\\frac{(2x+1)v\\pi}{16})$
+      - $f(x,y) = 1/4 \sum_u \sum_v C(u)C(v)F(u, v)\times cos(\frac{(2x+1)u\pi}{16})cos(\frac{(2x+1)v\pi}{16})$
 
 - Given a reference implementation
 

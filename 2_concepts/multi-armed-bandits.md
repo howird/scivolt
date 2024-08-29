@@ -4,16 +4,16 @@ status: backlog
 
 ## Multi-armed Bandits
 
-- suppose you form estimates $Q_t(a)=q\_*(a)$
+- suppose you form estimates $Q_t(a)=q_*(a)$
   $$
-  A^*\_t = argmax Q_t(a)
+  A^*_t = argmax Q_t(a)
   $$
 
 - if the sample average estimates converge to the true values if the action is taken an infinite number of times
 
 - in greedy, you always exploit
 
-- in eps-greedy you take the greedy action usually, but with probability $\\epsilon$, you instead pick an action at random (possibly the greedy action again)
+- in eps-greedy you take the greedy action usually, but with probability $\epsilon$, you instead pick an action at random (possibly the greedy action again)
 
 - this is the simplest way to balance exploration and exploitation
 

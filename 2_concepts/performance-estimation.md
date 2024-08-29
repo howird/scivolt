@@ -36,7 +36,7 @@ tags:
       - e.g. queueing theory: descirbes the chances of thisng happening ie. losing one message per 1000 for an N sized queue
   - 4. deterministic analysis
     - determine worst/base case latencies and bounds
-    - e.g. task graph scheduling $\\implies$ makespan
+    - e.g. task graph scheduling $\implies$ makespan
     - eg. real-time schudulability tests
   - these last two involve abstractions/simplifications
 

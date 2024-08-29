@@ -102,7 +102,7 @@ Currency: **€**
 
 #### Assumptions:
 
-#### The Problem: \_\_
+#### The Problem: __
 
 #### Observations:
 

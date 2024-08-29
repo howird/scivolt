@@ -15,7 +15,7 @@ tags:
 
 #### 9.2 Transformers use soft attention to weigh elements of a sequence
 
-- The similarity of query $i$ and key $j$ vectors $= Q_i \\cdot K_i / \\sqrt{d}$
+- The similarity of query $i$ and key $j$ vectors $= Q_i \cdot K_i / \sqrt{d}$
   ![](Pasted%20image%2020231218023559.png)
 - This is a “soft” attention mechanism where the
 

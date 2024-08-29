@@ -27,7 +27,7 @@ tags:
 - The Gaussians here are not probability distributions; they just indicate the mathematical form of the filter
 
 $$
-r(x,y)=\\sum^n\_{x'--n,y'=-n}s\_{x-x',y-y'}f\_{x-x',y-y'}
+r(x,y)=\sum^n_{x'--n,y'=-n}s_{x-x',y-y'}f_{x-x',y-y'}
 $$
 
 ![](2.2.2.png#center){ width=30% }

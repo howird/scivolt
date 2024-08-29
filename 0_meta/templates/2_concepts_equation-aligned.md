@@ -9,9 +9,9 @@ topics:
 # CONCEPT
 
 $$
-\\begin{aligned}
+\begin{aligned}
 TODO
-\\end{aligned}
+\end{aligned}
 $$
 
 ## Symbols

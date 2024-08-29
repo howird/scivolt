@@ -20,28 +20,28 @@ tags:
 
 - As seen above, the response curves are approximately shaped like cosines
 - Therefore, these neurons' firing rates, $f$, are proportional to the cosine of the angle between their preferred direction and the direction of the wind, $s$
-- The cosine allows us to interpret the neurons' firing rate as proportional to the projection of the wind velocity, $\\overrightarrow v$, onto the cardinal vectors, $\\overrightarrow c_a$
+- The cosine allows us to interpret the neurons' firing rate as proportional to the projection of the wind velocity, $\overrightarrow v$, onto the cardinal vectors, $\overrightarrow c_a$
 
 $$
-\\bigg(\\frac{f(s)}{r\_{max}}\\bigg)_a = \[cos(s-s_a)\]_+
-$$
-
-$$
-\\text{let: }\\ \\cos (s) = \\frac {r}{|v|}
+\bigg(\frac{f(s)}{r_{max}}\bigg)_a = \[cos(s-s_a)\]_+
 $$
 
 $$
-\\because |v| = 1 \\implies \\cos (s) = r
+\text{let: }\ \cos (s) = \frac {r}{|v|}
 $$
 
 $$
-\\therefore \\\\bigg(\\frac{f(s)}{r\_{max}}\\bigg)_a = \[\\overrightarrow v \\cdot \\overrightarrow c_a \]_+
+\because |v| = 1 \implies \cos (s) = r
+$$
+
+$$
+\therefore \\bigg(\frac{f(s)}{r_{max}}\bigg)_a = \[\overrightarrow v \cdot \overrightarrow c_a \]_+
 $$
 
 - Now we can take the responses of all the neurons and compute something called the Population Vector:
 
 $$
-\\overrightarrow v\_{pop}= \\sum\_{a=1}^4 \\bigg(\\frac{r}{r\_{max}}\\bigg)\_a \\overrightarrow c_a
+\overrightarrow v_{pop}= \sum_{a=1}^4 \bigg(\frac{r}{r_{max}}\bigg)_a \overrightarrow c_a
 $$
 
 ![](3.2.3.png#center){ width=40% }
@@ -59,7 +59,7 @@ $$
 
 - One study which aimed to decode information from the motor cortex found that this same mechanism of cosines and population coding is utilized
 - In this study, a brain computer interface recorded the firing rates of the motor neurons of a subject while they moved their arms. The direction of the arms movement was also recorded
-- Like the cricket cercal cells, each motor neuron's response had the form of a cosine around some baseline firing rate, $r_0$. In the above example, $r_0 \\approx 30Hz$
+- Like the cricket cercal cells, each motor neuron's response had the form of a cosine around some baseline firing rate, $r_0$. In the above example, $r_0 \approx 30Hz$
 
 ![](3.2.5.png#center){ width=50% }
 
@@ -68,17 +68,17 @@ $$
 - So once again, we're going to interpret the firing rate as the cosine of the angle between the arm movement and the neuron's preferred direction.
 
 $$
-\\bigg(\\frac{\\langle r \\rangle -r_0}{r\_{max}}\\bigg)_a =\\bigg(\\frac{f(s) -r_0}{r_{max}}\\bigg)\_a = \\overrightarrow v \\cdot \\overrightarrow c_a
+\bigg(\frac{\langle r \rangle -r_0}{r_{max}}\bigg)_a =\bigg(\frac{f(s) -r_0}{r_{max}}\bigg)_a = \overrightarrow v \cdot \overrightarrow c_a
 $$
 
-- And once again, we can compute a population vector by weighting each neuron's preferred direction, $\\overrightarrow c_a$, individual for every neuron, by its firing rate.
+- And once again, we can compute a population vector by weighting each neuron's preferred direction, $\overrightarrow c_a$, individual for every neuron, by its firing rate.
 
 $$
-\\overrightarrow v\_{pop}= \\sum\_{a=1}^N \\bigg(\\frac{r-r_0}{r\_{max}}\\bigg) \\overrightarrow c_a
+\overrightarrow v_{pop}= \sum_{a=1}^N \bigg(\frac{r-r_0}{r_{max}}\bigg) \overrightarrow c_a
 $$
 
 $$
-\\langle \\overrightarrow v\_{pop} \\rangle = \\sum\_{a=1}^N \\big( \\overrightarrow v \\cdot \\overrightarrow c_a \\big) \\overrightarrow c_a
+\langle \overrightarrow v_{pop} \rangle = \sum_{a=1}^N \big( \overrightarrow v \cdot \overrightarrow c_a \big) \overrightarrow c_a
 $$
 
 - So if we have enough neurons in our population, this population vector average is going to converge and be parallel to the direction of arm movement.
@@ -115,27 +115,27 @@ r=as+n
 $$
 
 $$
-\\hat s\_{MLE}(r) = argmax_s p(r|s)
+\hat s_{MLE}(r) = argmax_s p(r|s)
 $$
 
 $$
-p(r|s) = \\frac {1}{\\sqrt{2\\pi}\\sigma} \\exp \\bigg(\\frac {(r-as)^2}{2\\sigma}\\bigg)
+p(r|s) = \frac {1}{\sqrt{2\pi}\sigma} \exp \bigg(\frac {(r-as)^2}{2\sigma}\bigg)
 $$
 
 $$
-\\text{measure: } y = \\bar y = a \\hat s\_{MLE}
+\text{measure: } y = \bar y = a \hat s_{MLE}
 $$
 
 $$
-\\hat s\_{MAP}(r) = argmax_s p(s|r)
+\hat s_{MAP}(r) = argmax_s p(s|r)
 $$
 
 $$
-= argmax_s \\frac{p(r|s)\\times p(s)}{p(y)}
+= argmax_s \frac{p(r|s)\times p(s)}{p(y)}
 $$
 
 $$
-= argmax_s \\frac{p(r|s)\\times p(s)}{\\int_s p(r|s) p(s)ds}
+= argmax_s \frac{p(r|s)\times p(s)}{\int_s p(r|s) p(s)ds}
 $$
 
 In general, these are going to differ because of the role of the prior, that's what makes the two sides differ.

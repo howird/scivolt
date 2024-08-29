@@ -82,14 +82,14 @@ year: 2022/08
 - For each object in our dataset we generate up to $5000$ antipodal grasps, $G_j$, by:
   1. sample finger-object contact points $c_i$ evenly distributed over the mesh’s surface
   1. For each contact point, $c_i$:
-     1. we sample $k=1, \\ldots, N$, $N=5$ antipodal grasp attempts $c\_{i,k}$ with random deviation in approach direction and translation
-  1. The robust antipodal score $s\_{\\text{antipodal},i}$ for a contact point $c_i$ is: $s = n\_{\\text{successful samples}}/N$
-  1. To obtain grasp poses in $SE(3)$, we sample for each successful contact point $s\_{\\text{antipodal},i}\\gt 0$ up to $l=1\\ldots L$ gripper poses by rotating it around the fingers’ closing direction
-  1. A grasp $G_j=G\_{i,k,l}$ is considered successful if the gripper does not collide with the object and we assign it $s\_{pj,\\text{anal.},j}=s\_{\\text{antip.},i}$
+     1. we sample $k=1, \ldots, N$, $N=5$ antipodal grasp attempts $c_{i,k}$ with random deviation in approach direction and translation
+  1. The robust antipodal score $s_{\text{antipodal},i}$ for a contact point $c_i$ is: $s = n_{\text{successful samples}}/N$
+  1. To obtain grasp poses in $SE(3)$, we sample for each successful contact point $s_{\text{antipodal},i}\gt 0$ up to $l=1\ldots L$ gripper poses by rotating it around the fingers’ closing direction
+  1. A grasp $G_j=G_{i,k,l}$ is considered successful if the gripper does not collide with the object and we assign it $s_{pj,\text{anal.},j}=s_{\text{antip.},i}$
   1. In the next step, each successful grasp $G_j$ is executed multiple times in a physics simulation in IsaacGym
   1. Again, we extend the idea of robust sampling into simulation: Each grasp $G_j$ is simulated with different mass density factors and friction coefficients.
   1. Similar to [Acronym](acronym.md) we perform an upward and rotating gripper movement and assume a grasp is successful if the object is still in contact after execution
-  1. The robust simulation score $s\_{pj,sim.,j}$ is then defined as the fraction of successful grasps divided by the total number of attempts.
+  1. The robust simulation score $s_{pj,sim.,j}$ is then defined as the fraction of successful grasps divided by the total number of attempts.
 
 ## Dataset Details
 

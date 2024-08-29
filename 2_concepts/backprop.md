@@ -7,7 +7,7 @@ tags:
 #### 4.0 Gradient Descent Background
 
 - In deep learning, we minimize loss on training data as a proxy for loss calculated on test data
-- The gradient of a scalar function of multiple parameters is a vector field that indicates the direction and rate of fastest increase of the function at each point, $\\theta_i$ in the parameter space
+- The gradient of a scalar function of multiple parameters is a vector field that indicates the direction and rate of fastest increase of the function at each point, $\theta_i$ in the parameter space
 - We move the parameters in the opposite direction of the loss function's gradient
 - We do not move too far because the gradient is different at each point
 

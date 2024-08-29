@@ -101,10 +101,10 @@ graph TD
 - the speed up, $S$, of a cut, $C$, can be computed as
 
 $$
-S=\\frac{T\_{tot}}{T\_{tot}-n_c(T^C\_{sw}-T^C\_{hw})}
+S=\frac{T_{tot}}{T_{tot}-n_c(T^C_{sw}-T^C_{hw})}
 $$
 
 - where
   - $n_c$ is the number of times a cut is exectued
-  - $T^C\_{sw}-T^C\_{hw}$ is the drop in duration of the cut implemented in software vs hardware
+  - $T^C_{sw}-T^C_{hw}$ is the drop in duration of the cut implemented in software vs hardware
 - choose a set of cuts that maximize total speed up while staying within area constraints and register file limitations
