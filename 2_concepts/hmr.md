@@ -92,7 +92,7 @@ citekey: kanazawaEndtoendRecoveryHuman2018
 
 - **OUT**: Estimated parameters $\Theta = \{ \theta, \beta, R, t, s \}$
 
-- note: for a single forward pass, the entire loop ($t, ..., T$) of [iterative-error-feedback](2_concepts/iterative-error-feedback.md) occurs
+- note: for a single forward pass, the entire loop ($t, ..., T$) of [iterative error feedback](2_concepts/iterative%20error%20feedback.md) occurs
 
 #### 3. Weak-Perspective Projection
 
@@ -200,7 +200,7 @@ This provides real-time human shape recovery from a single image.
 
 - P1: is trained on 5 subjects (S1, S5, S6, S7, S8) and tested on 2 (S9, S11)
     - measures 3D joint error
-- note they use [procrustes-analysis](2_concepts/procrustes-analysis.md) when calculating MPJPE
+- note they use [procrustes analysis](2_concepts/procrustes%20analysis.md) when calculating MPJPE
 
 ![protocol 1 results](2_concepts/media/Pasted%20image%2020250312211117.png)
 

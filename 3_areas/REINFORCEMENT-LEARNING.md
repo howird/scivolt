@@ -27,6 +27,6 @@ tags:
     - The data is not i.i.d., prev outputs influence future inputs
     - The ground truth is not known, only success/failure
 
-[MDPs](markov-decision-process.md)
-[Value functions](value-functions.md)
+[MDPs](2_concepts/markov%20decision%20process.md)
+[Value functions](2_concepts/value%20functions.md)
 

@@ -17,7 +17,7 @@ citekey: carionEndtoEndObjectDetection2020
 ### Key Points
 
 - the goal of object detection is to predict a set of bounding boxes and category labels for each object of interest
-- their performances are significantly influenced by post-processing steps to collapse near-duplicate predictions ([non-maximum suppression](non-max-suppresion.md))
+- their performances are significantly influenced by post-processing steps to collapse near-duplicate predictions ([non-maximum suppression](2_concepts/non%20max%20suppresion.md))
 - as well as many other hand-crafted components such as anchor generation (as introduced in  [RCNNs](rcnn.md)) and rule-based training target assignment
 - to simplify these pipelines we propose a direct set prediction approach to bypass the surrogate tasks
 

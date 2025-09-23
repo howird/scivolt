@@ -17,4 +17,4 @@ aliases:
         - $||u||= \sqrt{u \cdot u} = 1$
         - $u^\top u = 1$ and $v^\top v = 1$
 
-- See [orthogonal matrix](2_concepts/orthogonal-matrix.md)
+- See [orthogonal matrix](2_concepts/orthogonal%20matrix.md)

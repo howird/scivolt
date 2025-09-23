@@ -10,9 +10,9 @@ status: review
 ---
 # SARSA
 
-- An on-policy [control](2_concepts/control-policy-evaluation.md) algorithm based on [TD policy evaluation](2_concepts/temporal-difference-policy-evaluation.md)
+- An on-policy [control](2_concepts/control%20policy%20evaluation.md) algorithm based on [TD policy evaluation](2_concepts/temporal%20difference%20policy%20evaluation.md)
 - Chooses an action, not necessarily the best one, sees the result, then updates it’s value function with that knowledge
-- will converge eventually, but more slowly than [q-learning](2_concepts/q-learning.md)
+- will converge eventually, but more slowly than [q learning](2_concepts/q%20learning.md)
 
 ## Algorithm
 

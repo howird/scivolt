@@ -4,22 +4,22 @@ tags:
   - 'area'
 ---
 
-[2.1 high-level-synthesis](high-level-synthesis.md)
-[2.2 instruction-level-parallelism](instruction-level-parallelism.md)
-[2.3 data-level-parallelism](data-level-parallelism.md)
-[2.4 transaction-level-parallelism](transaction-level-parallelism.md)
-[2.5 matrix-multiplication-application](matrix-multiplication-application.md)
-[3.1 models-of-computation](models-of-computation.md)
-[3.2 kahn-process-networks](kahn-process-networks.md)
-[3.3 synchronous-data-flow](synchronous-data-flow.md)
-[3.4 task-graph-scheduling](task-graph-scheduling.md)
-[3.5 periodic-task-graphs](periodic-task-graphs.md)
-[3.6 state-chart](state-chart.md)
-[4.1 performance-estimation](performance-estimation.md)
-[5.1 processing-elements](processing-elements.md)
-[5.2 app-specific-instr-procs](app-specific-instr-procs.md)
+[2.1 high-level-synthesis](2_concepts/high%20level%20synthesis.md)
+[2.2 instruction-level-parallelism](2_concepts/instruction%20level%20parallelism.md)
+[2.3 data-level-parallelism](2_concepts/data%20level%20parallelism.md)
+[2.4 transaction-level-parallelism](2_concepts/transaction%20level%20parallelism.md)
+[2.5 matrix-multiplication-application](2_concepts/matrix%20multiplication%20application.md)
+[3.1 models-of-computation](2_concepts/models%20of%20computation.md)
+[3.2 kahn-process-networks](2_concepts/kahn%20process%20networks.md)
+[3.3 synchronous-data-flow](2_concepts/synchronous%20data%20flow.md)
+[3.4 task-graph-scheduling](2_concepts/task%20graph%20scheduling.md)
+[3.5 periodic-task-graphs](2_concepts/periodic%20task%20graphs.md)
+[3.6 state-chart](2_concepts/state%20chart.md)
+[4.1 performance-estimation](2_concepts/performance%20estimation.md)
+[5.1 processing-elements](2_concepts/processing%20elements.md)
+[5.2 app-specific-instr-procs](2_concepts/app%20specific%20instr%20procs.md)
 [5.3 asip](asip.md)
-[6.1 memory-organization](memory-organization.md)
+[6.1 memory-organization](2_concepts/memory%20organization.md)
 
 # Introduction to Embedded Computer Systems
 

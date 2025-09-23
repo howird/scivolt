@@ -1,0 +1,1 @@
+https://www.reddit.com/r/CriticalTheory/comments/1nj00ij/technofeudalism_a_primer/

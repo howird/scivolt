@@ -30,7 +30,7 @@ citekey: 10.1145/3528223.3530178
 - Problems in practice:
     - sparsity makes modelling the interpolations or transitions between different motion types difficult
     - when updating the character state by interpolation, samples forwards and backwards states causing stagnation in the character
-    - transitioning to far-away states causes updates to diverge to spaces w no samples [could be related to BEAR](2_concepts/bootstrapping-error-reduction.md)
+    - transitioning to far-away states causes updates to diverge to spaces w no samples [could be related to BEAR](2_concepts/bootstrapping%20error%20reduction.md)
 
 
 ### Goals / Contributions

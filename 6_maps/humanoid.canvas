@@ -1,7 +1,7 @@
 {
 	"nodes":[
 		{"id":"04e9512d615fab9e","type":"file","file":"2_concepts/adversarial_motion_priors.md","x":-400,"y":-200,"width":385,"height":120},
-		{"id":"3955e860038af735","type":"file","file":"2_concepts/perpetual-humanoid-control.md","x":-15,"y":80,"width":300,"height":120},
+		{"id":"3955e860038af735","type":"file","file":"2_concepts/perpetual humanoid control.md","x":-15,"y":80,"width":300,"height":120},
 		{"id":"410ded14aa75b7de","x":400,"y":320,"width":360,"height":120,"type":"file","file":"2_concepts/skillmimic.md"}
 	],
 	"edges":[]

@@ -6,4 +6,4 @@ tags:
 
 # signals
 
-[Fourier Series](fourier-series.md)
+[Fourier Series](2_concepts/fourier%20series.md)

@@ -19,8 +19,8 @@ status: todo
 - **Why it's useful**: It enables **efficient learning** by leveraging prior knowledge, reducing the need for full rollouts of an episode before updating the value function.
 - **Key property**: It relies on the assumption that previous estimates are reasonably accurate, even though they might be biased or incomplete
 
-- in RL, bootstrapping is linked to [dynamic programming](2_concepts/dynamic-programming-rl.md)
-- In [Temporal Difference (TD) Learning](temporal-difference-policy-evaluation.md), for example, the value of a state $V(s)$ is updated using the value of the next state $V(s')$, rather than waiting for the actual return:
+- in RL, bootstrapping is linked to [dynamic programming](2_concepts/dynamic%20programming%20rl.md)
+- In [Temporal Difference (TD) Learning](2_concepts/temporal%20difference%20policy%20evaluation.md), for example, the value of a state $V(s)$ is updated using the value of the next state $V(s')$, rather than waiting for the actual return:
 
 $$
 V(s) \leftarrow V(s) + \alpha (r + \gamma V(s') - V(s))

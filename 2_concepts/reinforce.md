@@ -9,7 +9,7 @@ status: doing
 ---
 # REINFORCE Algorithm
 
-- The REINFORCE algorithm with baseline is a [monte carlo](2_concepts/monte-carlo-policy-evaluation.md) [policy gradient](2_concepts/policy-gradient.md) method used for optimizing policies directly in **on-policy** and **model-free** environments
+- The REINFORCE algorithm with baseline is a [monte carlo](2_concepts/monte%20carlo%20policy%20evaluation.md) [policy gradient](2_concepts/policy%20gradient.md) method used for optimizing policies directly in **on-policy** and **model-free** environments
 
 - The incorporation of a baseline significantly reduces the variance in gradient estimates, resulting in more stable learning.
 
@@ -92,7 +92,7 @@ $$
 
 # REINFORCE Algorithm
 
-- The REINFORCE algorithm with baseline is a [monte carlo](2_concepts/monte-carlo-policy-evaluation.md) [policy gradient](2_concepts/policy-gradient.md) method used for optimizing policies directly in **on-policy** and **model-free** environments
+- The REINFORCE algorithm with baseline is a [monte carlo](2_concepts/monte%20carlo%20policy%20evaluation.md) [policy gradient](2_concepts/policy%20gradient.md) method used for optimizing policies directly in **on-policy** and **model-free** environments
 
 ##  Description
 
@@ -125,7 +125,7 @@ $$
     2. Update policy parameters: $\theta \leftarrow \theta + \alpha \gamma^t G_t \nabla_\theta \ln \pi_\theta(A_t \vert S_t)$
 
 - A widely used variation of REINFORCE is to subtract a baseline value from the return $G_t$ to _reduce the variance of gradient estimation while keeping the bias unchanged_ (Remember we always want to do this when possible)
-- For example, a common baseline is to subtract state-value from action-value, and if applied, we would use [Advantage](2_concepts/advantage-function.md) $A(s, a) = Q(s, a) - V(s)$ in the gradient ascent update
+- For example, a common baseline is to subtract state-value from action-value, and if applied, we would use [Advantage](2_concepts/advantage%20function.md) $A(s, a) = Q(s, a) - V(s)$ in the gradient ascent update
 
 ## Properties
 

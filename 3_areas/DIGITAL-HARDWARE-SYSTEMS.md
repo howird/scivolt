@@ -6,8 +6,8 @@ tags:
 
 [02 simulation](simulation.md)
 [03 synthesis](synthesis.md)
-[03b synthesis-examples](synthesis-examples.md)
-[04 state-machines](state-machines.md)
+[03b synthesis-examples](2_concepts/synthesis%20examples.md)
+[04 state-machines](2_concepts/state%20machines.md)
 [05 pipelining](pipelining.md)
 [06 scheduling](scheduling.md)
 [07 memory](memory.md)
