@@ -1,7 +1,7 @@
 ---
-status: backlog
+status: review
 tags:
-  - '#deep-learning'
+  - "ai/dl/arch"
 ---
 
 #### 7.1 Convolution is related to correlation

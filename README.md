@@ -5,7 +5,8 @@
 
 - `<ctrl> + O`: Open or create a file
 - `<ctrl> + N`: Create a file
-- 
+- `<ctrl> + P`: Command palette
+    - `zotero`: generate zoterro
 
 ## Specifications
 

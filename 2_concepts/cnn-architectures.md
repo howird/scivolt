@@ -1,14 +1,14 @@
 ---
-status: backlog
+status: review
 tags:
-  - '#deep-learning'
+  - "ai/dl/arch"
 ---
 
 #### 8.1 The earliest convolutional networks were LeNets, developed for handwritten digit recognition
 
 #### 8.2 AlexNet ignited interest in deep learning by combining convolutional networks with GPUs and big data
 
-See [AlexNet](8.2-alexnet.md)
+See [alexnet](2_concepts/alexnet.md)
 
 #### 8.3 VGG networks added simplicity and depth
 

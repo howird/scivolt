@@ -1,10 +1,9 @@
 ---
-reference:
 status: backlog
 tags:
-  - '#concept'
-  - '#software'
-topics:
+  - 'concept'
+  - 'software'
+reference:
 ---
 
 # CONCEPT

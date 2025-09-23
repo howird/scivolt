@@ -1,8 +1,8 @@
 ---
 status: backlog
 tags:
-  - '#note/theory'
-  - '#deep-learning'
+  - 'note'
+  - 'ai/dl'
 ---
 
 #### 3.1 Multi-layer feed-forward networks make a series of simple but unintuitive calculations
@@ -19,7 +19,7 @@ tags:
 
 #### 3.3 Multi-layer networks break the curse of dimensionality
 
-- Recall from [2.13](2-linear-regression-classification.md) that:
+- Recall from [linear-regression-classification](2_concepts/linear-regression-classification.md) that:
   - Multi-layer neural networks take advantage of this by adapting basis functions so that:
     - Regions/directions of variation correspond to regions/directions over which input typically varies
 - Fewer basis functions are needed if they are adaptive

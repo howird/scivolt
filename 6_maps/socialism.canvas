@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"cbfb94c50fd11c4d","type":"text","text":"What is capitalism?","x":-200,"y":-260,"width":250,"height":60},
+		{"id":"cb19b255835b26cc","type":"text","text":"All profit under capitalism is exploitation","x":-75,"y":-20,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"e7c880d7cfa895aa","fromNode":"cbfb94c50fd11c4d","fromSide":"bottom","toNode":"cb19b255835b26cc","toSide":"top"}
+	]
+}

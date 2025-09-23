@@ -1,9 +1,11 @@
 ---
-status: backlog
+status: todo
 tags:
-  - '#deep-learning'
+  - "ai/dl/regularization"
 ---
-
+![layer norm vs batch norm](2_concepts/media/Pasted%20image%2020240924152531.png)
+                    
+![](2_concepts/media/Screenshot_20240924_152736.png)
 # What is batch normalization
 
 ```python

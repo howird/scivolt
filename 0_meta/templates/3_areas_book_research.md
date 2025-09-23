@@ -1,9 +1,10 @@
 ---
-date: '{{date}}'
-pages_per_hour:
 status: backlog
 tags:
-  - '#note/book'
+  - 'book'
+reference:
+  date: '{{date}}'
+  pages_per_hour:
 ---
 
 # {{title}}

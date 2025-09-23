@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#hwe/digital-hardware-eng'
+  - 'hw/digital-hardware-eng'
 ---
 
 ### Simulation vs Synthesis
@@ -71,7 +71,7 @@ tags:
   - due to the parallel nature of digital circuits, you can pass in new inputs __every__ cycle, it simply will take $n$ cycles to get the corresponding output signal from the block
   - this parallelism is integral to the concept of __pipelines__ in computer hardware,
 - Hardware designers must manually determine how many stages to use in order to achieve their desired functions, considering the trade-off between clock latency and computation cycles
-- The methodology to do so will be discussed in the [pipelining lecture](./05-pipelining.md)
+- The methodology to do so will be discussed in the [pipelining lecture](2_concepts/pipelining.md)
 
 ### Verilog Hardware Synthesis
 

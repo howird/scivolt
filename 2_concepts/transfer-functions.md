@@ -2,7 +2,7 @@
 date: October 15, 2022
 status: backlog
 tags:
-  - '#signals/controls'
+  - 'math/controls'
 ---
 
 # Transfer Functions
@@ -29,8 +29,8 @@ $$
 
 ## 1st and 2nd order systems
 
-- ## eq1
-- ## eq2
+### eq1
+### eq2
 
 ## System responses
 
@@ -44,12 +44,12 @@ $$
 
 ## under dampened systems
 
-- $0\<\zeta\<1$
+- $0\zeta1$
 
 - obsreve the magnitude plot
 
   - roughly the system bandwidth is approx
-  - wen the dampening ratio is small $0\<\zeta\<\frac 1 {\sqrt{2}}$ the mag plot has a peak and it occurs at \omega=\omega_n\sqrt{1-\omegan}
+  - wen the dampening ratio is small $0\zeta\frac 1 {\sqrt{2}}$ the mag plot has a peak and it occurs at \omega=\omega_n\sqrt{1-\omegan}
 
 - impulse response (tf: g(s)=)
 

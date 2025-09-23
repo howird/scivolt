@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#hwe/embedded-computer-systems'
+  - 'hw/embedded-computer-systems'
 ---
 
 # Processing Elements
@@ -56,7 +56,7 @@ Course Roadmap:
 #### (a) increasing voltage
 
 - The clock frequency can increase roughly linearly with voltage.
-- However, this also increases the dynamic [(switching) power consumption](../ece327/power.md), which can be expressed by the formula $P=CV^2f$ where:
+- However, this also increases the dynamic (switching) power consumption, which can be expressed by the formula $P=CV^2f$ where:
   - $C$ is the capacitance, depending on the number of transistors and interconnecting wires.
   - $V$ is the voltage.
   - $f$ is the frequency.

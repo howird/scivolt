@@ -1,5 +1,3 @@
-import subprocess
-
 from pathlib import Path
 from functools import partial as p
 
@@ -145,7 +143,6 @@ def format_concepts():
             p(modify_frontmatter, fn=p(update_tags, fn=p(prepend_tags, prefix="#"))),
         ]
     )
-    subprocess.run(["mdformat", str(path)])
 
     # ANALYSIS!
     read_markdown_frontmatter(path)
@@ -161,7 +158,6 @@ def format_areas():
             p(modify_frontmatter, fn=p(set_tags, value="#type/area")),
         ]
     )
-    subprocess.run(["mdformat", str(path)])
 
 
 def format_templates():
@@ -173,7 +169,6 @@ def format_templates():
         fns = [
         ]
     )
-    subprocess.run(["mdformat", str(path)])
 
 
 if __name__ == "__main__":

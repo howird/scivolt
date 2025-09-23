@@ -1,93 +1,151 @@
 ---
-aliases:
-  - 'AMP'
-  - 'pengAMPAdversarialMotion2021'
-authors: 'Xue Bin Peng, Ze Ma, Pieter Abbeel, Sergey Levine, Angjoo Kanazawa'
-citekey: 'pengAMPAdversarialMotion2021'
-status: backlog
 tags:
-  - '#paper'
-title: 'AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control'
-url: ''
-year: '2021/08'
+  - paper
+status: doing
+year: 2021/08
+authors: Xue Bin Peng, Ze Ma, Pieter Abbeel, Sergey Levine, Angjoo Kanazawa
+citekey: pengAMPAdversarialMotion2021
 ---
-
 # AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control
 
-> [!abstract]
-> Synthesizing graceful and life-like behaviors for physically simulated characters has been a fundamental challenge in computer animation. Data-driven methods that leverage motion tracking are a prominent class of techniques for producing high fidelity motions for a wide range of behaviors. However, the effectiveness of these tracking-based methods often hinges on carefully designed objective functions, and when applied to large and diverse motion datasets, these methods require significant additional machinery to select the appropriate motion for the character to track in a given scenario. In this work, we propose to obviate the need to manually design imitation objectives and mechanisms for motion selection by utilizing a fully automated approach based on adversarial imitation learning. High-level task objectives that the character should perform can be specified by relatively simple reward functions, while the low-level style of the character's behaviors can be specified by a dataset of unstructured motion clips, without any explicit clip selection or sequencing. These motion clips are used to train an adversarial motion prior, which specifies style-rewards for training the character through reinforcement learning (RL). The adversarial RL procedure automatically selects which motion to perform, dynamically interpolating and generalizing from the dataset. Our system produces high-quality motions that are comparable to those achieved by state-of-the-art tracking-based techniques, while also being able to easily accommodate large datasets of unstructured motion clips. Composition of disparate skills emerges automatically from the motion prior, without requiring a high-level motion planner or other task-specific annotations of the motion clips. We demonstrate the effectiveness of our framework on a diverse cast of complex simulated characters and a challenging suite of motor control tasks.
-
-## 3-pass method
-
-### Pass 1
-
-> [!info]
->
-> - carefully read title, abstract, intro
-> - read all headings and subheadings
-> - check references for papers that you have read
-> - make any relevant comments on the following:
->   - Category: What type of paper is this? A measurement paper? An analysis of an existing system? A description of a research prototype?
->   - Context: Which other papers is it related to? Which theoretical bases were used to analyze the problem?
->   - Correctness: Do the assumptions appear to be valid?
->   - Contributions: What are the paper’s main contributions?
->   - Clarity: Is the paper well written?
-
-#### Abstract & Introduction Summary
-
--
-
-#### Additional Comments
-
--
-
-#### Questions to Answer in Following Passes
-
--
-
-### Pass 2
-
-> [!info]
-> Pass 2 (1 hour):
->
-> - understand figures, graphs, looking for errors
-> - read paper with greater care but skip proofs
-> - note other significant references you may want to read
-
-### Pass 3
-
-> [!info]
-> Pass 3 (5 hours):
->
-> - essentially re-implement the entire paper
-> - identify assumptions in the paper and challenge them
-> - consider how you would present each idea
-
-- [INSERT GIT REPO HERE](www.github.com)
-  - comment code and make PR
-
-## Distillation
-
-> [!info]
-> After the 2/3 pass method try and copy and paste the above notes and present them in a more structured manner
+## Background
 
 ### Problem
 
--
+- Animating natural, life-like behaviors for physically simulated characters remains a major challenge in animation and robotics.
+- Existing methods often rely on:
+    - Careful manual design of objective functions.
+    - Explicit motion planners for selecting appropriate behaviors.
+- Scaling these methods to large and diverse motion datasets introduces significant complexity and overhead.
 
-### Key Points
+### Goals / Contributions
 
--
+#### Proposed Solution: Adversarial Motion Priors (AMP)
 
-### Methodology
+- Leverages adversarial imitation learning to create a style-based control mechanism for physics-based characters.
+- Uses unstructured motion data as a foundation for stylistic behaviors, avoiding the need for manual clip selection or segmentation.
+- Trains a reinforcement learning (RL) policy:
+    - Integrates task-specific objectives with style rewards derived from adversarial training
+    - Automatically selects and generalizes behaviors from motion data
 
-- Overview
-    - dataset, $\mathcal{M}$, with elements $m^i$ each of which consist of sequence of poses $\hat q ^i_t$ 
+#### Key Features and Contributions
 
-### Results
+- Eliminates reliance on motion planners by dynamically composing behaviors through adversarial learning.
+- Combines high-level task objectives (e.g., walking to a target) with low-level stylistic constraints (e.g., zombie walk).
+- Demonstrates diverse and natural behaviors in complex tasks without explicit task-specific annotations in the dataset.
+- Introduces new training stability techniques, including:
+    - Gradient penalties for the adversarial discriminator.
+    - Least-squares GAN objectives to stabilize imitation learning.
 
--
+### Past Work
 
-### Comments and Implications
+- Key concepts from reinforcement learning (e.g., Proximal Policy Optimization, PPO) and generative adversarial imitation learning (e.g., GAIL) are foundational.
+- For foundational understanding:
+    - "Ho and Ermon, 2016: Generative Adversarial Imitation Learning" for the GAIL framework.
+    - "Schulman et al., 2017: Proximal Policy Optimization" for PPO methods.
+- Additional insights:
+    - "Peng et al., 2018: DeepMimic" for reference-based motion imitation.
+    - "Kanazawa et al., 2018: Adversarial Pose Priors" for inspiration on adversarial priors in animation.
 
--
+
+### Broader Perspectives
+
+- Expands the possibilities for integrating diverse motion datasets without pre-processing or segmentation.
+- Highlights the ability to transfer human motion data to non-humanoid characters (e.g., dogs, dinosaurs).
+- Provides a unified framework where task and style specifications are decoupled, enhancing usability for animators and developers.
+
+## Methodology
+
+### Dataset Preparation
+
+- **Motion Data Collection**
+    - Collect motion data from sources like motion capture or artist-generated animations.
+    - Data can be raw and unstructured, covering diverse behaviors or specific styles.
+- **Preprocessing**
+    - Represent each motion as a sequence of joint configurations and their dynamics.
+    - Normalize the data to ensure uniformity across different sources.
+- **Feature Engineering**
+    - Extract features such as joint velocities, positions, and local coordinate frames.
+    - Map these features for both reference motions and character states.
+
+### Model Architecture
+
+- **Policy Network**
+    - Maps character state and task goals to joint actuation commands.
+    - Uses a Gaussian output layer for probabilistic control actions.
+    
+- **Discriminator**
+    - Distinguishes between generated motions and reference motions from the dataset.
+    - Provides a style-reward signal to the policy network.
+    
+- **Value Function**
+    - Evaluates state-action pairs to stabilize the policy optimization.
+
+
+### Training Process
+
+#### Adversarial Training Loop
+
+1. **Policy Rollouts**
+    - Initialize character state based on sampled motion data.
+    - Perform rollouts in the physics simulator using the policy.
+    
+2. **Reward Calculation**
+    - Combine task-specific rewards (goal completion) with style rewards (from the discriminator).
+    - Style rewards encourage similarity to dataset motions.
+    
+3. **Discriminator Update**
+    - Train discriminator to classify transitions from reference data and those generated by the policy.
+    - Use least-squares loss for stable adversarial training.
+    
+4. **Policy Update**
+    - Update policy network using Proximal Policy Optimization (PPO).
+    - Reinforce behaviors that optimize the combined task and style objectives.
+
+### Simulation Environment
+
+- **Physics Simulation**: (Bullet)
+    - Joint actuation forces are computed based on policy outputs.
+
+- **Task Design**
+    - Define high-level goals (e.g., target heading, obstacle avoidance).
+    - Incorporate environmental challenges (e.g., terrains, targets).
+    
+- **Stylistic Constraints**
+    - Use different datasets for distinct motion styles (e.g., running, zombie walk).
+
+### Evaluation Metrics
+
+- **Task Performance**
+    - Evaluate how well the character completes predefined tasks.
+
+- **Motion Quality**
+    - Compare simulated motions to reference motions using dynamic time warping and pose error metrics.
+    
+- **Behavior Versatility**
+    - Assess the ability to compose and transition between diverse skills.
+
+### Application and Deployment
+- **Generalization**
+    - Test models in unseen environments or tasks.
+    - Adapt training with additional datasets if needed.
+    
+- **Style Modulation**
+    - Switch styles by retraining or finetuning on specific datasets.
+
+### Enhancements
+
+- Incorporate gradient penalties for discriminator stability.
+- Refine motion quality by tuning network architectures or dataset preprocessing.
+- Extend the approach to non-humanoid characters or multi-agent systems.
+
+
+## Results
+
+> [!abstract]
+
+- 
+
+## Comments and Implications
+
+- 

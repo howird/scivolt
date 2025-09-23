@@ -1,15 +1,10 @@
 ---
-aliases:
-  - '{{shortTitle}}'
-  - '{{citekey}}'
-authors: '{{authors}}'
-citekey: '{{citekey}}'
 status: backlog
 tags:
-  - '#paper'
-title: '{{title}}'
-url: '{{URL}}'
+  - 'paper'
 year: '{{date | format("YYYY/MM")}}'
+authors: '{{authors}}'
+citekey: '{{citekey}}'
 ---
 
 # {{title}}
@@ -63,7 +58,7 @@ year: '{{date | format("YYYY/MM")}}'
 > - identify assumptions in the paper and challenge them
 > - consider how you would present each idea
 
-- [INSERT GIT REPO HERE](www.github.com)
+- INSERT GIT REPO HERE
   - comment code and make PR
 
 ## Distillation

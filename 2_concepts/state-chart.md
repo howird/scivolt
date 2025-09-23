@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#hwe/embedded-computer-systems'
+  - 'hw/embedded-computer-systems'
 ---
 
 # State Charts

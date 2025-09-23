@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#hwe/embedded-computer-systems'
+  - 'hw/embedded-computer-systems'
 ---
 
 # Memory Organization
@@ -121,7 +121,7 @@ In systems with multiple cores or processing elements, how memory is accessed ca
 - multi-ported (multiple accesses to same memory)
 
   - $N \ge C$, latency=1
-  - $N\<C$ latency=$C/N$
+  - $NC$ latency=$C/N$
 
 ![](Pasted%20image%2020240415154054.png)
 

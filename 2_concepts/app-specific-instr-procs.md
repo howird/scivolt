@@ -1,7 +1,7 @@
 ---
-status: backlog
+status: done
 tags:
-  - '#hwe/embedded-computer-systems'
+  - hw/embedded-computer-systems
 ---
 
 ## Digital Signal Processors (DSP)

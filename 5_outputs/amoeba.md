@@ -1,4 +1,4 @@
 ---
-tags:
-  - '#project/we-support-each-other'
+project: we-support-each-other
+status: backlog
 ---

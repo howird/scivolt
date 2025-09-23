@@ -1,8 +1,8 @@
 ---
 date: March 17, 2021
-status: backlog
+status: review
 tags:
-  - '#comp-neuro/bio'
+  - "ai/comp-neuro/bio"
 ---
 
 # 1.3 Brain Areas and their Function

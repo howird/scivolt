@@ -2,7 +2,7 @@
 date: April 28, 2021
 status: backlog
 tags:
-  - '#comp-neuro/decoding'
+  - 'ai/comp-neuro/decoding'
 ---
 
 # 3.1 Neural Decoding and Signal Detection Theory

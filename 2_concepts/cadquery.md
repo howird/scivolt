@@ -1,8 +1,8 @@
 ---
 status: backlog
 tags:
-  - '#note/tutorial'
-  - '#hwe'
+  - "guide"
+  - "hw"
 ---
 
 # CadQuery

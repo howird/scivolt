@@ -1,9 +1,9 @@
 ---
 status: backlog
 tags:
-  - '#note/theory'
-  - '#statistics/regression'
-  - '#deep-learning'
+  - "note"
+  - "math/stats"
+  - "ai/dl"
 ---
 
 #### 2.1 Regression and classification are prediction of continuous and categorical values, respectively
@@ -25,7 +25,7 @@ tags:
   - the prediction, $\hat y$, uses a linear decision boundary
     $$
     \hat y = \begin{cases}
-    0 &\text{if } \boldsymbol{w}^T\boldsymbol{x}+b \< 0 \\
+    0 &\text{if } \boldsymbol{w}^T\boldsymbol{x}+b < 0 \\
     1 &\text{if } \boldsymbol{w}^T\boldsymbol{x}+b \ge 0
     \end{cases}
     $$
@@ -115,7 +115,7 @@ $$
   \hat y = f (\boldsymbol{w}^T\boldsymbol{x}) \\
   \text{where: }
   f(a) = \begin{cases}
-  -1 &\text{if } a \< 0 \\
+  -1 &\text{if } a  0 \\
   1 &\text{if } a \ge 0
   \end{cases}
   }

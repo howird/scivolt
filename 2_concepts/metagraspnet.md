@@ -1,15 +1,10 @@
 ---
-aliases:
-  - MetaGraspNet
-  - gillesMetaGraspNetLargeScaleBenchmark2022
-authors: Maximilian Gilles, Yuhao Chen, Tim Robin Winter, E. Zhixuan Zeng, Alexander Wong
-citekey: gillesMetaGraspNetLargeScaleBenchmark2022
 status: backlog
 tags:
-  - '#paper'
-title: 'MetaGraspNet: A Large-Scale Benchmark Dataset for Scene-Aware Ambidextrous Bin Picking via Physics-based Metaverse Synthesis'
-url: ''
-year: 2022/08
+  - 'paper'
+year: '2022/08'
+authors: Maximilian Gilles, Yuhao Chen, Tim Robin Winter, E. Zhixuan Zeng, Alexander Wong
+citekey: gillesMetaGraspNetLargeScaleBenchmark2022
 ---
 
 # MetaGraspNet: A Large-Scale Benchmark Dataset for Scene-Aware Ambidextrous Bin Picking via Physics-based Metaverse Synthesis
@@ -88,7 +83,7 @@ year: 2022/08
   1. A grasp $G_j=G_{i,k,l}$ is considered successful if the gripper does not collide with the object and we assign it $s_{pj,\text{anal.},j}=s_{\text{antip.},i}$
   1. In the next step, each successful grasp $G_j$ is executed multiple times in a physics simulation in IsaacGym
   1. Again, we extend the idea of robust sampling into simulation: Each grasp $G_j$ is simulated with different mass density factors and friction coefficients.
-  1. Similar to [Acronym](acronym.md) we perform an upward and rotating gripper movement and assume a grasp is successful if the object is still in contact after execution
+  1. Similar to Acronym we perform an upward and rotating gripper movement and assume a grasp is successful if the object is still in contact after execution
   1. The robust simulation score $s_{pj,sim.,j}$ is then defined as the fraction of successful grasps divided by the total number of attempts.
 
 ## Dataset Details

@@ -1,40 +1,41 @@
 ---
-aliases:
-  - '{{shortTitle}}'
-  - '{{citekey}}'
+tags:
+  - 'paper'
+status: backlog
+year: '{{date | format("YYYY/MM")}}'
 authors: '{{authors}}'
 citekey: '{{citekey}}'
-status: backlog
-tags:
-  - '#paper'
-title: '{{title}}'
-url: '{{URL}}'
-year: '{{date | format("YYYY/MM")}}'
 ---
-
 # {{title}}
 
-> [!abstract]
-> {{abstractNote}}
+## Background
 
-# Short Summary
-
-### Key Points
-
--
+- {{abstractNote | replace(". ", "\n- ")}}
 
 ### Problem
 
--
+- 
 
-### Methodology
+### Goals / Contributions
 
--
+- 
 
-### Results
+### Past Work
 
--
+- 
 
-### Comments and Implications
+## Methodology
 
--
+> [! abstract]
+
+- 
+
+## Results
+
+> [!abstract]
+
+- 
+
+## Comments and Implications
+
+- 

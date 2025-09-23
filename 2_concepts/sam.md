@@ -1,14 +1,10 @@
 ---
-aliases:
-  - kirillovSegmentAnything2023
-authors: Alexander Kirillov, Eric Mintun, Nikhila Ravi, Hanzi Mao, Chloe Rolland, Laura Gustafson, Tete Xiao, Spencer Whitehead, Alexander C. Berg, Wan-Yen Lo, Piotr Dollár, Ross Girshick
-citekey: kirillovSegmentAnything2023
 status: backlog
 tags:
-  - '#paper'
-title: Segment Anything
-url: ''
-year: 2023/04
+  - 'paper'
+year: '2023/04'
+authors: Alexander Kirillov, Eric Mintun, Nikhila Ravi, Hanzi Mao, Chloe Rolland, Laura Gustafson, Tete Xiao, Spencer Whitehead, Alexander C. Berg, Wan-Yen Lo, Piotr Dollár, Ross Girshick
+citekey: kirillovSegmentAnything2023
 ---
 
 # Segment Anything

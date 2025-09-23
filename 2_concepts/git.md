@@ -1,8 +1,8 @@
 ---
 status: backlog
 tags:
-  - '#note/tutorial'
-  - '#swe/tool'
+  - 'guide'
+  - 'sw/tool'
 ---
 
 # Git

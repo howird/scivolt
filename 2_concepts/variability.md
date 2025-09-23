@@ -2,7 +2,7 @@
 date: April 26, 2021
 status: backlog
 tags:
-  - '#comp-neuro/encoding'
+  - 'ai/comp-neuro/encoding'
 ---
 
 # 2.4 Variability

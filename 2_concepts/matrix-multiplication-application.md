@@ -1,16 +1,16 @@
 ---
 status: backlog
 tags:
-  - '#hwe/embedded-computer-systems'
+  - 'hw/embedded-computer-systems'
 ---
 
 # Application: Matrix Multiplication
 
 - Now that we have discussed the 3 types of parallelism:
 
-  - [Instruction Level Parallel](2.2-instruction-level-parallelism.md) (datapath parallelism)
-  - [Data Level Parallelism](2.3-data-level-parallelism.md) (loop parallelism)
-  - [Transaction Level Parallelism](2.4-transaction-level-parallelism.md) (dataflow parallelism)
+  - [Instruction Level Parallel](/2_concepts/instruction-level-parallelism.md) (datapath parallelism)
+  - [Data Level Parallelism](/2_concepts/data-level-parallelism.md) (loop parallelism)
+  - [Transaction Level Parallelism](/2_concepts/transaction-level-parallelism.md) (dataflow parallelism)
 
 - We will apply these techniques to a commonly used application: __Matrix Multiplication__
 

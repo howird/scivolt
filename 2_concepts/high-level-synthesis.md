@@ -1,14 +1,14 @@
 ---
 status: backlog
 tags:
-  - '#hwe/embedded-computer-systems'
+  - 'hw/embedded-computer-systems'
 ---
 
 # High Level Synthesis
 
 ## Introduction
 
-- HLS converts C/C++/SystemC into [RTL (register transfer level) designs](../ece327-digital-hardware-systems/01-intro.md)
+- HLS converts C/C++/SystemC into [RTL (register transfer level) designs](3_areas/DIGITAL-HARDWARE-SYSTEMS.md)
 - It maps data structures, operations on those structures, and communication onto hardware blocks (Verilog, VHDL)
 - A standard synthesis tool (i.e. Vivado for Xilinx) then converts the RTL design to an FPGA bitstream (configures the FPGA) or ASIC programming masks
 
@@ -139,8 +139,8 @@ The CLB diagram consists of 2 main components:
 - if the number of iterations depends on input, declare an upper bound
 - `assert(k<CONST); for (i=0, i<k ...`
 - can handle simple cases such as:
-  - eg. for (i=0, i \<CONST;i++)
-    - for(j=i, j\< CONST; j++)
+  - eg. for (i=0, i CONST;i++)
+    - for(j=i, j CONST; j++)
       - foo(i,j);
     - the number of ierations of foo() = $\sum_{j=1}^{CONST}j = \frac{(const)(const + 1)}2$
 
@@ -255,12 +255,12 @@ Type3 /* output */ toplevel(
 
 - We will discuss 3 types of parallelism:
 
-  - [Instruction Level Parallel](2.2-instruction-level-parallelism.md) (datapath parallelism):
+  - [Instruction Level Parallel](2_concepts/instruction-level-parallelism.md) (datapath parallelism):
     - taking individual blocks and optimizing them
     - HLS tools are good at this
-  - [Data Level Parallelism](2.3-data-level-parallelism.md) (loop parallelism)
+  - [Data Level Parallelism](2_concepts/data-level-parallelism.md)(loop parallelism)
     - doing the same thing across an array
-      - kinda like [SIMD](20-gpu-programming.md) (same instruction multiple data)
+      - kinda like [SIMD](gpu-programming.md) (same instruction multiple data)
     - HLS tools will need guidance on this
-  - [Transaction Level Parallelism](2.4-transaction-level-parallelism.md) (dataflow parallelism)
+  - [Transaction Level Parallelism](2_concepts/transaction-level-parallelism.md)(dataflow parallelism)
     - HLS tools are good at taking loops and nested function calls and optimizing that

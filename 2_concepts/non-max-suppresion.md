@@ -1,17 +1,16 @@
 ---
-status: doing
+status: backlog
 tags:
-  - '#note/algorithm'
-  - '#note/impl'
-  - '#feature-engineering'
-  - '#application/vision'
+  - "note"
+  - "ai/feature-engineering"
+  - "app/object-detection"
 ---
 
 # Non Max Suppression
 
 - Given a list of bounding boxes in an image (pseudocode):
   - for each unique class:
-    - ## for each input bounding box:,
+   ### for each input bounding box:,
 
 ```python
 def non_max_suppression(

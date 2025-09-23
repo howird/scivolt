@@ -2,7 +2,7 @@
 date: March 17, 2021
 status: backlog
 tags:
-  - '#comp-neuro/encoding'
+  - 'ai/comp-neuro/encoding'
 ---
 
 # 2.1 Neural Encoding

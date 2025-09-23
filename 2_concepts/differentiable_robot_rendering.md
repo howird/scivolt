@@ -1,0 +1,46 @@
+---
+tags:
+  - paper
+status: backlog
+year: 2024/10
+authors: Ruoshi Liu, Alper Canberk, Shuran Song, Carl Vondrick
+citekey: liuDifferentiableRobotRendering2024a
+---
+# Differentiable Robot Rendering
+
+## Background
+
+- Vision foundation models trained on massive amounts of visual data have shown unprecedented reasoning and planning skills in open-world settings
+- A key challenge in applying them to robotic tasks is the modality gap between visual data and action data
+- We introduce differentiable robot rendering, a method allowing the visual appearance of a robot body to be directly differentiable with respect to its control parameters
+- Our model integrates a kinematics-aware deformable model and Gaussians Splatting and is compatible with any robot form factors and degrees of freedom
+- We demonstrate its capability and usage in applications including reconstruction of robot poses from images and controlling robots through vision language models
+- Quantitative and qualitative results show that our differentiable rendering model provides effective gradients for robotic control directly from pixels, setting the foundation for the future applications of vision foundation models in robotics.
+
+### Problem
+
+- 
+
+### Goals / Contributions
+
+- 
+
+### Past Work
+
+- 
+
+## Methodology
+
+> [! abstract]
+
+- 
+
+## Results
+
+> [!abstract]
+
+- 
+
+## Comments and Implications
+
+- 

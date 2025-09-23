@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#deep-learning'
+  - "ai/dl/arch"
 ---
 
 #### 9.1 Transformers operate on sequences of vectors

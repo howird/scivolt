@@ -8,7 +8,7 @@ result:
 status: backlog
 swot_score: 0.5
 tags:
-  - '#Topics'
+  - area
 ---
 
 # {{title}}
@@ -23,7 +23,7 @@ tags:
 
 ### Questions
 
-> 👉 _When exploring a particular research area you will have a lot of questions, some of which might become your research focus. It's good to collect them in one place. I've found [[QEC Template|QEC Method]] to be quite effective for answering questions effectively._
+> 👉 _When exploring a particular research area you will have a lot of questions, some of which might become your research focus. It's good to collect them in one place. I've found [QEC Method](QEC%20Template) to be quite effective for answering questions effectively._
 
 - [ ] **Question**:
   - **Evidence**:
@@ -32,8 +32,8 @@ tags:
 ### Prior Works
 
 - [ ]
-  - ## Strengths:
-  - ## Weaknesses:
+ ### Strengths:
+ ### Weaknesses:
 
 ### Necessary Background Knowledge
 

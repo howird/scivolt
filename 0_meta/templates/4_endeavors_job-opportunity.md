@@ -1,8 +1,8 @@
 ---
-date: '{{date}}'
+date: "{{date}}"
 status: backlog
 tags:
-  - '#endeavor/job-oppurtunity'
+  - endeavors/job-oppurtunity
 ---
 
 ## country: city: remote: no hybrid: no field:
@@ -20,5 +20,5 @@ salary:
 
 ## Context
 
-- ## _How did you learn about this opportunity?_
-- ## _Why do you think it's the right choice?_
+### _How did you learn about this opportunity?_
+### _Why do you think it's the right choice?_

@@ -1,9 +1,9 @@
 ---
 date: June 9, 2022
-status: backlog
+status: done
 tags:
-  - '#machine-learning'
-  - '#application/classification'
+  - ai/unsup-learning
+  - comp-methods/classification
 ---
 
 # Support Vector Machines

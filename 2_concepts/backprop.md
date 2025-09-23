@@ -1,7 +1,7 @@
 ---
-status: backlog
+status: todo
 tags:
-  - '#deep-learning'
+  - "ai/dl"
 ---
 
 #### 4.0 Gradient Descent Background

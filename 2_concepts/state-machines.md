@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#hwe/digital-hardware-eng'
+  - 'hw/digital-hardware-eng'
 ---
 
 # State Machines in Hardware

@@ -1,7 +1,7 @@
 ---
-status: backlog
+status: review
 tags:
-  - '#hwe/embedded-computer-systems'
+  - "hw/embedded-computer-systems"
 ---
 
 # Data Level Parallelism
@@ -311,7 +311,7 @@ gantt
 - Essentially, arrays are contiguous blocks of memory in the BRAM, and our hardware module will synthesize a memory circuit to access the array
 - There is 1 memory circuit per array and each memory circuit allows for 1 read/write per cycle
 - Therefore, if we perform loop optimizations that will require multiple parallel accesses to a single array, we must perform Array Optimizations
-- For more information, see [Memory](07-memory.md)
+- For more information, see [memory](2_concepts/memory.md)
 
 ### Array Partitioning
 

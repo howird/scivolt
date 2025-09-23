@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#signals/controls'
+  - "math/signals"
 ---
 
 # Fourier Series Part 1
@@ -30,8 +30,8 @@ $$
 $$
 \begin{align}
 \displaylines{
-\bf{f} & = \<\bf{f}, \bf{x}>\frac{\bf{x}}{||\bf{x}||^2} + \<\bf{f}, \bf{y}>\frac{\bf{y}}{||\bf{y}||^2} \\
-&=\<\bf{f}, \bf{u}>\frac{\bf{u}}{||\bf{u}||^2} + \<\bf{f}, \bf{v}>\frac{\bf{v}}{||\bf{v}||^2}
+\bf{f} & = \bf{f}, \bf{x}>\frac{\bf{x}}{||\bf{x}||^2} + \bf{f}, \bf{y}>\frac{\bf{y}}{||\bf{y}||^2} \\
+&=\bf{f}, \bf{u}>\frac{\bf{u}}{||\bf{u}||^2} + \bf{f}, \bf{v}>\frac{\bf{v}}{||\bf{v}||^2}
 }
 \end{align}
 $$
@@ -41,13 +41,13 @@ $$
   $$
   f(x) = \frac{A_0}{2} + \sum _{k=1}^{\infty} A_k \cos (kx)+B_k \sin (kx)
   $$
-  $$A_k = \frac{1}{\pi} \int_{-\pi}^{\pi}f(x)cos(kx)dx = \frac{1}{||\cos (kx)||^2} \<f(x), \cos (kx)>$$
+  $$A_k = \frac{1}{\pi} \int_{-\pi}^{\pi}f(x)cos(kx)dx = \frac{1}{||\cos (kx)||^2} f(x), \cos (kx)>$$
 
-$$B_k = \frac{1}{\pi} \int_{-\pi}^{\pi}f(x)sin(kx)dx = \frac{1}{||\sin (kx)||^2} \<f(x), \sin (kx)>$$
+$$B_k = \frac{1}{\pi} \int_{-\pi}^{\pi}f(x)sin(kx)dx = \frac{1}{||\sin (kx)||^2} f(x), \sin (kx)>$$
 
 - Where this is the inner product of two functions:
   $$
-  \<f(x), g(x)> = \int _a^b f(x)\bar g(x) dx
+  f(x), g(x)> = \int _a^b f(x)\bar g(x) dx
   $$
 
 # Fourier Series Part 2
@@ -63,7 +63,7 @@ $$B_k = \frac{2}{L} \int_{0}^{L}f(x)\sin (\frac{2 \pi k}{L}kx)dx$$
 
 - Here we use $\frac{2\pi}{L}$ constant in the sinusoids to give them a period of $L$
   $$
-  \<f(x), g(x)> = \int _a^b f(x)\bar g(x) dx
+  f(x), g(x)> = \int _a^b f(x)\bar g(x) dx
   $$
 
 # Fourier Series Part 3 Complex Number
@@ -84,7 +84,7 @@ Where: $C_k = -\bar{C}_{-k}$ if $f(x)$ is real
   $$
 
 $$
-\<\Psi_n, \Psi_m> = \int_{-\pi}^{\pi} e^{jnx}e^{-jmx}dx = \int_{-\pi}^{\pi} e^{j(n-m)x}dx
+\Psi_n, \Psi_m> = \int_{-\pi}^{\pi} e^{jnx}e^{-jmx}dx = \int_{-\pi}^{\pi} e^{j(n-m)x}dx
 $$%5Cpsi_k%20%3D%20e%5E%7Bikx%7D%20%3D%20%5Ccos(kx)%2Bi%20%5Csin(kx)
 
 [$$\implies \frac{1}{i(j-k)} [ e^{j(n-m)x}]_{-\pi}^{\pi}$$](<https://www.codecogs.com/eqnedit.php?latex=%5Cpsi_k%20%3D%20e%5E%7Bikx%7D%20%3D%20%5Ccos(kx)%2Bi%20%5Csin(kx)#0>)
@@ -92,7 +92,7 @@ $$%5Cpsi_k%20%3D%20e%5E%7Bikx%7D%20%3D%20%5Ccos(kx)%2Bi%20%5Csin(kx)
 - Here, since the function is periodic from $-\pi$ to $\pi$, $e^{j(n-m)}$ will always be equal at $-\pi$ and $\pi$, thus when $n \ne m$ it must evaluate to 0, in the equal case use l'hopital's:
   $$
   \displaylines{
-  \therefore \<\Psi_n, \Psi_m> = \begin{cases} 0 &\text{if } n \ne m \\
+  \therefore \Psi_n, \Psi_m> = \begin{cases} 0 &\text{if } n \ne m \\
   2\pi &\text{if } n=m \end{cases}
   }
   $$
@@ -101,7 +101,7 @@ $$%5Cpsi_k%20%3D%20e%5E%7Bikx%7D%20%3D%20%5Ccos(kx)%2Bi%20%5Csin(kx)
 
 - In vector-like notation:\
   $$
-  = \frac{1}{2\pi} \sum _{k=1}^{\infty} \underbrace{\<f(x), \Psi_k>}_{C_k} \underbrace{\Psi_k}_{e^{jkx}}
+  = \frac{1}{2\pi} \sum _{k=1}^{\infty} \underbrace{f(x), \Psi_k>}_{C_k} \underbrace{\Psi_k}_{e^{jkx}}
   $$
 
 # Fourier Transform: Generalizing to non-periodic functions
@@ -110,7 +110,7 @@ $$%5Cpsi_k%20%3D%20e%5E%7Bikx%7D%20%3D%20%5Ccos(kx)%2Bi%20%5Csin(kx)
 
 $$f(x)= \sum_{k=-\infty}^{\infty} C_k e^{jk\pi x/L}$$
 
-$$C_k = \frac{1}{2\pi} \<f(x), \Psi_k> =\frac{1}{2L} \int_{-L}^L f(x) e^{-jk\pi x/L} dx$$
+$$C_k = \frac{1}{2\pi} f(x), \Psi_k> =\frac{1}{2L} \int_{-L}^L f(x) e^{-jk\pi x/L} dx$$
 
 Let: $$ \omega_k = k\pi /L = k \Delta \omega, \Delta \omega = \frac{\pi}{L}$$
 

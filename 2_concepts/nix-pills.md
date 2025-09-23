@@ -1,8 +1,8 @@
 ---
 status: doing
 tags:
-  - '#note/tutorial'
-  - '#swe/nix/pills'
+  - 'guide'
+  - 'sw/nix/pills'
 ---
 
 # Nix Pills Notes

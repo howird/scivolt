@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#hwe/embedded-computer-systems'
+  - 'hw/embedded-computer-systems'
 ---
 
 # Performance Estimation
@@ -123,7 +123,7 @@ SC_MODULE(nand) { // declare a module (basically a class)
 }
 ```
 
-![[Pasted image 20240307144053.png]]
+![Pasted image 20240307144053](Pasted%20image%2020240307144053.png)
 
 ```cpp
 #include <systemc>
@@ -192,8 +192,8 @@ public:
 
 ```
 
-![[Pasted image 20240307145030.png]]
-![[Pasted image 20240307145719.png]]
+![Pasted image 20240307145030](Pasted%20image%2020240307145030.png)
+![Pasted image 20240307145719](Pasted%20image%2020240307145719.png)
 
 - functions block until they run completely in the simulator, no mutexes needed
 

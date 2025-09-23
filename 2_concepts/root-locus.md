@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#signals/controls'
+  - 'math/controls'
 ---
 
 # Root Locus

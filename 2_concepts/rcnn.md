@@ -1,16 +1,12 @@
 ---
 status: backlog
 tags:
-  - '#deep-learning'
-  - '#application/vision'
+  - "ai/dl/arch"
+  - "app/obj-detection"
 ---
+    
+# R-CNN
 
-# What is Image Detection?
-
-- In image classification, we simply predict whether or not a class exists within an image
-- In image detection, we must predict where instances of classes are located within an image using bounding boxes
-- Before the [R-CNN](https://arxiv.org/pdf/1311.2524.pdf) paper, the two most successful methods for generating bounding boxes were to use a [regression CNN](https://papers.nips.cc/paper_files/paper/2013/hash/f7cade80b7cc92b991cf4d2806d6bd78-Abstract.html), and others used a sliding window detector
-  - The sliding window detector led to units deep in the network to have very large receptive fields and strides in the input image, which makes precise localization an open technical challenge
 - The R-CNN solves the CNN localization problem by operating within the "recognition using regions" paradigm
 - At test time, the method:
   - generates around 2000 category independent region proposals for the input image
@@ -18,7 +14,7 @@ tags:
   - classifies each region with category-specific linear SVMs
 - Use a simple technique affine image warping to compute a fixed-size CNN input from each region proposal regardless of the region' shape
 
-![[Pasted image 20231002184636.png]]
+![Pasted image 20231002184636](Pasted%20image%2020231002184636.png)
 
 # Fast RCNN and Faster RCNN
 
@@ -56,7 +52,7 @@ Multi-Scale Anchors as Regression References
 
 - Our design of anchors presents a novel scheme for addressing multiple scales (and aspect ratios)
 - As shown in Figure 1, there have been two popular ways for multi-scale predictions.
-  ![[Pasted image 20231003173212.png]]
+  ![Pasted image 20231003173212](Pasted%20image%2020231003173212.png)
 - The first way (b) is based on image/feature pyramids, e.g., in DPM [8] and CNNbased methods
   - The images are resized at multiple scales, and feature maps (HOG [8] or deep convolutional features) are computed for each scale (Figure 1(a)). This way is often useful but is time-consuming.
 - The second way is to use sliding windows of multiple scales (and/or aspect ratios) on the feature maps. For example, in DPM [8], models of different aspect ratios are trained separately using different filter sizes (such as 5×7 and 7×5). If this way is used to address multiple scales, it can be thought of as a “pyramid of filters” (Figure 1(b)).

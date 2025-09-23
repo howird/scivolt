@@ -10,7 +10,7 @@ mood:
 overall grade:
 status: backlog
 tags:
-  - '#Personal'
+  - 'Personal'
 ---
 
 # {{title}}
@@ -43,9 +43,9 @@ tags:
 
 ## Vegvísir
 
-- ## Explain how the goals align with your Path:
-- ## What do you need to lay the most focus on next week to stay on your Path:
-- ## What distracted you this week the most and made you step off your Path:
-- ## What can you do to alleviate such distractions to stay on your Path:
+### Explain how the goals align with your Path:
+### What do you need to lay the most focus on next week to stay on your Path:
+### What distracted you this week the most and made you step off your Path:
+### What can you do to alleviate such distractions to stay on your Path:
 
 > 🎗️ Remember: all you do should align with your Values and your Priorities. Not somebody else's. Yours only.

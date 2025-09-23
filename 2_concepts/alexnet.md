@@ -2,7 +2,8 @@
 date: June 15, 2022
 status: done
 tags:
-  - '#deep-learning'
+  - "ai/dl/arch"
+  - "ai/dl/eng"
 ---
 
 # AlexNet

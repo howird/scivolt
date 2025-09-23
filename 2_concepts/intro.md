@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#deep-learning'
+  - 'ai/dl'
 ---
 
 # Key Concepts
@@ -64,7 +64,7 @@ tags:
 
 #### 1.8 A network's weights and biases are improved via gradient descent
 
-- Further explored [here](4-backprop.md)
+- Further explored [backprop](2_concepts/backprop.md)
 
 #### 1.9 Deep networks must generalize from examples
 

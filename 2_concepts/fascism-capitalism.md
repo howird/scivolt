@@ -1,0 +1,1 @@
+https://www.reddit.com/r/Marxism/comments/1nkpi0d/do_fascism_and_capitalism_go_together_in_todays/

@@ -1,7 +1,7 @@
 ---
 status: done
 tags:
-  - '#hwe/embedded-computer-systems'
+  - 'hw/embedded-computer-systems'
 ---
 
 # ASIP: Application-Specific Instruction-Set Processor

@@ -2,7 +2,7 @@
 date: March 17, 2021
 status: backlog
 tags:
-  - '#comp-neuro/bio'
+  - 'ai/comp-neuro/bio'
 ---
 
 # 1.2 Neurons and Synapses

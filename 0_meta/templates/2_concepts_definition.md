@@ -1,9 +1,8 @@
 ---
-reference:
 status: backlog
 tags:
-  - '#note/theory'
-topics:
+  - 'note'
+reference:
 ---
 
 # CONCEPTS

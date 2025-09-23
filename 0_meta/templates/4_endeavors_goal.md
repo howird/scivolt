@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#endeavor/goal'
+  - endeavors/goal
 ---
 
 ## Deadline

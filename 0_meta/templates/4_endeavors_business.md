@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#endeavor/idea/business'
+  - endeavors/idea/business
 ---
 
 # {{title}}
@@ -31,10 +31,10 @@ Currency: **€**
 
 ### Variants
 
-- ## Free
-- ## Pro
-- ## Premium
-- ## Ultimate
+### Free
+### Pro
+### Premium
+### Ultimate
 
 ### Pricing
 

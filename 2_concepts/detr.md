@@ -1,14 +1,10 @@
 ---
-aliases:
-  - carionEndtoEndObjectDetection2020
-authors: Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, Sergey Zagoruyko
-citekey: carionEndtoEndObjectDetection2020
 status: backlog
 tags:
-  - '#paper'
-title: End-to-End Object Detection with Transformers
-url: ''
-year: 2020/05
+  - paper
+year: '2020/05'
+authors: Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, Sergey Zagoruyko
+citekey: carionEndtoEndObjectDetection2020
 ---
 
 # End-to-End Object Detection with Transformers
@@ -24,8 +20,8 @@ year: 2020/05
 - their performances are significantly influenced by post-processing steps to collapse near-duplicate predictions ([non-maximum suppression](non-max-suppresion.md))
 - as well as many other hand-crafted components such as anchor generation (as introduced in  [RCNNs](rcnn.md)) and rule-based training target assignment
 - to simplify these pipelines we propose a direct set prediction approach to bypass the surrogate tasks
-  ![[Pasted image 20231004152026.png]]
-- DETR utilizes a simple architecture, by combining CNNs and [Transformer](1_sources/cv-papers/transformers.md) encoder-decoders
+
+- DETR utilizes a simple architecture, by combining CNNs and [transformers](2_concepts/transformers.md) encoder-decoders
 - DETR exploits the versatile and powerful relation modeling capability of Transformers to replace the hand-crafted rules, under properly designed training signals
 -
 

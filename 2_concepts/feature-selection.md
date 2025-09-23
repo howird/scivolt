@@ -1,8 +1,8 @@
 ---
 date: March 18, 2021
-status: backlog
+status: done
 tags:
-  - '#comp-neuro/encoding'
+  - "ai/comp-neuro/encoding"
 ---
 
 # 2.3 Feature Selection

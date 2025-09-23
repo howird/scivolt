@@ -1,7 +1,7 @@
 ---
 status: backlog
 tags:
-  - '#endeavor/idea'
+  - endeavors/idea
 ---
 
 # {{title}}
